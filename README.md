@@ -7,7 +7,7 @@
 </p>
 
 ### About Me
-🌍 Mississauga, ON  
+🌍 Toronto, Canada  
 🏢 Currently working at Amazon YYZ2  
 🏫 Honours Bachelor of Computer Science @ Sheridan College  
 🔭 Intersested in Machine Learning, Cryptography, and Virtualization  
