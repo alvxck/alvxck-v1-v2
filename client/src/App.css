@@ -1,0 +1,32 @@
+
+
+/* App */
+::-webkit-scrollbar {
+    height: .5rem;
+}
+  
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fff; 
+}
+
+body {
+    overflow: overlay;
+}
+
+
+/* Background */
+.wallpaper {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
