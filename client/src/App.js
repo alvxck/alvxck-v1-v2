@@ -1,12 +1,16 @@
 import './App.css';
+import React from 'react'
 import Background from './components/Background';
 import Header from './components/Header';
 
 function App() {
+
 	return (
-		<Background>
+		<div className='backdrop'>
+			<Background />
 			<Header />
-		</Background>
+
+		</div>
 	)
 }
 
