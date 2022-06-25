@@ -1,5 +1,6 @@
 import './App.css';
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import LoadingScreen from './components/LoadingScreen';
 import Background from './components/Background';
 import Header from './components/Header';
 import Menu from './components/Menu';
@@ -14,6 +15,7 @@ function App(props) {
 
 	return (
 		<div className='backdrop'>
+			<LoadingScreen />
 			<Background />
 			<Header 
 				onClick={toggleMenu}
