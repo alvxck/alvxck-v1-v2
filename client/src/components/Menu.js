@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import NavTab from './NavTab.js';
-import Article from './Article.js';
-
+import About from './Articles/About.js';
+import Contact from './Articles/Contact.js';
+import Interests from './Articles/Interests.js';
+import Projects from './Articles/Projects.js';
+import Work from './Articles/Work.js';
 
 function Menu() {
     const [article, setArticle] = useState()
@@ -14,7 +17,7 @@ function Menu() {
         },
         {
             id: 1,
-            value: 'Resume'
+            value: 'Work'
         },
         {
             id: 2,
@@ -58,11 +61,11 @@ function Menu() {
                     id='article'
                     className='menu-article-container'
                 >
-                    {(article === 0) && <Article />}
-                    {(article === 1) && <Article />}
-                    {(article === 2) && <Article />}
-                    {(article === 3) && <Article />}
-                    {(article === 4) && <Article />}
+                    {(article === 0) && <About />}
+                    {(article === 1) && <Work />}
+                    {(article === 2) && <Contact />}
+                    {(article === 3) && <Projects />}
+                    {(article === 4) && <Interests />}
 
                 </motion.div>
             </div>

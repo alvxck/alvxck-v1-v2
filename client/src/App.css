@@ -97,7 +97,7 @@
     right: 0;
     bottom: 0;
     backdrop-filter: blur(.75rem);
-    z-index: 3;
+    z-index: 2;
 }
 
 .menu-container {
@@ -142,9 +142,26 @@
     width: 92%;
     height: 92%;
     
-    border-radius: .75rem;
+    /* border-radius: .75rem;
     border-width: .05rem;
     border-style: solid;
     border-color: var(--primary-color);
-    box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203);
+    box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 }
+
+/* Contact */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    width: 92%;
+    height: 92%;
+}
+
+.contact-info {
+    display: flex;
+    width: 49%;
+    color: var(--primary-color);
+
+    background-color: #000;
+}
+
