@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import NavTab from './NavTab.js';
 import Article from './Article.js';
 
 
 function Menu() {
+    const [article, setArticle] = useState()
 
     const navTabs = [
         {
@@ -36,7 +37,7 @@ function Menu() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0}}
-            transition={{ duration: 0.4 }}  
+            transition={{ duration: .4 }}  
         >
             <div className='menu-container'>
                 <motion.div
@@ -45,8 +46,10 @@ function Menu() {
                 >
                     {navTabs.map((tab) => (
                         <NavTab
+                            key={tab.id}
                             id={tab.id}
                             value={tab.value}
+                            onClick={() => setArticle(tab.id)}
                         />
                     ))}
                 </motion.div>
@@ -55,7 +58,12 @@ function Menu() {
                     id='article'
                     className='menu-article-container'
                 >
-                    <Article />
+                    {(article === 0) && <Article />}
+                    {(article === 1) && <Article />}
+                    {(article === 2) && <Article />}
+                    {(article === 3) && <Article />}
+                    {(article === 4) && <Article />}
+
                 </motion.div>
             </div>
         </motion.div>

@@ -26,6 +26,14 @@
     z-index: 2;
 } */
 
+.wallpaper {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
 ::-webkit-scrollbar {
     height: .5rem;
 }
@@ -79,16 +87,6 @@
     cursor: pointer;
 }  
 
-
-/* Home */
-.home-wallpaper {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
 /* Menu */
 .menu-backdrop {
     position: fixed;
@@ -134,14 +132,15 @@
 .nav-text {
     margin: 0;
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: 2.5rem;
     cursor: pointer;
 }
 
+
 /* Article */
 .article-container {
-    width: 90%;
-    height: 90%;
+    width: 92%;
+    height: 92%;
     
     border-radius: .75rem;
     border-width: .05rem;

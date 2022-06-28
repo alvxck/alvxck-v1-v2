@@ -5,14 +5,18 @@ function NavTab(props) {
     
     return (
         <motion.div 
-            key={props.id}
             className='nav-link'
-            initial={{ x: -100 }}
+            initial={{ x: '-100vw' }}
             animate={{ x: 0 }}
-            exit={{ x: -100 }}
+            exit={{ x: '-100vw' }}
             transition={{ ease: 'easeInOut', delay: props.id * 0.05 }}
         >
-            <h1 className='nav-text'>{props.value}</h1>
+            <h1 
+                className='nav-text'
+                onClick={props.onClick}
+            >
+                {props.value}
+            </h1>
         </motion.div>
     )
 }
