@@ -4,10 +4,12 @@ import { AnimatePresence } from 'framer-motion';
 import LoadingScreen from './components/LoadingScreen';
 import wallpaper from './assets/alvx-wallpaper.png';
 import Header from './components/Header';
+import Beacon from './components/Beacon';
 import Menu from './components/Menu';
 
 function App() {
 	const [show, setShow] = useState(false);
+	const [article, setArticle] = useState();
 
     function toggleMenu() {
         setShow((prevShow) => !prevShow);
@@ -25,13 +27,15 @@ function App() {
 					src={wallpaper} 
 					alt='wallpaper'
 				/>
-				<Header 
-					onClick={toggleMenu}
-				/>
-				{/* import beacon box */}
+				
+				<Header onClick={toggleMenu}/>
+
+				<div className='beacon-container'>
+					<Beacon />
+				</div>
 
 				<AnimatePresence>
-					{show && <Menu />}
+					{show && <Menu selected={article}/>}
 				</AnimatePresence>
         	</div>
 		</div>
