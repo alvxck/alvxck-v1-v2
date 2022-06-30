@@ -1,23 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import NavTab from './NavTab.js';
 import About from './Articles/About.js';
 import Contact from './Articles/Contact.js';
 import Interests from './Articles/Interests.js';
 import Projects from './Articles/Projects.js';
-import Work from './Articles/Work.js';
+import Resume from './Articles/Resume.js';
 
-function Menu() {
-    const [article, setArticle] = useState()
+function Menu(props) {
 
     const navTabs = [
         {
             id: 0,
-            value: 'About'
+            value: 'About',
         },
         {
             id: 1,
-            value: 'Work'
+            value: 'Resume'
         },
         {
             id: 2,
@@ -43,7 +42,7 @@ function Menu() {
             transition={{ duration: .4 }}  
         >
             <div className='menu-container'>
-                <motion.div
+                <div
                     id='navbar' 
                     className='menu-navbar-container'
                 >
@@ -52,22 +51,22 @@ function Menu() {
                             key={tab.id}
                             id={tab.id}
                             value={tab.value}
-                            onClick={() => setArticle(tab.id)}
+                            onClick={() => props.setArticle(tab.id)}
                         />
                     ))}
-                </motion.div>
+                </div>
 
-                <motion.div
+                <div
                     id='article'
                     className='menu-article-container'
                 >
-                    {(article === 0) && <About />}
-                    {(article === 1) && <Work />}
-                    {(article === 2) && <Contact />}
-                    {(article === 3) && <Projects />}
-                    {(article === 4) && <Interests />}
+                    {(props.selected === 0) && <About />}
+                    {(props.selected === 1) && <Resume />}
+                    {(props.selected === 2) && <Contact />}
+                    {(props.selected === 3) && <Projects />}
+                    {(props.selected === 4) && <Interests />}
 
-                </motion.div>
+                </div>
             </div>
         </motion.div>
     )

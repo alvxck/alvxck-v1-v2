@@ -9,7 +9,7 @@ import Menu from './components/Menu';
 
 function App() {
 	const [show, setShow] = useState(false);
-	const [article, setArticle] = useState();
+	const [article, setArticle] = useState(0);
 
     function toggleMenu() {
         setShow((prevShow) => !prevShow);
@@ -17,6 +17,40 @@ function App() {
 
 	// Disable scrolling if <Menu /> is open
 	document.body.style.overflow = show ? 'hidden' : 'overlay';
+
+
+	const beacons = [
+		{
+			id: 0,
+			value: 'about',
+			top: '50%',
+			left: '20%',
+		},
+		{
+			id: 1,
+			value: 'resume',
+			top: '50%',
+			left: '40%',
+		},
+		{
+			id: 2,
+			value: 'contact',
+			top: '50%',
+			left: '60%',
+		},
+		{
+			id: 3,
+			value: 'projects',
+			top: '50%',
+			left: '80%',
+		},
+		{
+			id: 4,
+			value: 'interests',
+			top: '50%',
+			left: '110%',
+		},
+	]
 
 	return (
 		<div className='backdrop'>
@@ -30,12 +64,18 @@ function App() {
 				
 				<Header onClick={toggleMenu}/>
 
-				<div className='beacon-container'>
-					<Beacon />
-				</div>
+				{beacons.map((beacon) => (
+					<Beacon
+						key={beacon.id}
+						value={beacon.value}
+						top={beacon.top}
+						left={beacon.left}
+						onClick={() => {setArticle(beacon.id); toggleMenu();}}
+					/>
+				))}
 
 				<AnimatePresence>
-					{show && <Menu selected={article}/>}
+					{show && <Menu selected={article} setArticle={(id) => setArticle(id)}/>}
 				</AnimatePresence>
         	</div>
 		</div>

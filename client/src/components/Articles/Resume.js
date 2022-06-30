@@ -10,7 +10,7 @@ function Resume() {
             exit={{ x: '100vw'}}
             transition={{ ease: 'easeInOut', duration: .4 }}  
         >
-            
+            <h1>resume</h1>   
         </motion.div>
     )
 }

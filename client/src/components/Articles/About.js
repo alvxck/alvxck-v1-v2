@@ -10,7 +10,7 @@ function About() {
             exit={{ x: '100vw'}}
             transition={{ ease: 'easeInOut', duration: .4 }}  
         >
-            
+            <h1>about</h1>
         </motion.div>
     )
 }

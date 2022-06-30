@@ -10,7 +10,7 @@ function Interests() {
             exit={{ x: '100vw'}}
             transition={{ ease: 'easeInOut', duration: .4 }}  
         >
-            
+            <h1>interests</h1>
         </motion.div>
     )
 }

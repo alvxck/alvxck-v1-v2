@@ -10,7 +10,7 @@ function Projects() {
             exit={{ x: '100vw'}}
             transition={{ ease: 'easeInOut', duration: .4 }}  
         >
-            
+            <h1>projects</h1>
         </motion.div>
     )
 }
