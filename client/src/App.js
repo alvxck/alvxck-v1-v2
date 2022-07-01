@@ -64,15 +64,17 @@ function App() {
 				
 				<Header onClick={toggleMenu}/>
 
-				{beacons.map((beacon) => (
-					<Beacon
-						key={beacon.id}
-						value={beacon.value}
-						top={beacon.top}
-						left={beacon.left}
-						onClick={() => {setArticle(beacon.id); toggleMenu();}}
-					/>
-				))}
+				<div className='beacon-container'>
+					{beacons.map((beacon) => (
+						<Beacon
+							key={beacon.id}
+							value={beacon.value}
+							top={beacon.top}
+							left={beacon.left}
+							onClick={() => {setArticle(beacon.id); toggleMenu();}}
+						/>
+					))}
+				</div>
 
 				<AnimatePresence>
 					{show && <Menu selected={article} setArticle={(id) => setArticle(id)}/>}

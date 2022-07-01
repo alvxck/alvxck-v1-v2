@@ -5,12 +5,12 @@ function Beacon(props) {
 
     return (
         <div 
-            className='beacon-container'
+            className='beacon'
             style={{ top: props.top, left: props.left}}
         >
-            <div className='beacon' onClick={props.onClick}></div>
+            <div className='beacon-link' onClick={props.onClick}></div>
             <motion.div 
-                className='beacon'
+                className='beacon-link'
                 initial={{ opacity: 1, scale: 0 }}
                 animate={{ opacity: 0, scale: 4 }}
                 transition={{ duration: 6, repeat: Infinity }}  
