@@ -4,13 +4,19 @@ import { motion } from 'framer-motion';
 function Resume() {
     return (
         <motion.div
-            className='article-container'
+            className='article-container-column'
             initial={{ x: '100vw' }}
             animate={{ x: 0 }}
             exit={{ x: '100vw'}}
             transition={{ ease: 'easeInOut', duration: .4 }}  
         >
-            <h1>resume</h1>   
+            <div className='article-column'>
+                <h1 className='article-header'>Skills</h1>
+            </div>
+            <div className='article-column'>
+                <h1 className='article-header'>Experience</h1>
+            </div>
+
         </motion.div>
     )
 }
