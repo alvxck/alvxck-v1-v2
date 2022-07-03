@@ -2,7 +2,7 @@
 /* App */
 :root {
     --primary-color: #ffffff;
-    --secondary-color: #d9d9d9;
+    --secondary-color: #cccccc;
     --tertiary-color: #000000; 
 }
 
@@ -100,9 +100,16 @@
     cursor: pointer;
 }
 
-.header-container svg {
+.header-svg {
     width: .5rem;
-    cursor: pointer;
+    transition: all 0.3s;
+    transform: rotate(180deg);
+}
+
+.header-svg-selected {
+    width: .5rem;
+    transition: all 0.3s;
+    transform: rotate(0deg);
 }
 
 .header-container svg path {
@@ -156,7 +163,6 @@
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
-    gap: .5rem;
 }
 
 .menu-article-container {
@@ -171,6 +177,7 @@
 .nav-link {
     display: flex;
     gap: 1rem;
+    cursor: pointer;
 }
 
 .nav-link svg {
@@ -185,10 +192,19 @@
     margin: 0;
     color: var(--primary-color);
     font-size: 2.5rem;
-    cursor: pointer;
+}
+
+.nav-text-selected {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 2.5rem;
 }
 
 /* Article */
+.article-container {
+    position: absolute;
+}
+
 .article-container-column {
     display: flex;
     gap: 1rem;
@@ -206,8 +222,6 @@
     width: 50%;
 }
 
-
-
 .article-header {
     color: var(--primary-color);
     font-size: 1.5rem;
@@ -218,6 +232,7 @@
 /* Contact */
 .contact-container {
     display: grid;
+    position: absolute;
     grid-template-columns: 100%;
     grid-template-rows: 30% 70%;
     width: 92%;
@@ -237,7 +252,7 @@
 }
 
 .contact-img {
-    width: 6rem;
+    width: 7rem;
     border-radius: 100%;
 }
 

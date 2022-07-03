@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import NavTab from './NavTab.js';
 import About from './Articles/About.js';
 import Contact from './Articles/Contact.js';
@@ -62,17 +62,22 @@ function Menu(props) {
                     ))}
                 </div>
 
-                <div
+                <motion.div
                     id='article'
                     className='menu-article-container'
+                    initial={{ x: '100vw' }}
+                    animate={{ x: 0 }}
+                    exit={{ x: '100vw'}}
+                    transition={{ ease: 'easeInOut', duration: .4 }} 
                 >
-                    {(props.selected === 0) && <About />}
-                    {(props.selected === 1) && <Resume />}
-                    {(props.selected === 2) && <Contact />}
-                    {(props.selected === 3) && <Projects />}
-                    {(props.selected === 4) && <Interests />}
-
-                </div>
+                    <AnimatePresence>
+                        {(props.selected === 0) && <About key='123'/>}
+                        {(props.selected === 1) && <Resume key='456'/>}
+                        {(props.selected === 2) && <Contact key='789'/>}
+                        {(props.selected === 3) && <Projects key='101'/>}
+                        {(props.selected === 4) && <Interests key='112'/>}
+                    </AnimatePresence>
+                </motion.div>
             </div>
         </motion.div>
     )

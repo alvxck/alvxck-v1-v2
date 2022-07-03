@@ -62,7 +62,7 @@ function App() {
 					alt='wallpaper'
 				/>
 				
-				<Header onClick={toggleMenu}/>
+				<Header onClick={toggleMenu} menu={show}/>
 
 				<div className='beacon-container'>
 					{beacons.map((beacon) => (
@@ -77,7 +77,7 @@ function App() {
 				</div>
 
 				<AnimatePresence>
-					{show && <Menu selected={article} setArticle={(id) => setArticle(id)}/>}
+					{ show && <Menu selected={article} setArticle={(id) => setArticle(id)}/>}
 				</AnimatePresence>
         	</div>
 		</div>
