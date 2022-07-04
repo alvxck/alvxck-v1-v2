@@ -8,7 +8,9 @@ function Beacon(props) {
             className='beacon'
             style={{ top: props.top, left: props.left}}
         >
-            <div className='beacon-link' onClick={props.onClick}></div>
+            <div className='beacon-link' onClick={props.onClick}>
+                <h1 className='beacon-value'>{props.value}</h1>
+            </div>
             <motion.div 
                 className='beacon-link'
                 initial={{ opacity: 1, scale: 0 }}
@@ -18,7 +20,6 @@ function Beacon(props) {
             >
             </motion.div> 
         </div>
-            
     )
 }
 

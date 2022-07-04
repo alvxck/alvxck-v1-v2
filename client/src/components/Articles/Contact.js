@@ -13,10 +13,10 @@ function Contact() {
             transition={{ ease: 'easeInOut', duration: .4 }}  
         >
             <div className='contact-row-top'>
-                <a href='https://www.linkedin.com/in/-alexandercarvalho/' target="blank">
+                <a href='https://www.linkedin.com/in/-alexandercarvalho/' target='blank'>
                     <img className='contact-img' src={linkedin} alt='linkedin'/>
                 </a>
-                <a href='https://github.com/alvxck' target="blank">
+                <a href='https://github.com/alvxck' target='blank'>
                     <img className='contact-img' src={github} alt='github'/>
                 </a>
             </div>

@@ -121,9 +121,48 @@
     color: var(--primary-color);
 }
 
+/* Scoll Buttons */
+.scroll-button-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.scroll-left {
+    position: absolute;
+    width: 2rem;
+    top: 50%;
+    left: 1vw;
+    cursor: pointer;
+}
+
+.scroll-right {
+    position: absolute;
+    width: 2rem;
+    top: 50%;
+    right: 1%;
+    cursor: pointer;
+}
+
+.scroll-left path, .scroll-right path {
+    fill: var(--primary-color);
+}
+
 /* Beacons */
 .beacon{
     position: absolute;
+    z-index: 2;
+}
+
+.beacon-value {
+    position: absolute;
+    color: var(--primary-color);
+    font-size: .75rem;
 }
 
 .beacon-link {
@@ -145,7 +184,7 @@
     right: 0;
     bottom: 0;
     backdrop-filter: blur(1rem);
-    z-index: 2;
+    z-index: 3;
 }
 
 .menu-container {
@@ -205,22 +244,11 @@
     position: absolute;
 }
 
-.article-container-column {
-    display: flex;
-    gap: 1rem;
-    width: 92%;
-    height: 92%;
-    
-    /* border-radius: .75rem;
-    border-width: .05rem;
-    border-style: solid;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
-}
-
-.article-column {
-    width: 50%;
-}
+/* border-radius: .75rem;
+border-width: .05rem;
+border-style: solid;
+border-color: var(--primary-color);
+box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 
 .article-header {
     color: var(--primary-color);
@@ -306,3 +334,70 @@
     background-color: #00e600 !important;
     cursor: pointer;
 }
+
+/* Projects */
+.projects-container {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    width: 92%;
+    height: 92%;
+}
+
+.project-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.project-card-container img {
+    width: 80%;
+    height: 50%;
+    border: solid var(--primary-color);
+}
+
+.project-title {
+    width: 80%;
+    color: var(--primary-color);
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+.project-preview, .project-code {
+    display: block;
+    width: 80%;
+    height: 10%;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.project-preview {
+    background: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
+.project-code {
+    background: var(--primary-color);
+    color: var(--tertiary-color);
+}
+
+.project-card-container svg {
+    width: .75rem;
+    margin-right: .3rem;
+}
+
+.project-preview svg path {
+    fill: var(--primary-color)
+}
+
+.project-code svg path {
+    fill: var(--tertiary-color)
+}
+
