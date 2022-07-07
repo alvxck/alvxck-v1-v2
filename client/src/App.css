@@ -282,6 +282,7 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 .contact-img {
     width: 7rem;
     border-radius: 100%;
+    box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203);
 }
 
 .contact-form {
@@ -305,6 +306,7 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     border: solid var(--primary-color);
     padding-left: .5rem;
     color: var(--primary-color);
+    box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203);
 }
 
 .contact-form input:focus {
@@ -321,6 +323,7 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     height: 100%;
     margin: 0;
     color: var(--primary-color);
+    box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203);
 }
 
 .contact-form textarea:focus {
@@ -333,6 +336,7 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     margin-left: auto;
     background-color: #00e600 !important;
     cursor: pointer;
+    box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203);
 }
 
 /* Projects */
@@ -343,6 +347,7 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     grid-template-rows: 50% 50%;
     width: 92%;
     height: 92%;
+    gap: .5rem;
 }
 
 .project-card-container {
@@ -350,17 +355,19 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: .5rem;
+    border: solid var(--primary-color);
+    gap: .25rem;
+    box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203);
 }
 
 .project-card-container img {
-    width: 80%;
+    width: 90%;
     height: 50%;
-    border: solid var(--primary-color);
+    cursor: pointer;
 }
 
 .project-title {
-    width: 80%;
+    width: 90%;
     color: var(--primary-color);
     font-size: 1rem;
     text-align: center;
@@ -368,11 +375,12 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 }
 
 .project-preview, .project-code {
-    display: block;
-    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
     height: 10%;
     text-decoration: none;
-    text-align: center;
     cursor: pointer;
     margin: 0;
     padding: 0;

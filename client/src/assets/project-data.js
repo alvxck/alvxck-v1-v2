@@ -8,8 +8,8 @@ const projects = [
         code: 'https://github.com/alvxck/alvxck'
     }, 
     {
-        name: 'Authentication System',
-        img: 'https://raw.githubusercontent.com/alvxck/Login-System/main/login-system-demo.gif',
+        name: 'Authentication Service',
+        // img: 'https://raw.githubusercontent.com/alvxck/Login-System/main/login-system-demo.gif',
         preview: 'https://raw.githubusercontent.com/alvxck/Login-System/main/login-system-demo.gif',
         code: 'https://github.com/alvxck/Login-System'
     }, 
@@ -21,6 +21,12 @@ const projects = [
     }, 
     {
         name: 'Traffic Recognition System',
+        img: '',
+        preview: '',
+        code: ''
+    },
+    {
+        name: 'PDF Securitization',
         img: '',
         preview: '',
         code: ''

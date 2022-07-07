@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import linkedin from '../../assets/linkedin.jpg';
 import github from '../../assets/github.jpg';
+import resume from '../../assets/resume.png';
 
 function Contact() {
     return (
@@ -18,6 +19,9 @@ function Contact() {
                 </a>
                 <a href='https://github.com/alvxck' target='blank'>
                     <img className='contact-img' src={github} alt='github'/>
+                </a>
+                <a href='https://google.com/' target='blank'>
+                    <img className='contact-img' src={resume} alt='resume'/>
                 </a>
             </div>
             <div className='contact-row-bottom'>

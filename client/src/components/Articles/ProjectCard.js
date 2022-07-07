@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function ProjectCard(props) {
+    const [show, setShow] = useState(false);
+
+
+    function toggleInfo() {
+        setShow((prevShow) => !prevShow);
+    }
 
     return (
         <div className='project-card-container'>
-            <img src={props.image} alt='projectimage' />
             <h1 className='project-title'>{props.title}</h1>
+            <img src={props.image} alt='projectimage' onClick={toggleInfo}/>
             <a 
                 className='project-preview'
                 href={props.preview}
@@ -26,6 +32,9 @@ function ProjectCard(props) {
                 </svg>
                 Code
             </a>
+
+            {show}
+
         </div>
     )
 }

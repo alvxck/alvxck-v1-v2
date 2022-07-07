@@ -34,7 +34,6 @@ function App() {
 			<div className='home'>
 				<img 
 					className='wallpaper'
-					id='wallpaper'
 					src={wallpaper} 
 					alt='wallpaper'
 				/>
@@ -61,7 +60,7 @@ function App() {
 				</div>
 
 				<div className='beacon-container'>
-					{articles.map((article) => (
+					{!show && articles.map((article) => (
 						<Beacon
 							key={article.id}
 							value={article.value}
