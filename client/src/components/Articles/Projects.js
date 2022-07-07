@@ -16,6 +16,7 @@ function Projects() {
                 <ProjectCard
                     key={project.name} 
                     title={project.name}
+                    created={project.created}
                     image={project.img}
                     preview={project.preview}
                     code={project.code}

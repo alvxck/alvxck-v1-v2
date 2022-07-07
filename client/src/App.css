@@ -2,8 +2,7 @@
 /* App */
 :root {
     --primary-color: #ffffff;
-    --secondary-color: #cccccc;
-    --tertiary-color: #000000; 
+    --secondary-color: #000000; 
 }
 
 * {
@@ -37,6 +36,7 @@
 
 ::-webkit-scrollbar {
     height: .5rem;
+    width: .5rem;
 }
   
 ::-webkit-scrollbar-track {
@@ -64,7 +64,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
     z-index: 1000;
 
     display: flex;
@@ -121,7 +121,7 @@
     color: var(--primary-color);
 }
 
-/* Scoll Buttons */
+/* Scroll Buttons */
 .scroll-button-container {
     position: fixed;
     width: 100vw;
@@ -135,7 +135,7 @@
 
 .scroll-left {
     position: absolute;
-    width: 2rem;
+    width: 1rem;
     top: 50%;
     left: 1vw;
     cursor: pointer;
@@ -143,7 +143,7 @@
 
 .scroll-right {
     position: absolute;
-    width: 2rem;
+    width: 1rem;
     top: 50%;
     right: 1%;
     cursor: pointer;
@@ -154,7 +154,7 @@
 }
 
 /* Beacons */
-.beacon{
+.beacon {
     position: absolute;
     z-index: 2;
 }
@@ -252,9 +252,60 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 
 .article-header {
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0;
     border-bottom: solid var(--primary-color);
+}
+
+/* About */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 92%;
+    height: 92%;
+    gap: .25rem;
+    overflow-y: auto;
+}
+
+.about-top {
+    display: flex;
+    gap: 1rem;
+}
+
+.about-top img {
+    width: 30%;
+    height: 100%;
+}
+
+.about-container h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.about-top p, .about-top ul, .about-top li {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.about-top-information {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.about-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-card-container {
+    width: 99%;
+    height: 30%;
+    border: solid var(--primary-color);
 }
 
 /* Contact */
@@ -362,8 +413,7 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 
 .project-card-container img {
     width: 90%;
-    height: 50%;
-    cursor: pointer;
+    height: 40%;
 }
 
 .project-title {
@@ -372,6 +422,27 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     font-size: 1rem;
     text-align: center;
     margin: 0;
+}
+
+.project-date {
+    display: flex;
+    gap: .25rem;
+    cursor: pointer;
+}
+
+.project-date h2 {
+    width: 90%;
+    color: var(--primary-color);
+    font-size: .6rem;
+    text-align: center;
+    text-decoration: underline;
+    margin: 0;
+}
+
+.project-languages-container {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
 }
 
 .project-preview, .project-code {
@@ -387,13 +458,13 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 }
 
 .project-preview {
-    background: var(--tertiary-color);
+    background: var(--secondary-color);
     color: var(--primary-color);
 }
 
 .project-code {
     background: var(--primary-color);
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
 }
 
 .project-card-container svg {
@@ -401,11 +472,14 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     margin-right: .3rem;
 }
 
+.project-card-container svg path {
+    fill: var(--primary-color);
+}
+
 .project-preview svg path {
     fill: var(--primary-color)
 }
 
 .project-code svg path {
-    fill: var(--tertiary-color)
+    fill: var(--secondary-color)
 }
-
