@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import articles from './assets/article-data';
+import articles from './data/article-data';
 import LoadingScreen from './components/LoadingScreen';
 import wallpaper from './assets/alvx-wallpaper.png';
 import Header from './components/Header';

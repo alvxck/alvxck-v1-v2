@@ -1,9 +1,10 @@
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import articles from '../assets/article-data.js';
+import articles from '../data/article-data.js';
 import NavTab from './NavTab.js';
 import About from './Articles/About.js';
 import Contact from './Articles/Contact.js';
+import Work from './Articles/Work.js';
 import Interests from './Articles/Interests.js';
 import Projects from './Articles/Projects.js';
 
@@ -30,6 +31,7 @@ function Menu(props) {
                             value={tab.value}
                             svg={tab.svg}
                             onClick={() => props.setArticle(tab.id)}
+                            selected={props.selected}
                         />
                     ))}
                 </div>
@@ -45,8 +47,9 @@ function Menu(props) {
                     <AnimatePresence>
                         {(props.selected === 0) && <About key='about'/>}
                         {(props.selected === 1) && <Contact key='contact'/>}
-                        {(props.selected === 2) && <Projects key='projects'/>}
-                        {(props.selected === 3) && <Interests key='interests'/>}
+                        {(props.selected === 2) && <Work key='work'/>}
+                        {(props.selected === 3) && <Projects key='projects'/>}
+                        {(props.selected === 4) && <Interests key='interests'/>}
                     </AnimatePresence>
                 </motion.div>
             </div>
