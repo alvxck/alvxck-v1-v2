@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 59 66" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
-    <use xlinkHref="#html" x="1" y="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 63.75 85" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+    <use xlinkHref="#html" x="1.875" y="2.5"/>
     <symbol id="html" overflow="visible">
-        <g stroke="none" fill-rule="nonzero">
-            <path d="M5.136 57.602L0 0h56.432l-5.14 57.594-23.112 6.404z" fill="#e44d26"/>
-            <path d="M46.89 53.926L51.284 4.71H28.216v54.394z" fill="#f16529"/>
-            <path d="M28.192 11.774H10.5l1.906 21.364h15.81v-7.064h-9.348l-.646-7.234h9.994v-7.066zm.024 32.624l-.03.008-7.868-2.124-.5-5.634h-7.096l.99 11.092 14.472 4 .032-.01z" fill="#ebebeb"/>
-            <path d="M28.192 33.138h8.7l-.8 9.16-7.88 2.126v7.35l14.484-4.014 1.94-21.69h-16.42zM45.72 13.67l.168-1.896h-17.7v7.064h17.064l.14-1.588z"/>
-        </g>
-    </symbol>
+        <g stroke="none">
+            <path d="M60 15H0l5 57.5L30 80l25-7.5L60 15" fill="#e44d26"/>
+            <path d="M22.366 65.21l-8.214-2.464-.67-7.701-.221-2.545h8l.436 5.009L30 60v7.5zM30 32.5H19.522l.652 7.5H30v7.5h-9.174-8l-.652-7.5-.652-7.5-.652-7.5h8H30z" fill="#ebebeb"/>
+            <path d="M51.739 52.5l.435-5 .652-7.5.652-7.5.652-7.5.435-5H30v55l15.179-4.554 5.134-1.54.67-7.701.67-7.701z" fill="#f16529"/>
+            <path d="M30 32.5h10.478 8l.652-7.5h-8H30zm9.174 15H30V40h9.826 8l-.652 7.5-.435 5-.221 2.545-.67 7.701-8.214 2.464L30 67.5V60l8.304-2.491.435-5.009z"/>
+            </g> 
+     </symbol>
 </svg>

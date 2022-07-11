@@ -18,8 +18,11 @@ function Projects() {
                     title={project.name}
                     created={project.created}
                     image={project.img}
+                    languages={project.languages}
                     preview={project.preview}
                     code={project.code}
+                    info1={project.info1}
+                    info2={project.info2}
                 />
             ))}
         </motion.div>
