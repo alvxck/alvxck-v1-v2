@@ -22,8 +22,7 @@ function ProjectCard(props) {
                 </div>
 
                 <ul>
-                    <li>{props.info1}</li>
-                    <li>{props.info2}</li>
+                    <li>{props.info}</li>
                 </ul>
 
                 <div className='project-card-content-footer'>

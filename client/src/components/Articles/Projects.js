@@ -21,8 +21,7 @@ function Projects() {
                     languages={project.languages}
                     preview={project.preview}
                     code={project.code}
-                    info1={project.info1}
-                    info2={project.info2}
+                    info={project.info}
                 />
             ))}
         </motion.div>
