@@ -2,7 +2,7 @@
 const experience = [
     {
         company: 'Amazon Fulfillment',
-        position: 'L1 Associate',
+        position: 'L1 Associate | Full-Time',
         location: 'Milton, ON',
         date: 'Mar 2020 - Current',
         img: '',

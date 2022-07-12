@@ -53,7 +53,7 @@ const projects = [
         ],
         preview: '',
         code: 'https://github.com/alvxck/SHA',
-        info: 'Python implementation of all SHA-1, SHA-2, and SHA-3 cryptographic hash algorithms in compliance with NIST standards FIPS PUB 180-4 and FIPS PUB 202. ',
+        info: 'Python implementation of all SHA-1, SHA-2, and SHA-3 cryptographic hash algorithms.',
     }, 
     {
         name: 'PDF Securitization',

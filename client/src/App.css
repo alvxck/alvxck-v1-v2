@@ -222,13 +222,17 @@
     display: flex;
     gap: 1rem;
     cursor: pointer;
+    margin-right: .5rem;
 }
 
 .nav-link-selected {
     display: flex;
     gap: 1rem;
     cursor: pointer;
-    border-bottom: solid var(--primary-color);
+    background-color: rgba(225, 225, 225, .15);
+    border-radius: .5rem;
+    padding: 0 .5rem;
+    margin-right: 0;
 }
 
 .nav-link svg, .nav-link-selected svg {
@@ -414,6 +418,9 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 .contact-row-bottom {
     display: flex;
     flex-direction: column;
+    background-color: rgba(225, 225, 225, .15);
+    border-radius: .5rem;
+    padding: 1rem;
 }
 
 .contact-img {
@@ -502,7 +509,11 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 30% 70%;
-    height: 40%;
+    height: max-content;
+    background-color: rgba(225, 225, 225, .15);
+    border-radius: .5rem;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .work-header-info {
@@ -547,14 +558,16 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     overflow-y: auto;
     width: 92%;
     height: 92%;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .project-card-container {
     display: flex;
-    gap: .25rem;
+    gap: 1rem;
     margin-right: 1rem;
-    background-color: rgba(225, 225, 225, .1) ;
+    background-color: rgba(225, 225, 225, .15);
+    border-radius: .5rem;
+    padding: 1rem;
 }
 
 .project-card-container img {
@@ -656,4 +669,28 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 
 .project-code svg path {
     fill: var(--secondary-color)
+}
+
+/* Interests */
+.interests-container {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    width: 92%;
+    height: 92%;
+}
+
+.interests-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.interests-content img {
+    width: 90%;
+}
+
+.interests-content h1 {
+    width: 90%;
 }
