@@ -12,10 +12,6 @@ function Work() {
             exit={{ x: '100vw'}}
             transition={{ ease: 'easeInOut', duration: .4 }}  
         >
-            <div className='work-tree-container'>
-
-            </div>
-
             <div className='work-experience-container'>
                 {experience.map((work) => (
                     <WorkCard

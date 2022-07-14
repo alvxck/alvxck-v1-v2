@@ -21,3 +21,8 @@ code {
   font-family: 'DMSans-Regular';
   src: local('DMSans-Regular'), url(./assets/DMSans-Regular.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'DMSans-Italic';
+  src: local('DMSans-Italic'), url(./assets/DMSans-Italic.ttf) format('truetype');
+}
