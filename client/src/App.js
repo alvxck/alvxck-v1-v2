@@ -67,6 +67,7 @@ function App() {
 							top={article.beacon.top}
 							left={article.beacon.left}
 							onClick={() => {setArticle(article.id); toggleMenu();}}
+							svg={article.svg}
 						/>
 					))}
 				</div>
