@@ -2,11 +2,11 @@ import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import articles from '../data/article-data.js';
 import NavTab from './NavTab.js';
-import About from './Articles/About.js';
-import Contact from './Articles/Contact.js';
-import Work from './Articles/Work.js';
-import Interests from './Articles/Interests.js';
-import Projects from './Articles/Projects.js';
+import About from './About.js';
+import Contact from './Contact.js';
+import Work from './Work.js';
+import Interests from './Interests.js';
+import Projects from './Projects.js';
 
 function Menu(props) {
 

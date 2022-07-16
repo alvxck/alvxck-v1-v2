@@ -1,18 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ReactComponent as PythonSVG } from '../../assets/python.svg';
-import { ReactComponent as TensorFlowSVG } from '../../assets/tensorflow.svg';
-import { ReactComponent as SQLSVG } from '../../assets/sql.svg';
-import { ReactComponent as JavascriptSVG } from '../../assets/javascript.svg';
-import { ReactComponent as ReactSVG } from '../../assets/react.svg';
-import { ReactComponent as NodeSVG } from '../../assets/nodejs.svg';
-import { ReactComponent as ExpressSVG } from '../../assets/expressjs.svg';
-import { ReactComponent as MongoDBSVG } from '../../assets/mongodb.svg';
-import { ReactComponent as JestSVG } from '../../assets/jest.svg';
-import { ReactComponent as HTMLSVG } from '../../assets/html.svg';
-import { ReactComponent as CSSSVG } from '../../assets/css.svg';
-import { ReactComponent as GITSVG } from '../../assets/git.svg';
-import { ReactComponent as GithubSVG } from '../../assets/github.svg';
+import { ReactComponent as PythonSVG } from '../assets/python.svg';
+import { ReactComponent as TensorFlowSVG } from '../assets/tensorflow.svg';
+import { ReactComponent as SQLSVG } from '../assets/sql.svg';
+import { ReactComponent as JavascriptSVG } from '../assets/javascript.svg';
+import { ReactComponent as ReactSVG } from '../assets/react.svg';
+import { ReactComponent as NodeSVG } from '../assets/nodejs.svg';
+import { ReactComponent as ExpressSVG } from '../assets/expressjs.svg';
+import { ReactComponent as MongoDBSVG } from '../assets/mongodb.svg';
+import { ReactComponent as JestSVG } from '../assets/jest.svg';
+import { ReactComponent as HTMLSVG } from '../assets/html.svg';
+import { ReactComponent as CSSSVG } from '../assets/css.svg';
+import { ReactComponent as GITSVG } from '../assets/git.svg';
+import { ReactComponent as GithubSVG } from '../assets/github.svg';
 
 
 function About() {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import linkedin from '../../assets/linkedin.jpg';
-import github from '../../assets/github.jpg';
-import resume from '../../assets/resume.png';
+import linkedin from '../assets/linkedin.jpg';
+import github from '../assets/github.jpg';
+import resume from '../assets/resume.png';
 
 function Contact() {
     return (

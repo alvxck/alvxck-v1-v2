@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import projects from '../../data/project-data';
+import projects from '../data/project-data';
 import ProjectCard from './ProjectCard';
 
 function Projects() {

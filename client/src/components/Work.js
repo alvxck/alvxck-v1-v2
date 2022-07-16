@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import WorkCard from './WorkCard';
-import experience from '../../data/experience-data';
+import experience from '../data/experience-data';
 
 function Work() {
     return (
