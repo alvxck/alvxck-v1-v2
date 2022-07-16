@@ -8,20 +8,19 @@ function Beacon(props) {
             className='beacon'
             style={{ top: props.top, left: props.left}}
         >
+            <motion.div 
+                className='beacon-pulse'
+                initial={{ opacity: 1, scale: 0 }}
+                animate={{ opacity: 0, scale: 4 }}
+                transition={{ duration: 4, repeat: Infinity }}  
+            >
+            </motion.div> 
             <div className='beacon-link' onClick={props.onClick}>
                 <div className='beacon-value'>
                     {props.svg}
                     <h1>{props.value}</h1>
                 </div>
             </div>
-            {/* <motion.div 
-                className='beacon-link'
-                initial={{ opacity: 1, scale: 0 }}
-                animate={{ opacity: 0, scale: 4 }}
-                transition={{ duration: 4, repeat: Infinity }}  
-                onClick={props.onClick}
-            >
-            </motion.div>  */}
         </div>
     )
 }

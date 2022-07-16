@@ -3,7 +3,6 @@
 :root {
     --primary-color: #ffffff;
     --secondary-color: #000000;
-    --tertiary-color: #d2d2d2;
 
     --primary-font: DMSans-Bold;
     --secondary-font: DMSans-Regular;
@@ -26,16 +25,6 @@
     grid-template-rows: 10% 90%;
     z-index: 2;
 } */
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeout {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
 
 .wallpaper {
     position: absolute;
@@ -111,6 +100,9 @@
     display: flex;
     gap: .25rem;
     cursor: pointer;
+    background-color: rgba(30, 30, 30, .4);
+    border-radius: .25rem;
+    padding: 0 .25rem;
 }
 
 .header-svg {
@@ -176,23 +168,23 @@
 
 .beacon-value {
     visibility: hidden;
-    width: 5rem;
-    background-color: var(--primary-color);
+    width: 6rem;
+    background-color: rgba(30, 30, 30, .4);
     text-align: center;
     border-radius: .5rem;
     position: absolute;
     z-index: 3;
-    top: 150%;
+    bottom: 150%;
     padding: 0 .5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .25rem;
-    margin-left: -2.5rem;
+    margin-left: -3rem;
 }
 
 .beacon-value h1 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-family: var(--primary-font);
     font-size: 1rem;
     margin: 0;
@@ -203,16 +195,16 @@
 }
 
 .beacon-value svg path {
-    fill: var(--secondary-color);
+    fill: var(--primary-color);
 }
 
 .beacon-value::after {
     content: '';
     position: absolute;
-    bottom: 100%;
+    top: 100%;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent var(--primary-color) transparent;
+    border-color: rgba(30, 30, 30, .4) transparent transparent transparent;
 }
 
 .beacon-link:hover .beacon-value {
@@ -226,7 +218,18 @@
     height: 1rem;
     border-radius: 100%;
     cursor: pointer;
+    z-index: 3;
+
 }
+
+.beacon-pulse {
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+}
+
 
 
 /* Menu */
@@ -239,6 +242,7 @@
     right: 0;
     bottom: 0;
     backdrop-filter: blur(1.5rem);
+    background-color: rgba(30, 30, 30, .1);
     z-index: 3;
 }
 
@@ -279,7 +283,7 @@
     display: flex;
     gap: 1rem;
     cursor: pointer;
-    background-color: rgba(225, 225, 225, .15);
+    background-color: rgba(30, 30, 30, .4);
     border-radius: .5rem;
     padding: 0 .5rem;
     margin-right: 0;
@@ -384,7 +388,7 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     display: flex;
     flex-direction: column;
     width: 50%;
-    background-color: rgba(225, 225, 225, .15);
+    background-color: rgba(30, 30, 30, .4);
     border-radius: .5rem;
     padding: 1rem;
 }
@@ -401,19 +405,18 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 }
 
 .li-header {
-    font-family: var(--secondary-font);
+    font-family: var(--tertiary-font) !important;
     font-size: .6rem !important;
-    text-decoration: underline;
-    color: var(--tertiary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 .skill-container {
     flex: 1;
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    justify-content: space-between;
     align-items: center;
-    justify-content: baseline;
-    gap: 1rem;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 30% 30% 30%;
 }
 
 .skill-container svg {
@@ -440,7 +443,7 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 .contact-row-bottom {
     display: flex;
     flex-direction: column;
-    background-color: rgba(225, 225, 225, .15);
+    background-color: rgba(30, 30, 30, .4);
     border-radius: .5rem;
     padding: 1rem;
 }
@@ -519,14 +522,15 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     width: 10%;
     height: 100%;
-    gap: 2%;
 }
 
 .work-card-tree svg {
-    width: 12%;
+    position: relative;
+    width: .75rem;
+    top: 1%;
 }
 
 .work-card-tree svg path {
@@ -535,20 +539,10 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 
 .work-card-branch {
     background-color: var(--primary-color);
-    width: 5%;
-    flex: .5;
-    
+    width: 5%;    
 }
 
-.work-card-branch-first {
-    background-color: var(--primary-color);
-    width: 5%;
-    flex: .5;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-}
-
-.work-card-branch-last {
+.work-experience-container .work-card-branch:last-child {
     background: linear-gradient(var(--primary-color), rgba(225, 225, 225, 0));
     width: 5%;
     flex: .5;
@@ -559,7 +553,6 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     flex-direction: column-reverse;
     justify-content: flex-start;
     width: 100%;
-    gap: 2%;
 }
 
 .work-card-container {
@@ -572,7 +565,7 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     grid-template-columns: 100%;
     grid-template-rows: 30% 70%;
     height: max-content;
-    background-color: rgba(225, 225, 225, .15);
+    background-color: rgba(30, 30, 30, .4);
     border-radius: .5rem;
     padding: 1rem;
     gap: 1rem;
@@ -602,8 +595,8 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 
 .work-header-info h3 {
     font-family: var(--tertiary-font);
-    font-size: 1rem;
-    color: var(--tertiary-color) !important;
+    font-size: .75rem;
+    color: var(--primary-color) !important;
 }
 
 .work-card-info ul {
@@ -628,7 +621,7 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 .project-card-container {
     display: flex;
     gap: 1rem;
-    background-color: rgba(225, 225, 225, .15);
+    background-color: rgba(30, 30, 30, .4);
     border-radius: .5rem;
     padding: 1rem;
 }
@@ -759,7 +752,7 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     flex-direction: column;
     width: 92%;
     height: 90%;
-    background-color: rgba(225, 225, 225, .15);
+    background-color: rgba(30, 30, 30, .4);
     border-radius: .5rem;
     padding: 1rem;
 }

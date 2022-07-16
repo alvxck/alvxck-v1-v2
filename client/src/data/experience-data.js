@@ -10,9 +10,6 @@ const experience = [
         info2: 'Lead a team of 25+ associates, allocating tasks and monitoring performance.',
         info3: 'Process customer items to meet specific shipping deadlines.',
     },
-    {
-
-    },
 ]
 
 export default experience;
