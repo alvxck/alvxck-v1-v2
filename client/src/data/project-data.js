@@ -31,7 +31,7 @@ const projects = [
         ],
         preview: 'https://raw.githubusercontent.com/alvxck/Login-System/main/login-system-demo.gif',
         code: 'https://github.com/alvxck/Login-System',
-        info: 'Fullstack MERN login / registration system using REST API endpoints for login, registration, user authentication, and database connections.',
+        info: 'MERN login / registration system with REST.',
     }, 
     {
         name: 'Traffic Recognition System',

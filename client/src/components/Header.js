@@ -1,53 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-
-function DesktopMenu(props) {
-    return (
-        <div className='header-menu' onClick={props.onClick}>
-            <svg 
-                className={props.menu ? 'header-svg-selected' : 'header-svg'}
-                xmlns="http://www.w3.org/2000/svg" 
-                viewBox="0 0 448 512"
-                >
-                <path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/>
-            </svg>
-            <h1>menu</h1>
-        </div>
-    )
-}
-
-function MobileMenu(props) {
-    return (
-        <svg 
-        className={props.menu ? 'header-svg-selected' : 'header-svg'}
-        onClick={props.onClick}
-        xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 448 512"
-        >
-            <path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/>
-        </svg>
-    )
-}
-
+// Main header component
 function Header(props) {
-    const [width, setWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-        function resizeWindow() {
-            setWidth(window.innerWidth);
-        }
-
-        window.addEventListener('resize', resizeWindow);
-
-        return () => {
-            window.removeEventListener('resize', resizeWindow);
-        }
-    }, [])
 
     return (
         <div className='header-container'>
             <h1 className='header-name'>Alexander Carvalho</h1>
-            {width > 480 ? <DesktopMenu onClick={props.onClick} menu={props.menu} /> : <MobileMenu onClick={props.onClick} menu={props.menu} />}
+            <div className='header-menu' onClick={props.onClick}>
+                <svg 
+                    className={props.menu ? 'header-svg-selected' : 'header-svg'}
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 448 512"
+                    >
+                    <path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/>
+                </svg>
+                <h1>menu</h1>
+            </div>
         </div>
     )
 }
