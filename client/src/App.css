@@ -316,22 +316,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90%;
-    margin-top: auto;
+    margin-top: 10vh;
+    padding: 1rem .5rem 1rem 1rem;
 }
 
 @media screen and (max-width: 480px) {
     .menu-container {
         position: absolute;
-        display: block;
-        width: 100%;
-        height: 93%;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100vw;
+        height: 93vh;
         bottom: 0;
     }
 
     .menu-navbar-container {
-        position: fixed;
-        bottom: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -339,6 +338,7 @@
         width: 100%;
         height: 7%;
         background-color: rgba(30, 30, 30, .4);
+        z-index: 999;
     }
 
     .menu-article-container {
@@ -346,6 +346,7 @@
         justify-content: center;
         align-items: center;
         height: 93%;
+        margin: 0;
     }
 }
 
@@ -415,36 +416,16 @@
 
 }
 
-/* Article */
-.article-container {
-    position: absolute;
-}
-
-/* border-radius: .75rem;
-border-width: .05rem;
-border-style: solid;
-border-color: var(--primary-color);
-box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
-
-.article-header {
-    color: var(--primary-color);
-    font-family: var(--primary-font);
-    font-size: 2rem;
-    margin: 0;
-    border-bottom: solid var(--primary-color);
-}
-
 /* About */
 .about-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    position: absolute;
-    width: 92%;
-    height: 92%;
+    width: 100%;
+    height: 100%;
     overflow-y: auto;
-    padding-right: 1rem;
+    padding-right: .5rem;
 }
 
 .about-container img {
@@ -564,12 +545,13 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 /* Contact */
 .contact-container {
     display: grid;
-    position: absolute;
     grid-template-columns: 100%;
     grid-template-rows: 30% 70%;
-    width: 92%;
-    height: 92%;
+    width: 100%;
+    height: 100%;
+    padding-right: .5rem;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .contact-row-top {
@@ -584,6 +566,14 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     background-color: rgba(30, 30, 30, .4);
     border-radius: .5rem;
     padding: 1rem;
+}
+
+.contact-row-bottom h1 {
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    margin: 0;
+    border-bottom: solid var(--primary-color);
 }
 
 .contact-img {
@@ -660,8 +650,9 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 /* Work */
 .work-container {
     display: flex;
-    width: 92%;
-    height: 92%;
+    width: 100%;
+    height: 100%;
+    padding-right: .5rem;
     overflow-y: auto;
 }
 
@@ -788,12 +779,11 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 .projects-container {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    overflow-y: auto;
-    width: 92%;
-    height: 92%;
+    width: 100%;
+    height: 100%;
     gap: 1rem;
-    padding-right: 1rem;
+    overflow-y: hidden;
+    padding-right: .5rem;
 }
 
 .project-card-container {
@@ -802,7 +792,6 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
     gap: 1rem;
     background-color: rgba(30, 30, 30, .4);
     border-radius: .5rem;
-    padding: 1rem;
 }
 
 .project-card-container img {
@@ -907,10 +896,6 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 
 @media screen and (max-width: 480px) {
 
-    .projects-container {
-        padding: 0;
-    }
-
     .project-card-container {
         display: flex;
         flex-direction: column;
@@ -933,13 +918,13 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 /* Interests */
 .interests-container {
     display: flex;
-    position: absolute;
     justify-content: center;
     align-items: center;
     overflow-y: auto;
-    width: 92%;
-    height: 92%;
+    width: 100%;
+    height: 100%;
     gap: 1%;
+    padding-right: .5rem;
 }
 
 .interests-container svg {
@@ -954,11 +939,10 @@ box-shadow: 0 0 5rem 0 rgba(29, 29, 29, 0.203); */
 .interests-content {
     display: flex;
     flex-direction: column;
-    width: 92%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     background-color: rgba(30, 30, 30, .4);
     border-radius: .5rem;
-    padding: 1rem;
 }
 
 .interests-content img {

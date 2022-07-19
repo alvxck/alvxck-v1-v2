@@ -1,5 +1,4 @@
 import React from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import articles from '../data/article-data.js';
 import NavTab from './NavTab.js';
 import About from './About.js';
@@ -11,14 +10,7 @@ import Projects from './Projects.js';
 function Menu(props) {
 
     return (
-        <motion.div 
-            id='menu' 
-            className='menu-backdrop'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0}}
-            transition={{ duration: .4 }}  
-        >
+        <div id='menu' className='menu-backdrop'>
             <div className='menu-container'>
                 <div
                     id='navbar' 
@@ -36,24 +28,15 @@ function Menu(props) {
                     ))}
                 </div>
 
-                <motion.div
-                    id='article'
-                    className='menu-article-container'
-                    initial={{ x: '100vw' }}
-                    animate={{ x: 0 }}
-                    exit={{ x: '100vw'}}
-                    transition={{ ease: 'easeInOut', duration: .4 }} 
-                >
-                    <AnimatePresence>
+                <div id='article' className='menu-article-container'>
                         {(props.selected === 0) && <About key='about'/>}
                         {(props.selected === 1) && <Contact key='contact'/>}
                         {(props.selected === 2) && <Work key='work'/>}
                         {(props.selected === 3) && <Projects key='projects'/>}
                         {(props.selected === 4) && <Interests key='interests'/>}
-                    </AnimatePresence>
-                </motion.div>
+                </div>
             </div>
-        </motion.div>
+        </div>
     )
 
 }

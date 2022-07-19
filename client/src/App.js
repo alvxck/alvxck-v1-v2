@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
 import articles from './data/article-data';
 import LoadingScreen from './components/LoadingScreen';
 import wallpaper from './assets/alvx-wallpaper.png';
@@ -29,7 +28,7 @@ function App() {
 
 	return (
 		<div className='backdrop'>
-			<LoadingScreen />
+			{/* <LoadingScreen /> */}
 			<div className='home'>
 				<img 
 					className='wallpaper'
@@ -72,9 +71,7 @@ function App() {
 					))}
 				</div>
 
-				<AnimatePresence>
 					{ show && <Menu selected={article} setArticle={(id) => setArticle(id)}/>}
-				</AnimatePresence>
         	</div>
 		</div>
 	)

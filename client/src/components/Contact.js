@@ -1,18 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import linkedin from '../assets/linkedin.jpg';
 import github from '../assets/github.jpg';
 import resume from '../assets/resume.png';
 
 function Contact() {
     return (
-        <motion.div
-            className='contact-container'
-            initial={{ x: '100vw' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100vw'}}
-            transition={{ ease: 'easeInOut', duration: .4 }}  
-        >
+        <div className='contact-container'>
             <div className='contact-row-top'>
                 <a href='https://www.linkedin.com/in/-alexandercarvalho/' target='blank'>
                     <img className='contact-img' src={linkedin} alt='linkedin'/>
@@ -36,7 +29,7 @@ function Contact() {
                     <textarea name='message'/>
                 </form>
             </div>
-        </motion.div>
+        </div>
     )
 }
 

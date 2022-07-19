@@ -1,17 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import WorkCard from './WorkCard';
 import experience from '../data/experience-data';
 
 function Work() {
     return (
-        <motion.div
-            className='work-container'
-            initial={{ x: '100vw' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100vw'}}
-            transition={{ ease: 'easeInOut', duration: .4 }}  
-        >
+        <div className='work-container'>
             <div className='work-experience-container'>
                 {experience.map((work) => (
                     <WorkCard
@@ -27,7 +20,7 @@ function Work() {
                     />
                 ))}
             </div>
-        </motion.div>
+        </div>
     )
 }
 

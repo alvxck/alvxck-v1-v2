@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ReactComponent as PythonSVG } from '../assets/python.svg';
 import { ReactComponent as TensorFlowSVG } from '../assets/tensorflow.svg';
 import { ReactComponent as SQLSVG } from '../assets/sql.svg';
@@ -17,16 +16,10 @@ import { ReactComponent as GithubSVG } from '../assets/github.svg';
 
 function About() {
     return (
-        <motion.div
-            className='about-container'
-            initial={{ x: '100vw' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100vw'}}
-            transition={{ ease: 'easeInOut', duration: .4 }}  
-        >
+        <div className='about-container'>
             <img src='https://media.wired.com/photos/5ed67e71b818b223fd84195f/1:1/w_1600,h_1600,c_limit/Blackout-hashtag-activism.jpg' alt='headshot'/>
             <h1>Hi! I'm Alex,</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             <div className='about-information'>
                 <div className='about-education'>
                     <div className='about-header'>
@@ -73,7 +66,7 @@ function About() {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
 
