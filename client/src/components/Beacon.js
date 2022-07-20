@@ -7,8 +7,7 @@ function Beacon(props) {
             className='beacon'
             style={{ top: props.top, left: props.left}}
         >
-            <div className='beacon-pulse'>
-            </div> 
+            <div className='beacon-pulse' onClick={props.onClick}/>
             <div className='beacon-link' onClick={props.onClick}>
                 <div className='beacon-value'>
                     {props.svg}

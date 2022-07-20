@@ -17,7 +17,7 @@ import { ReactComponent as GithubSVG } from '../assets/github.svg';
 function About() {
     return (
         <div className='about-container'>
-            <img src='https://media.wired.com/photos/5ed67e71b818b223fd84195f/1:1/w_1600,h_1600,c_limit/Blackout-hashtag-activism.jpg' alt='headshot'/>
+            {/* <img src='' alt='headshot'/> */}
             <h1>Hi! I'm Alex,</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             <div className='about-information'>

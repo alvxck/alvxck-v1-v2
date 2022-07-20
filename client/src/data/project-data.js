@@ -14,7 +14,7 @@ const projects = [
     {
         name: 'Portfolio Webpage',
         created: '6/26/22',
-        img: 'https://media.wired.com/photos/5ed67e71b818b223fd84195f/1:1/w_1600,h_1600,c_limit/Blackout-hashtag-activism.jpg',
+        img:'',
         languages: [
             <JavascriptSVG />, <ReactSVG />, <HTMLSVG />, <CSSSVG />, <GITSVG />
         ],
@@ -25,7 +25,7 @@ const projects = [
     {
         name: 'Authentication Service',
         created: '5/7/22',
-        img: 'https://media.wired.com/photos/5ed67e71b818b223fd84195f/1:1/w_1600,h_1600,c_limit/Blackout-hashtag-activism.jpg',
+        img:'',
         languages: [
             <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <ExpressSVG />, <MongoDBSVG />, <JestSVG />, <HTMLSVG />, <CSSSVG />, <GITSVG />
         ],
@@ -36,7 +36,7 @@ const projects = [
     {
         name: 'Traffic Recognition System',
         created: 'TBD',
-        img: 'https://media.wired.com/photos/5ed67e71b818b223fd84195f/1:1/w_1600,h_1600,c_limit/Blackout-hashtag-activism.jpg',
+        img:'',
         languages: [
             <PythonSVG />, <TensorFlowSVG />, <GITSVG />
         ],
@@ -47,7 +47,7 @@ const projects = [
     {
         name: "Secure Hash Algorithm's",
         created: '3/20/22',
-        img: 'https://media.wired.com/photos/5ed67e71b818b223fd84195f/1:1/w_1600,h_1600,c_limit/Blackout-hashtag-activism.jpg',
+        img:'',
         languages: [
             <PythonSVG />, <GITSVG />
         ],
@@ -58,7 +58,7 @@ const projects = [
     {
         name: 'PDF Securitization',
         created: 'TBD',
-        img: 'https://media.wired.com/photos/5ed67e71b818b223fd84195f/1:1/w_1600,h_1600,c_limit/Blackout-hashtag-activism.jpg',
+        img:'',
         preview: '',
         code: '',
         info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',

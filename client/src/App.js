@@ -10,6 +10,7 @@ import Menu from './components/Menu';
 function App() {
 	const [show, setShow] = useState(false);
 	const [article, setArticle] = useState(0);
+	const [loading, setLoading] = useState(true);
 
     function toggleMenu() {
         setShow((prevShow) => !prevShow);
@@ -28,13 +29,15 @@ function App() {
 
 	return (
 		<div className='backdrop'>
-			{/* <LoadingScreen /> */}
+			{ loading && <LoadingScreen /> }
+
 			<div className='home'>
 				<img 
 					className='wallpaper'
 					id='wallpaperr'
 					src={wallpaper} 
 					alt='wallpaper'
+					onLoad={() => setLoading(false)}
 				/>
 				
 				<Header onClick={toggleMenu} menu={show}/>
@@ -71,7 +74,7 @@ function App() {
 					))}
 				</div>
 
-					{ show && <Menu selected={article} setArticle={(id) => setArticle(id)}/>}
+				{ show && <Menu selected={article} setArticle={(id) => setArticle(id)}/>}
         	</div>
 		</div>
 	)
