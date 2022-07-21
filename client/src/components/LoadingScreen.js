@@ -3,9 +3,7 @@ import React from 'react';
 function LoadingScreen() {
     return(
         <div className='loading-container'>
-            <h1 className='loading-header'>
-                Alexander Carvalho
-            </h1>
+            <h1>Alexander Carvalho</h1>
         </div>
     )
 }

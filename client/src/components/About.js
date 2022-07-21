@@ -12,6 +12,7 @@ import { ReactComponent as HTMLSVG } from '../assets/html.svg';
 import { ReactComponent as CSSSVG } from '../assets/css.svg';
 import { ReactComponent as GITSVG } from '../assets/git.svg';
 import { ReactComponent as GithubSVG } from '../assets/github.svg';
+import { ReactComponent as Aws } from '../assets/aws.svg';
 
 
 function About() {
@@ -61,6 +62,7 @@ function About() {
                         <JestSVG />
                         <HTMLSVG />
                         <CSSSVG />
+                        <Aws />
                         <GITSVG />
                         <GithubSVG />
                     </div>

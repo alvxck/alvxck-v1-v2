@@ -2,18 +2,18 @@ import './App.css';
 import React, { useState } from 'react';
 import articles from './data/article-data';
 import LoadingScreen from './components/LoadingScreen';
-import wallpaper from './assets/alvx-wallpaper.png';
+import wallpaper from './assets/alvx-wallpaper.jpg';
 import Header from './components/Header';
 import Beacon from './components/Beacon';
 import Menu from './components/Menu';
 
 function App() {
-	const [show, setShow] = useState(false);
+	const [showMenu, setShowMenu] = useState(false);
 	const [article, setArticle] = useState(0);
 	const [loading, setLoading] = useState(true);
 
     function toggleMenu() {
-        setShow((prevShow) => !prevShow);
+        setShowMenu((prev) => !prev);
     }
 
 	function scrollLeft() {
@@ -25,7 +25,7 @@ function App() {
 	}
 
 	// Disable scrolling if <Menu /> is open
-	document.body.style.overflow = show ? 'hidden' : 'overlay';
+	document.body.style.overflow = showMenu ? 'hidden' : 'overlay';
 
 	return (
 		<div className='backdrop'>
@@ -40,7 +40,7 @@ function App() {
 					onLoad={() => setLoading(false)}
 				/>
 				
-				<Header onClick={toggleMenu} menu={show}/>
+				<Header onClick={toggleMenu} menu={showMenu}/>
 
 				<div className='scroll-button-container'>
 					<svg 
@@ -62,7 +62,7 @@ function App() {
 				</div>
 
 				<div className='beacon-container'>
-					{!show && articles.map((article) => (
+					{!showMenu && articles.map((article) => (
 						<Beacon
 							key={article.id}
 							value={article.value}
@@ -74,7 +74,7 @@ function App() {
 					))}
 				</div>
 
-				{ show && <Menu selected={article} setArticle={(id) => setArticle(id)}/>}
+				<Menu open={showMenu} selected={article} setArticle={(id) => setArticle(id)}/>
         	</div>
 		</div>
 	)

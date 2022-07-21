@@ -10,11 +10,11 @@ import Projects from './Projects.js';
 function Menu(props) {
 
     return (
-        <div id='menu' className='menu-backdrop'>
+        <div id='menu' className={props.open ? 'menu-backdrop-open' : 'menu-backdrop-closed'}>
             <div className='menu-container'>
                 <div
                     id='navbar' 
-                    className='menu-navbar-container'
+                    className={props.open ? 'menu-navbar-open' : 'menu-navbar-closed'}
                 >
                     {articles.map((tab) => (
                         <NavTab
@@ -28,7 +28,7 @@ function Menu(props) {
                     ))}
                 </div>
 
-                <div id='article' className='menu-article-container'>
+                <div id='article' className={props.open ? 'menu-article-open' : 'menu-article-closed'}>
                         {(props.selected === 0) && <About key='about'/>}
                         {(props.selected === 1) && <Contact key='contact'/>}
                         {(props.selected === 2) && <Work key='work'/>}

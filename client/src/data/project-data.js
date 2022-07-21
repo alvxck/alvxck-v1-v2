@@ -9,6 +9,8 @@ import { ReactComponent as JestSVG } from '../assets/jest.svg';
 import { ReactComponent as HTMLSVG } from '../assets/html.svg';
 import { ReactComponent as CSSSVG } from '../assets/css.svg';
 import { ReactComponent as GITSVG } from '../assets/git.svg';
+import { ReactComponent as Aws } from '../assets/aws.svg';
+
 
 const projects = [
     {
@@ -16,7 +18,7 @@ const projects = [
         created: '6/26/22',
         img:'',
         languages: [
-            <JavascriptSVG />, <ReactSVG />, <HTMLSVG />, <CSSSVG />, <GITSVG />
+            <JavascriptSVG />, <ReactSVG />, <HTMLSVG />, <CSSSVG />, <Aws />, <GITSVG />
         ],
         preview: '',
         code: 'https://github.com/alvxck/alvxck',
