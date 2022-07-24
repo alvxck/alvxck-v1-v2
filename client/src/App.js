@@ -29,7 +29,7 @@ function App() {
 
 	return (
 		<div className='backdrop'>
-			{ loading && <LoadingScreen /> }
+			<LoadingScreen loadState={loading}/>
 
 			<div className='home'>
 				<img 

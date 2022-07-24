@@ -29,8 +29,6 @@
 .wallpaper {
     position: absolute;
     height: 100%;
-    top: 0;
-    left: 0;
     z-index: 0;
 }
 
@@ -62,7 +60,7 @@
     100% {opacity: .25;}
 }
 
-.loading-container {
+.loading-container-await {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -75,18 +73,54 @@
 
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+
+    opacity: 1;
+    visibility: visible;
 }
 
-.loading-container h1 {
+.loading-container-loaded {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--secondary-color);
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1000ms linear, visibility 1000ms;
+    transition-delay: 2100ms;
+    will-change: opacity, visibility;
+}
+
+.loading-header-await {
+    transform: translateY(50vh);
+}
+
+.loading-header-loaded {
+    transform: translateY(0);
+    transition: transform 1500ms;
+    transition-delay: 600ms;
+    will-change: transform;
+}
+
+.loading-container-await h1, .loading-container-loaded h1 {
     color: var(--primary-color);
     font-family: var(--primary-font);
     font-size: 1.5rem;
-    animation: pulse 3s;
-    animation-iteration-count: infinite;
 }
 
 @media screen and (max-width: 480px) {
-    
+
+
 }
 
 /* Header */
@@ -355,7 +389,7 @@
     flex-direction: column;
 
     transform: none;
-    transition: transform 200ms;
+    transition: transform 300ms;
     will-change: transform;
 }
 
@@ -366,7 +400,7 @@
     flex-direction: column;
 
     transform: translateX(-100%);
-    transition: transform 200ms;
+    transition: transform 300ms;
     will-change: transform;
 }
 
@@ -378,7 +412,7 @@
     padding: 1rem .5rem 1rem 1rem;
 
     transform: none;
-    transition: transform 200ms;
+    transition: transform 300ms;
     will-change: transform;
 }
 
@@ -390,7 +424,7 @@
     padding: 1rem .5rem 1rem 1rem;
 
     transform: translateX(100%);
-    transition: transform 200ms;
+    transition: transform 300ms;
     will-change: transform;
 }
 
@@ -414,7 +448,7 @@
         z-index: 999;
    
         transform: none;
-        transition: transform 200ms;
+        transition: transform 300ms;
         will-change: transform;
     }
 
@@ -429,7 +463,7 @@
 
         
         transform: translateY(100%);
-        transition: transform 200ms;
+        transition: transform 300ms;
         will-change: transform;
     }
 
