@@ -2,9 +2,9 @@ import React from 'react';
 import projects from '../data/project-data';
 import ProjectCard from './ProjectCard';
 
-function Projects() {
+function Projects(props) {
     return (
-        <div className='projects-container'>
+        <div className={props.selected ? 'projects-container-open' : 'projects-container-closed'}>
             {projects.map((project) => (
                 <ProjectCard
                     key={project.name} 

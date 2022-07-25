@@ -15,9 +15,9 @@ import { ReactComponent as GithubSVG } from '../assets/github.svg';
 import { ReactComponent as Aws } from '../assets/aws.svg';
 
 
-function About() {
+function About(props) {
     return (
-        <div className='about-container'>
+        <div className={props.selected ? 'about-container-open' : 'about-container-closed'}>
             {/* <img src='' alt='headshot'/> */}
             <h1>Hi! I'm Alex,</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>

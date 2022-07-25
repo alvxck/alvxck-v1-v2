@@ -57,14 +57,14 @@ const projects = [
         code: 'https://github.com/alvxck/SHA',
         info: 'Python implementation of all SHA-1, SHA-2, and SHA-3 cryptographic hash algorithms.',
     }, 
-    {
-        name: 'PDF Securitization',
-        created: 'TBD',
-        img:'',
-        preview: '',
-        code: '',
-        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-    }
+    // {
+    //     name: 'PDF Securitization',
+    //     created: 'TBD',
+    //     img:'',
+    //     preview: '',
+    //     code: '',
+    //     info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+    // }
 ]
 
 export default projects;

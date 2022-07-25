@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-function Contact() {
+function Contact(props) {
     return (
-        <div className='contact-container'>
+        <div className={props.selected ? 'contact-container-open' : 'contact-container-closed'}>
             <div className='contact-row-top'>
                 <a id='linkedin' href='https://www.linkedin.com/in/-alexandercarvalho/' target='blank'>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

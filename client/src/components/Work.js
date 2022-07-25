@@ -2,9 +2,9 @@ import React from 'react';
 import WorkCard from './WorkCard';
 import experience from '../data/experience-data';
 
-function Work() {
+function Work(props) {
     return (
-        <div className='work-container'>
+        <div className={props.selected ? 'work-container-open' : 'work-container-closed'}>
             <div className='work-experience-container'>
                 {experience.map((work) => (
                     <WorkCard

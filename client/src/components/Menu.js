@@ -29,11 +29,11 @@ function Menu(props) {
                 </div>
 
                 <div id='article' className={props.open ? 'menu-article-open' : 'menu-article-closed'}>
-                        {(props.selected === 0) && <About key='about'/>}
-                        {(props.selected === 1) && <Contact key='contact'/>}
-                        {(props.selected === 2) && <Work key='work'/>}
-                        {(props.selected === 3) && <Projects key='projects'/>}
-                        {(props.selected === 4) && <Interests key='interests'/>}
+                        <About key='about' selected={props.selected === 0}/>
+                        <Contact key='contact' selected={props.selected === 1}/>
+                        <Work key='work' selected={props.selected === 2}/>
+                        <Projects key='projects' selected={props.selected === 3}/>
+                        <Interests key='interests' selected={props.selected === 4}/>
                 </div>
             </div>
         </div>
