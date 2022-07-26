@@ -32,16 +32,6 @@
     z-index: 0;
 }
 
-.home {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-
-    display: flex;
-    flex-direction: column;
-}
-
 ::-webkit-scrollbar {
     height: .5rem;
     width: .5rem;
@@ -135,7 +125,7 @@
 
 /* Header */
 .header-container {
-    position: relative;
+    position: fixed;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -184,7 +174,7 @@
 
 @media screen and (max-width: 480px) {
     .header-container {
-        position: relative;
+        position: fixed;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -345,9 +335,9 @@
 
 /* Menu */
 .menu-backdrop-open {
-    position: relative;
-    flex: 1;
+    position: fixed;
     width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -363,9 +353,9 @@
 }
 
 .menu-backdrop-closed {
-    position: relative;
-    flex: 1;
+    position: fixed;
     width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -417,6 +407,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10%;
 
     transform: none;
     transition: transform 300ms;
@@ -440,7 +431,7 @@
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
-        height: 100%;
+        height: 90%;
         bottom: 0;
     }
 
