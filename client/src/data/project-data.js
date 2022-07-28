@@ -11,6 +11,8 @@ import { ReactComponent as CSSSVG } from '../assets/css.svg';
 import { ReactComponent as GITSVG } from '../assets/git.svg';
 import { ReactComponent as Aws } from '../assets/aws.svg';
 
+import loginsystem from '../assets/loginsystem-preview.png';
+import sha from '../assets/sha-preview.png'; 
 
 const projects = [
     {
@@ -27,7 +29,7 @@ const projects = [
     {
         name: 'Authentication Service',
         created: '5/7/22',
-        img:'',
+        img:loginsystem,
         languages: [
             <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <ExpressSVG />, <MongoDBSVG />, <JestSVG />, <HTMLSVG />, <CSSSVG />, <GITSVG />
         ],
@@ -35,25 +37,25 @@ const projects = [
         code: 'https://github.com/alvxck/Login-System',
         info: 'MERN login / registration system with REST.',
     }, 
-    {
-        name: 'Traffic Recognition System',
-        created: 'TBD',
-        img:'',
-        languages: [
-            <PythonSVG />, <TensorFlowSVG />, <GITSVG />
-        ],
-        preview: '',
-        code: '',
-        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-    },
+    // {
+    //     name: 'Traffic Recognition System',
+    //     created: 'TBD',
+    //     img:'',
+    //     languages: [
+    //         <PythonSVG />, <TensorFlowSVG />, <GITSVG />
+    //     ],
+    //     preview: '',
+    //     code: '',
+    //     info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
+    // },
     {
         name: "Secure Hash Algorithm's",
         created: '3/20/22',
-        img:'',
+        img: sha,
         languages: [
             <PythonSVG />, <GITSVG />
         ],
-        preview: '',
+        preview: 'https://raw.githubusercontent.com/alvxck/SHA/main/sha-demo.gif',
         code: 'https://github.com/alvxck/SHA',
         info: 'Python implementation of all SHA-1, SHA-2, and SHA-3 cryptographic hash algorithms.',
     }, 
