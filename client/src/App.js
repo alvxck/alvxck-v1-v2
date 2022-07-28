@@ -27,19 +27,28 @@ function App() {
 	// Disable scrolling if <Menu /> is open
 	document.body.style.overflow = showMenu ? 'hidden' : 'overlay';
 
+
+	const documentHeight = () => {
+		const doc = document.documentElement
+		doc.style.setProperty('--menu-height', `${window.innerHeight}px`)
+	}
+
+	window.addEventListener('resize', documentHeight);
+	documentHeight();
+
 	return (
 		<div className='backdrop'>
-			<img 
+			{/* <img 
 				className='wallpaper'
 				id='wallpaperr'
 				src={wallpaper} 
 				alt='wallpaper'
 				onLoad={() => setLoading(false)}
-			/>
+			/> */}
 
-			<LoadingScreen loadState={loading}/>
+			{/* <LoadingScreen loadState={loading}/> */}
 
-			<div className='scroll-button-container'>
+			{/* <div className='scroll-button-container'>
 				<svg 
 					className='scroll-left' 
 					onClick={scrollLeft}
@@ -56,9 +65,9 @@ function App() {
 				>
 					<path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/>
 				</svg>
-			</div>
+			</div> */}
 
-			<div className='beacon-container'>
+			{/* <div className='beacon-container'>
 				{!showMenu && articles.map((article) => (
 					<Beacon
 						key={article.id}
@@ -69,7 +78,7 @@ function App() {
 						svg={article.svg}
 					/>
 				))}
-			</div>
+			</div> */}
 
 			<div className='home'>
 				<Header onClick={toggleMenu} menu={showMenu}/>
