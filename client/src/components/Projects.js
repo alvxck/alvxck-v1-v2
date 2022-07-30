@@ -5,18 +5,24 @@ import ProjectCard from './ProjectCard';
 function Projects(props) {
     return (
         <div className={props.selected ? 'projects-container-open' : 'projects-container-closed'}>
-            {projects.map((project) => (
-                <ProjectCard
-                    key={project.name} 
-                    title={project.name}
-                    created={project.created}
-                    image={project.img}
-                    languages={project.languages}
-                    preview={project.preview}
-                    code={project.code}
-                    info={project.info}
-                />
-            ))}
+            <div className='projects-slider'>
+                {projects.map((project) => (
+                    <ProjectCard
+                        key={project.name} 
+                        title={project.name}
+                        created={project.created}
+                        image={project.img}
+                        languages={project.languages}
+                        preview={project.preview}
+                        code={project.code}
+                        info={project.info}
+                    />
+                ))}
+            </div>
+
+            <div className='projects-slider-counter'>
+
+            </div>
         </div>
     )
 }

@@ -30,9 +30,9 @@ function Menu(props) {
 
                 <div id='article' className={props.open ? 'menu-article-open' : 'menu-article-closed'}>
                         <About key='about' selected={props.selected === 0}/>
-                        <Contact key='contact' selected={props.selected === 1}/>
-                        <Work key='work' selected={props.selected === 2}/>
-                        <Projects key='projects' selected={props.selected === 3}/>
+                        <Work key='work' selected={props.selected === 1}/>
+                        <Projects key='projects' selected={props.selected === 2}/>
+                        <Contact key='contact' selected={props.selected === 3}/>
                         <Interests key='interests' selected={props.selected === 4}/>
                 </div>
             </div>

@@ -4,9 +4,7 @@ function ProjectCard(props) {
 
     return (
         <div className='project-card-container'>
-            <div className='project-card-preview'>
-                <img src={props.image} alt='project'/>
-            </div>
+            <img src={props.image} alt='project'/>
 
             <div className='project-card-content'>
                 <div className='project-card-content-header'>

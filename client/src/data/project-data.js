@@ -20,7 +20,7 @@ const projects = [
         created: '6/26/22',
         img:'',
         languages: [
-            <JavascriptSVG />, <ReactSVG />, <HTMLSVG />, <CSSSVG />, <Aws />, <GITSVG />
+            <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <HTMLSVG />, <CSSSVG />, <Aws />, <GITSVG />
         ],
         preview: '',
         code: 'https://github.com/alvxck/alvxck',

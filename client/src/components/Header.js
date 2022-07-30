@@ -5,7 +5,7 @@ function Header(props) {
 
     return (
         <div className='header-container'>
-            <h1 className='header-name'>Alexander Carvalho</h1>
+            <h1>Alexander Carvalho</h1>
             <div className='header-menu' onClick={props.onClick}>
                 <svg 
                     className={props.menu ? 'header-svg-selected' : 'header-svg'}

@@ -31,13 +31,13 @@ function About(props) {
                     </div>
 
                     <ul>
-                        <li className='li-header'>Institution</li>
+                        <li className='li-header'>━ Institution ━━━</li>
                         <li>Sheridan College</li>
-                        <li className='li-header'>Degree</li>
+                        <li className='li-header'>━ Degree ━━━</li>
                         <li>Honors Bachelor of Computer Science (Co-op)</li>
-                        <li className='li-header'>GPA</li>
+                        <li className='li-header'>━ GPA ━━━</li>
                         <li>3.88</li>
-                        <li className='li-header'>Years</li>
+                        <li className='li-header'>━ Years ━━━</li>
                         <li>2021 - 2025</li>
                     </ul>
                 </div>

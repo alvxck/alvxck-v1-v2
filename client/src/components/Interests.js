@@ -5,16 +5,13 @@ import interests from '../data/interest-data';
 function Interests(props) {
     return (
         <div className={props.selected ? 'interests-container-open' : 'interests-container-closed'}>
-            <div className='interests-content'>
-                {interests.map((interest) => (
-                    <InterestsCard
-                        key={interest.key}
-                        img={interest.img}
-                        caption={interest.caption}
-                        info={interest.info}
-                    />
-                ))}
-            </div>
+            {interests.map((interest) => (
+                <InterestsCard 
+                    img={interest.img}
+                    name={interest.name}
+                    info={interest.info}
+                />
+            ))}
         </div>
     )
 }
