@@ -38,13 +38,13 @@ function App() {
 
 	return (
 		<div className='backdrop'>
-			{/* <img 
+			<img 
 				className='wallpaper'
 				id='wallpaperr'
 				src={wallpaper} 
 				alt='wallpaper'
 				onLoad={() => setLoading(false)}
-			/> */}
+			/>
 
 			{/* <LoadingScreen loadState={loading}/> */}
 

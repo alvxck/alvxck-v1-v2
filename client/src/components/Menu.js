@@ -4,7 +4,7 @@ import NavTab from './NavTab.js';
 import About from './About.js';
 import Contact from './Contact.js';
 import Work from './Work.js';
-import Interests from './Interests.js';
+import Skills from './Skills.js';
 import Projects from './Projects.js';
 
 function Menu(props) {
@@ -30,10 +30,10 @@ function Menu(props) {
 
                 <div id='article' className={props.open ? 'menu-article-open' : 'menu-article-closed'}>
                         <About key='about' selected={props.selected === 0}/>
-                        <Work key='work' selected={props.selected === 1}/>
-                        <Projects key='projects' selected={props.selected === 2}/>
-                        <Contact key='contact' selected={props.selected === 3}/>
-                        <Interests key='interests' selected={props.selected === 4}/>
+                        <Skills key='interests' selected={props.selected === 1}/>
+                        <Work key='work' selected={props.selected === 2}/>
+                        <Projects key='projects' selected={props.selected === 3}/>
+                        <Contact key='contact' selected={props.selected === 4}/>
                 </div>
             </div>
         </div>
