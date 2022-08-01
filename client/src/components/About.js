@@ -1,28 +1,55 @@
 import React from 'react';
-import blob from '../assets/blob.png';
+import profile from '../assets/sha-preview.png';
 import sheridan from '../assets/sheridan.png';
 
 function About(props) {
     return (
         <div className={props.selected ? 'about-container-open' : 'about-container-closed'}>
-            <img src={blob} alt='headshot'/>
-            <h1>Hi! I'm Alex,</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            
-            <div className='about-information'>
+            <img src={profile} alt='profile' />
+            <h1>Hi! my name is Alex,</h1>
+            <p>I'm a computer science student interested in .</p>
+
+            <div className='about-bottom'>
                 <div className='about-education'>
                     <img src={sheridan} alt='sheridan'/>
                     <div className='about-education-info'>
-                        <h1>Education</h1>
+                        <div className='about-education-header'>
+                            <h1>Education</h1>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path d="M160 32V64H288V32C288 14.33 302.3 0 320 0C337.7 0 352 14.33 352 32V64H400C426.5 64 448 85.49 448 112V160H0V112C0 85.49 21.49 64 48 64H96V32C96 14.33 110.3 0 128 0C145.7 0 160 14.33 160 32zM0 192H448V464C448 490.5 426.5 512 400 512H48C21.49 512 0 490.5 0 464V192zM64 304C64 312.8 71.16 320 80 320H112C120.8 320 128 312.8 128 304V272C128 263.2 120.8 256 112 256H80C71.16 256 64 263.2 64 272V304zM192 304C192 312.8 199.2 320 208 320H240C248.8 320 256 312.8 256 304V272C256 263.2 248.8 256 240 256H208C199.2 256 192 263.2 192 272V304zM336 256C327.2 256 320 263.2 320 272V304C320 312.8 327.2 320 336 320H368C376.8 320 384 312.8 384 304V272C384 263.2 376.8 256 368 256H336zM64 432C64 440.8 71.16 448 80 448H112C120.8 448 128 440.8 128 432V400C128 391.2 120.8 384 112 384H80C71.16 384 64 391.2 64 400V432zM208 384C199.2 384 192 391.2 192 400V432C192 440.8 199.2 448 208 448H240C248.8 448 256 440.8 256 432V400C256 391.2 248.8 384 240 384H208zM320 432C320 440.8 327.2 448 336 448H368C376.8 448 384 440.8 384 432V400C384 391.2 376.8 384 368 384H336C327.2 384 320 391.2 320 400V432z"/>
+                                </svg>
+                                <h2>2021 - 2025</h2>
+                            </div>
+                        </div>
                         <ul>
-                            <li>Institution · Sheridan College</li>
-                            <li>Degree · Honours Bachelor of Computer Science (Co-op)</li>
-                            <li>GPA · 3.88</li>
-                            <li>Years · 2021 - 2025</li>
+                            <li id='education-header'>Institution</li>
+                            <li>Sheridan College</li>
+                            <li id='education-header'>Degree</li>
+                            <li>Honours Bachelor of Computer Science (Co-op)</li>
                         </ul>
                     </div>
                 </div>
 
+                <div className='about-interests'>
+                    <h1>Interests</h1>
+                    <h2>Programming</h2>
+                    <div className='about-interests-info'>
+                        <p>Cryptography</p>
+                        <p>Machine Learning</p>
+                        <p>IOT</p>
+                        <p>Cyber Security</p>
+                    </div>
+
+                    <h2>Personal</h2>
+                    <div className='about-interests-info'>
+                        <p>Sports Cars</p>
+                        <p>Dogs</p>
+                        <p>Hiking</p>
+                        <p>Travelling</p>
+                        <p>Food</p>
+                    </div>
+                </div>
             </div>
         </div>
     )
