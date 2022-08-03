@@ -30,7 +30,7 @@ function App() {
 
 	const documentHeight = () => {
 		const doc = document.documentElement
-		doc.style.setProperty('--menu-height', `${window.innerHeight}px`)
+		doc.style.setProperty('--view-height', `${window.innerHeight}px`)
 	}
 
 	window.addEventListener('resize', documentHeight);
@@ -38,13 +38,13 @@ function App() {
 
 	return (
 		<div className='backdrop'>
-			<img 
+			{/* <img 
 				className='wallpaper'
 				id='wallpaperr'
 				src={wallpaper} 
 				alt='wallpaper'
 				onLoad={() => setLoading(false)}
-			/>
+			/> */}
 
 			{/* <LoadingScreen loadState={loading}/> */}
 
