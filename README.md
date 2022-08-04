@@ -10,7 +10,7 @@
 🌍 Toronto, Canada  
 🏢 Currently working at Amazon YYZ2  
 🏫 Honors Bachelor of Computer Science @ Sheridan College  
-🔭 Intersested in Machine Learning, Cryptography, and Virtualization  
+🔭 interested in Machine Learning, Cryptography, and Virtualization  
 📫 Connections: [Linkedin](https://www.linkedin.com/in/-alexandercarvalho/)  
 <!-- 🏎 Porsche, BMW  -->
 
