@@ -18,24 +18,24 @@ const projects = [
     {
         name: 'Portfolio Webpage',
         created: '6/26/22',
-        img:'',
+        img: '',
         languages: [
             <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <HTMLSVG />, <CSSSVG />, <Aws />, <GITSVG />
         ],
         preview: '',
         code: 'https://github.com/alvxck/alvxck',
-        info: 'Personal portfolio webpage.',
+        info: 'Personal portfolio and interactive webpage.',
     }, 
     {
         name: 'Authentication Service',
         created: '5/7/22',
-        img:loginsystem,
+        img: loginsystem,
         languages: [
             <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <ExpressSVG />, <MongoDBSVG />, <JestSVG />, <HTMLSVG />, <CSSSVG />, <GITSVG />
         ],
         preview: 'https://raw.githubusercontent.com/alvxck/Login-System/main/login-system-demo.gif',
         code: 'https://github.com/alvxck/Login-System',
-        info: 'MERN login / registration system with REST.',
+        info: 'MERN login / registration system using REST APIs with JWT for user authentication.',
     }, 
     // {
     //     name: 'Traffic Recognition System',
@@ -57,7 +57,7 @@ const projects = [
         ],
         preview: 'https://raw.githubusercontent.com/alvxck/SHA/main/sha-demo.gif',
         code: 'https://github.com/alvxck/SHA',
-        info: 'Python implementation of all SHA-1, SHA-2, and SHA-3 cryptographic hash algorithms.',
+        info: 'Python implementation of SHA-1, SHA-2, and SHA-3 Cryptographic Hash Algorithms.',
     }, 
     // {
     //     name: 'PDF Securitization',
