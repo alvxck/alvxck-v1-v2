@@ -10,34 +10,40 @@
 
     --view-height: 100vh;
 }
-/* 
-.backdrop {
-    width: 100%;
-    height: var(--view-height);
-    background-color: #000;
-    z-index: 0;
-} */
 
-/* .overlay {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 90%;
-    z-index: 2;
-} */
+html {
+    display: block;
+    height: calc(var(--view-height) - .35rem);
+    max-height: calc(var(--view-height) - .35rem);
 
-.wallpaper {
-    position: absolute;
-    height: 100vh;
-    z-index: 0;
+}
+
+body, #root {
+    height: calc(var(--view-height) - .35rem);
+    max-height: calc(var(--view-height) - .35rem);
+    display: inline-block;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+.backdrop, .wallpaper {
+    height: calc(var(--view-height) - .35rem);
+    max-height: calc(var(--view-height) - .35rem);
+    width: calc(var(--view-height) * 2.4 + .35rem);
+    max-width: calc(var(--view-height) * 2.4 + .35rem);
+    overflow-y: hidden;
 }
 
 .home {
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100vw;
     height: 100vh;
     height: var(--view-height);
-    z-index: 1;
+    z-index: 3;
 
     display: flex;
     flex-direction: column;
@@ -50,6 +56,7 @@
     
 ::-webkit-scrollbar-track {
     display: none;
+
 }
 
 ::-webkit-scrollbar-thumb {
@@ -240,7 +247,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .scroll-left {
@@ -1186,7 +1193,7 @@
     width: 60%;
 }
 
-.projects-card-info-links div {
+.projects-card-info-links a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1194,6 +1201,7 @@
     padding: .25rem 0;
     width: 50%;
     cursor: pointer;
+    text-decoration: none;
 }
 
 #project-preview {

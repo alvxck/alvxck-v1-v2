@@ -22,7 +22,7 @@ const projects = [
         languages: [
             <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <HTMLSVG />, <CSSSVG />, <Aws />, <GITSVG />
         ],
-        preview: '',
+        preview: 'https://alexandercarvalho.ca/',
         code: 'https://github.com/alvxck/alvxck',
         info: 'Personal portfolio and interactive webpage.',
     }, 
