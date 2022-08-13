@@ -1,5 +1,4 @@
 import { ReactComponent as PythonSVG } from '../assets/python.svg';
-import { ReactComponent as TensorFlowSVG } from '../assets/tensorflow.svg';
 import { ReactComponent as JavascriptSVG } from '../assets/javascript.svg';
 import { ReactComponent as ReactSVG } from '../assets/react.svg';
 import { ReactComponent as NodeSVG } from '../assets/nodejs.svg';
@@ -37,17 +36,6 @@ const projects = [
         code: 'https://github.com/alvxck/Login-System',
         info: 'MERN login / registration system using REST APIs with JWT for user authentication.',
     }, 
-    // {
-    //     name: 'Traffic Recognition System',
-    //     created: 'TBD',
-    //     img:'',
-    //     languages: [
-    //         <PythonSVG />, <TensorFlowSVG />, <GITSVG />
-    //     ],
-    //     preview: '',
-    //     code: '',
-    //     info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-    // },
     {
         name: "Secure Hash Algorithm's",
         created: '3/20/22',
@@ -59,14 +47,6 @@ const projects = [
         code: 'https://github.com/alvxck/SHA',
         info: 'Python implementation of SHA-1, SHA-2, and SHA-3 Cryptographic Hash Algorithms.',
     }, 
-    // {
-    //     name: 'PDF Securitization',
-    //     created: 'TBD',
-    //     img:'',
-    //     preview: '',
-    //     code: '',
-    //     info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod',
-    // }
 ]
 
 export default projects;
