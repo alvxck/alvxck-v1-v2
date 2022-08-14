@@ -37,7 +37,7 @@ const skills = [
         ],
         header2: 'Concepts',
         info: [
-            <p>OOP</p>, <p>Cryptography</p>, <p>RDBMS</p>, <p>Unit Testing</p>,
+            <p>Cryptography</p>, <p>RDBMS</p>, <p>Unit Testing</p>,
         ],
     },
     {
@@ -49,7 +49,7 @@ const skills = [
         ],
         header2: 'Concepts',
         info: [
-
+            <p>OOP</p>,
         ],
     },
     {
