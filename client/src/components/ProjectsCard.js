@@ -16,7 +16,6 @@ function ProjectsCard(props) {
                     {props.languages}
                 </div>
 
-                <h2>Information</h2>
                 <ul className='projects-card-info-information'>
                     <li>{props.info}</li>
                 </ul>

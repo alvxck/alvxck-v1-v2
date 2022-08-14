@@ -1,5 +1,6 @@
 
 /* App */
+
 :root {
     --primary-color: #ffffff;
     --secondary-color: #000000;
@@ -137,13 +138,11 @@ body, #root {
 
 @media screen and (max-width: 480px) {
 
-
-
     .loading-header-loaded {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 6vh;
+        height: 8vh;
     }
 
 }
@@ -206,9 +205,11 @@ body, #root {
         align-items: center;
         justify-content: center;
         width: calc(100% - 2rem);
-        height: 6vh;
+        height: 8vh;
         z-index: 999;
         padding: 0 1rem;
+
+        background-color: rgba(30, 30, 30, .4);
     }
 
     .header-container h1 {
@@ -513,7 +514,9 @@ body, #root {
         justify-content: center;
         align-items: center;
         height: 100%;
-        margin-top: 6vh;
+        margin-top: 8vh;
+        border-top: solid var(--primary-color) .5px;
+        border-bottom: solid var(--primary-color) .5px;
     }
 
     .menu-article-closed {
@@ -521,7 +524,9 @@ body, #root {
         justify-content: center;
         align-items: center;
         height: 100%;
-        margin-top: 6vh;
+        margin-top: 8vh;
+        border-top: solid var(--primary-color) .5px;
+        border-bottom: solid var(--primary-color) .5px;
     }
 }
 
@@ -600,7 +605,7 @@ body, #root {
 
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     gap: 1rem;
     overflow-y: auto;
@@ -621,7 +626,7 @@ body, #root {
 
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     gap: 1rem;
     overflow-y: auto;
@@ -638,7 +643,6 @@ body, #root {
 }
 
 .about-information {
-    flex: 1;
     display: flex;
     flex-direction: column;
 
@@ -727,28 +731,24 @@ body, #root {
 
 @media screen and (max-width: 480px) {
 
-    .about-container-open {
-        top: .5rem;
-        bottom: .5rem;
+    .about-container-open, .about-container-closed {
+        top: 0;
+        bottom: 0;
         left: .5rem;
         right: .5rem;
         width: calc(100% - 1rem);
-        height: calc(100% - 1rem);
-        gap: .5rem;
-    }
-
-    .about-container-closed {
-        top: .5rem;
-        bottom: .5rem;
-        left: .5rem;
-        right: .5rem;
-        width: calc(100% - 1rem);
-        height: calc(100% - 1rem);
+        height: 100%;
         gap: .5rem;
     }
 
     .about-container-open img, .about-container-closed img {
+        margin-top: .5rem;
         width: 100%;
+        height: auto;
+    }
+
+    .about-information {
+        margin-bottom: .5rem;
     }
 
     .about-information-header h1 {
@@ -757,11 +757,15 @@ body, #root {
 
     .about-information-content p {
         width: 100%;
-        font-size: .85rem;
+        font-size: .8rem;
     }
 
     .about-information-content-footer {
         flex-direction: column;
+    }
+
+    .about-information-content-footer h2 {
+        font-size: 1rem;
     }
     
     .about-information-content-footer div {
@@ -769,11 +773,11 @@ body, #root {
     }
 
     #about-education li, #about-interests li {
-        font-size: .85rem;
+        font-size: .8rem;
     }
     
     #about-education svg, #about-interests svg {
-        width: .85rem;
+        width: .8rem;
     }
 }
 
@@ -913,25 +917,14 @@ body, #root {
 
 @media screen and (max-width: 480px) {
 
-    .skills-container-open {
+    .skills-container-open, .skills-container-closed {
         flex-wrap: nowrap;
-        top: .5rem;
-        bottom: .5rem;
+        top: 0;
+        bottom: 0;
         left: .5rem;
         right: .5rem;
         width: calc(100% - 1rem);
-        height: calc(100% - 1rem);
-        gap: .5rem;
-    }
-
-    .skills-container-closed {
-        flex-wrap: nowrap;
-        top: .5rem;
-        bottom: .5rem;
-        left: .5rem;
-        right: .5rem;
-        width: calc(100% - 1rem);
-        height: calc(100% - 1rem);
+        height: 100%;
         gap: .5rem;
     }
 
@@ -939,12 +932,32 @@ body, #root {
         width: 100%;
     }
 
-    .skills-content-data svg {
-        width: 15%;
+    .skills-content-card:first-of-type {
+        margin-top: .5rem;
     }
 
-    .skills-content-languages svg {
-        width: 2rem;
+    .skills-content-card:last-of-type {
+        margin-bottom: .5rem;
+    }
+
+    .skills-content-card-header svg {
+        width: 1.75rem;
+    }
+
+    .skills-content-card-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .skills-content-card-info h2 {
+        font-size: .8rem;
+    }
+
+    .skills-content-card-info-languages svg {
+        width: 1.5rem;
+    }
+
+    .skills-content-card-info-concepts p {
+        font-size: .8rem;
     }
 }
 
@@ -1078,28 +1091,26 @@ body, #root {
 
 @media screen and (max-width: 480px) {
 
-    .work-container-open {
-        top: .5rem;
-        bottom: .5rem;
-        left: .5rem;
+    .work-container-open, .work-container-closed {
+        top: 0;
+        bottom: 0;
+        left: 1rem;
         right: .5rem;
-        width: calc(100% - 1rem);
-        height: calc(100% - 1rem);
-        gap: .5rem;
-    } 
-
-    .work-container-closed {
-        top: .5rem;
-        bottom: .5rem;
-        left: .5rem;
-        right: .5rem;
-        width: calc(100% - 1rem);
-        height: calc(100% - 1rem);
+        width: calc(100% - 1.5rem);
+        height: 100%;
         gap: .5rem;
     } 
 
     .work-card-container {
-        gap: .5rem;
+        gap: 1rem;
+    }
+
+    .work-card-container:first-of-type {
+        margin-bottom: .5rem;
+    }
+
+    .work-card-container:last-of-type {
+        margin-top: .5rem;
     }
 
     .work-card-tree {
@@ -1107,7 +1118,7 @@ body, #root {
     }
 
     .work-card-tree svg {
-        width: .75rem;
+        width: .8rem;
     }
 
     .work-card-header img {
@@ -1120,15 +1131,15 @@ body, #root {
 
     .work-card-header li {
         gap: .25rem;
-        font-size: .7rem;
+        font-size: .8rem;
     }
 
     .work-card-header svg {
-        width: .5rem;
+        width: .6rem;
     }
 
     .work-card-info li {
-        font-size: .85rem;
+        font-size: .8rem;
     }
 }
 
@@ -1243,6 +1254,13 @@ body, #root {
     margin: 0;
 }
 
+.projects-card-info li {
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
 .projects-card-info-stack {
     display: flex;
     flex-wrap: wrap;
@@ -1258,14 +1276,6 @@ body, #root {
 .projects-card-info-information {
     margin: 0;
     list-style: circle;
-}
-
-
-.projects-card-info-information li {
-    font-family: var(--secondary-font);
-    font-size: 1rem;
-    color: var(--primary-color);
-    margin: 0;
 }
 
 .projects-card-info-links {
@@ -1325,26 +1335,20 @@ body, #root {
 
 @media screen and (max-width: 480px) {
 
-    .projects-container-open {
-        top: .5rem;
-        bottom: .5rem;
+    .projects-container-open, .projects-container-closed {
+        top: 0;
+        bottom: 0;
         left: .5rem;
         right: .5rem;
         width: calc(100% - 1rem);
-        height: calc(100% - .5rem);
+        height: 100%;
         gap: .5rem;
     }
 
-    .projects-container-closed {
-        top: .5rem;
-        bottom: .5rem;
-        left: .5rem;
-        right: .5rem;
-        width: calc(100% - 1rem);
+    .projects-slider {
+        margin-top: .5rem;
         height: calc(100% - .5rem);
-        gap: .5rem;
     }
-
     
     .swiper-button-next,
     .swiper-button-prev {
@@ -1364,7 +1368,7 @@ body, #root {
     }
 
     .projects-card-header img {
-        width: 100%;
+        height: 100%;
     }
 
     .projects-card-info {
@@ -1377,15 +1381,19 @@ body, #root {
     }
 
     .projects-card-info-information li {
-        font-size: .85rem;
+        font-size: .8rem;
     }
 
     .projects-card-info-links {
         width: 100%;
     }
 
+    #project-code svg, #project-preview svg {
+        width: 1rem;
+    }
+
     #project-code p, #project-preview p {
-        font-size: .85rem;
+        font-size: 1rem;
     }
 
 }
@@ -1474,8 +1482,10 @@ body, #root {
 
 .contact-form-header {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: .5rem;
-    padding: 1rem;
+    padding: .5rem;
     background-color: rgba(10, 10, 10, .4);
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
@@ -1483,14 +1493,13 @@ body, #root {
 
 .contact-form-header svg {
     fill: var(--primary-color);
-    width: 2rem;
+    width: 1.75rem;
 }
 
 .contact-form-header h1 {
-    display: inline;
     color: var(--primary-color);
     font-family: var(--primary-font);
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0;
 }
 
@@ -1556,24 +1565,23 @@ body, #root {
 
 @media screen and (max-width: 480px) {
 
-    .contact-container-open {
-        top: .5rem;
-        bottom: .5rem;
+    .contact-container-open, 
+    .contact-container-closed {
+        top: 0;
+        bottom: 0;
         left: .5rem;
         right: .5rem;
         width: calc(100% - 1rem);
-        height: calc(100% - 1rem);
+        height: 100%;
         gap: .5rem;
     }
 
-    .contact-container-closed {
-        top: .5rem;
-        bottom: .5rem;
-        left: .5rem;
-        right: .5rem;
-        width: calc(100% - 1rem);
-        height: calc(100% - 1rem);
-        gap: .5rem;
+    .contact-row-top {
+        margin-top: .5rem;
+    }
+
+    .contact-row-bottom {
+        margin-bottom: .5rem;
     }
 
     .contact-info {

@@ -59,10 +59,6 @@ const skills = [
         svgs: [
             <GITSVG />, <GithubSVG />, <AwsSVG />
         ],
-        header2: 'Concepts',
-        info: [
-            <p>SDLC</p>,
-        ],
     },
 ]
 
