@@ -10,15 +10,11 @@ function ProjectsCard(props) {
 
             <div className='projects-card-info'>
                 <h1>{props.name}</h1>
+                <p>{props.info}</p>
 
-                <h2>Stack</h2>
                 <div className='projects-card-info-stack'>
                     {props.languages}
                 </div>
-
-                <ul className='projects-card-info-information'>
-                    <li>{props.info}</li>
-                </ul>
 
                 <div className='projects-card-info-links'>
                     <a 
