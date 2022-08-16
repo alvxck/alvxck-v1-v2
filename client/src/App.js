@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import articles from './data/article-data';
 import LoadingScreen from './components/LoadingScreen';
-import wallpaper from './assets/alvx.jpg';
+import wallpaper from './assets/alvx-wallpaper.jpg';
 import Header from './components/Header';
 import Beacon from './components/Beacon';
 import Menu from './components/Menu';
