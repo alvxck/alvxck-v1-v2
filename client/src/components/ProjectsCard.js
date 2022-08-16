@@ -10,6 +10,7 @@ function ProjectsCard(props) {
 
             <div className='projects-card-info'>
                 <h1>{props.name}</h1>
+                <h2>Created: {props.created}</h2>
                 <p>{props.info}</p>
 
                 <div className='projects-card-info-stack'>

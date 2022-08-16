@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import articles from './data/article-data';
 import LoadingScreen from './components/LoadingScreen';
-import wallpaper from './assets/alvx-wallpaper.jpg';
+import wallpaper from './assets/alvx.jpg';
 import Header from './components/Header';
 import Beacon from './components/Beacon';
 import Menu from './components/Menu';
@@ -57,20 +57,21 @@ function App() {
 				{!showMenu && (
 					<div className='scroll-button-container'>
 						<svg 
-							className='scroll-left' 
-							onClick={scrollLeft}
+							class="scroll-left"
+							onClick={scrollLeft} 
 							xmlns="http://www.w3.org/2000/svg" 
-							viewBox="0 0 256 512"
+							viewBox="0 0 197.402 197.402"
 						>
-							<path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/>
+							<polygon points="146.883,197.402 45.255,98.698 146.883,0 152.148,5.418 56.109,98.698 152.148,191.98"/>
 						</svg>
+
 						<svg 
-							className='scroll-right' 
-							onClick={scrollRight}
+							class="scroll-right"
+							onClick={scrollRight} 
 							xmlns="http://www.w3.org/2000/svg" 
-							viewBox="0 0 256 512"
+							viewBox="0 0 197.402 197.402"
 						>
-							<path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/>
+							<polygon points="146.883,197.402 45.255,98.698 146.883,0 152.148,5.418 56.109,98.698 152.148,191.98"/>
 						</svg>
 					</div>
 				)}

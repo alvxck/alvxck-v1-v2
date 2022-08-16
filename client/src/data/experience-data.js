@@ -4,7 +4,7 @@ import amazon from '../assets/amazon.png';
 const experience = [
     {
         company: amazon,
-        position: 'L1 Associate (Full-Time)',
+        position: 'L1 Associate (Full-time)',
         location: 'Milton, ON',
         date: 'Mar 2020 - Current',
         img: '',
