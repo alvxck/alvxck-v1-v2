@@ -24,6 +24,7 @@ function Projects(props) {
                     {projects.map((project) => (
                         <SwiperSlide>
                             <ProjectsCard
+                                key={project.key}
                                 name={project.name}
                                 created={project.created}
                                 img={project.img}

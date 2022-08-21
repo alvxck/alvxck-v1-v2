@@ -18,7 +18,7 @@ function Menu(props) {
                 >
                     {articles.map((tab) => (
                         <NavTab
-                            key={tab.id}
+                            key={tab.key}
                             id={tab.id}
                             value={tab.value}
                             svg={tab.svg}

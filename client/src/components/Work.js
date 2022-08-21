@@ -8,7 +8,7 @@ function Work(props) {
             <div className='work-experience-container'>
                 {experience.map((work) => (
                     <WorkCard
-                        key={work.company}
+                        key={work.key}
                         company={work.company}
                         position={work.position}
                         location={work.location}

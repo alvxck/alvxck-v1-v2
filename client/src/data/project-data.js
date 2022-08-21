@@ -1,4 +1,6 @@
 import { ReactComponent as PythonSVG } from '../assets/python.svg';
+import { ReactComponent as NumpySVG } from '../assets/numpy.svg';
+import { ReactComponent as PytestSVG } from '../assets/pytest.svg';
 import { ReactComponent as JavascriptSVG } from '../assets/javascript.svg';
 import { ReactComponent as ReactSVG } from '../assets/react.svg';
 import { ReactComponent as NodeSVG } from '../assets/nodejs.svg';
@@ -15,6 +17,7 @@ import sha from '../assets/sha-preview.png';
 
 const projects = [
     {
+        key: 'project-portfolio-webpage',
         name: 'Portfolio Webpage',
         created: '6/26/22',
         img: '',
@@ -26,6 +29,7 @@ const projects = [
         info: 'Personal portfolio and interactive webpage.',
     }, 
     {
+        key: 'project-authentication-service',
         name: 'Authentication Service',
         created: '5/7/22',
         img: loginsystem,
@@ -37,11 +41,12 @@ const projects = [
         info: 'MERN login / registration system using REST APIs with JWT for user authentication.',
     }, 
     {
+        key: 'project-SHA',
         name: "Secure Hash Algorithm's",
         created: '3/20/22',
         img: sha,
         languages: [
-            <PythonSVG />, <GITSVG />
+            <PythonSVG />, <NumpySVG />, <PytestSVG />, <GITSVG />
         ],
         preview: 'https://raw.githubusercontent.com/alvxck/SHA/main/sha-demo.gif',
         code: 'https://github.com/alvxck/SHA',

@@ -14,7 +14,7 @@ function ProjectsCard(props) {
                 <p>{props.info}</p>
 
                 <div className='projects-card-info-stack'>
-                    {props.languages}
+                    {/* {props.languages} */}
                 </div>
 
                 <div className='projects-card-info-links'>

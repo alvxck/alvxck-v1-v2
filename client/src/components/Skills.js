@@ -8,6 +8,7 @@ function Skills(props) {
         <div className={props.selected ? 'skills-container-open' : 'skills-container-closed'}>
             {skills.map((skill) => (
                 <SkillCard
+                    key={skill.key}
                     skill={skill.skill}
                     header_svg={skill.header_svg}
                     header1={skill.header1}
