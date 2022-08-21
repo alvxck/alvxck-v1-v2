@@ -40,7 +40,7 @@ const skills = [
         ],
         header2: 'Concepts',
         info: [
-            <p>Hashing</p>, <p>Unit Testing</p>, <p>1D / 2D / 3D Matricies</p>
+            <p>Hashing</p>, <p>Unit Testing</p>, <p>Test Driven Development</p>, <p>1D / 2D / 3D Matricies</p>
         ],
     },
     {
