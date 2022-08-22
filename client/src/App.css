@@ -110,10 +110,19 @@ html, body, #root {
 }
 
 .loading-header-await {
+    -webkit-transform: translateY(50vh);
+    -webkit-transition: transform;
+    -moz-transform: translateY(50vh);
+    -moz-transition: transform;
     transform: translateY(50vh);
-}
+    transition: transform;
+    will-change: transform;}
 
 .loading-header-loaded {
+    -webkit-transform: translateY(0);
+    -webkit-transition: transform 1500ms;
+    -moz-transform: translateY(0);
+    -moz-transition: transform 1500ms;
     transform: translateY(0);
     transition: transform 1500ms;
     transition-delay: 600ms;
@@ -427,6 +436,10 @@ html, body, #root {
 
     background-color: rgba(30, 30, 30, .4);
 
+    -webkit-transform: none;
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: none;
+    -moz-transition: -moz-transform 300ms;
     transform: none;
     transition: transform 300ms;
     will-change: transform;
@@ -441,6 +454,10 @@ html, body, #root {
 
     background-color: rgba(30, 30, 30, .4);
 
+    -webkit-transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: translateX(-100%);
+    -moz-transition: -moz-transform 300ms;
     transform: translateX(-100%);
     transition: transform 300ms;
     will-change: transform;
@@ -452,6 +469,10 @@ html, body, #root {
     align-items: center;
     margin-top: 10vh;
 
+    -webkit-transform: none;
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: none;
+    -moz-transition: -moz-transform 300ms;
     transform: none;
     transition: transform 300ms;
     will-change: transform;
@@ -463,6 +484,10 @@ html, body, #root {
     align-items: center;
     margin-top: 10vh;
 
+    -webkit-transform: translateX(100%);
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: translateX(100%);
+    -moz-transition: -moz-transform 300ms;
     transform: translateX(100%);
     transition: transform 300ms;
     will-change: transform;
@@ -487,6 +512,10 @@ html, body, #root {
         z-index: 999;
         padding-right: 0;
    
+        -webkit-transform: none;
+        -webkit-transition: -webkit-transform 300ms;
+        -moz-transform: none;
+        -moz-transition: -moz-transform 300ms;
         transform: none;
         transition: transform 300ms;
         will-change: transform;
@@ -501,6 +530,10 @@ html, body, #root {
         z-index: 999;
         padding-right: 0;
         
+        -webkit-transform: translateY(100%);
+        -webkit-transition: -webkit-transform 300ms;
+        -moz-transform: translateY(100%);
+        -moz-transition: -moz-transform 300ms;
         transform: translateY(100%);
         transition: transform 300ms;
         will-change: transform;
@@ -605,6 +638,10 @@ html, body, #root {
     gap: 1rem;
     overflow-y: auto;
 
+    -webkit-transform: translateX(0);
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: translateX(0);
+    -moz-transition: -moz-transform 300ms;
     transform: translateX(0);
     transition: transform 300ms;
     will-change: transform;
@@ -626,6 +663,10 @@ html, body, #root {
     gap: 1rem;
     overflow-y: auto;
 
+    -webkit-transform: translateX(calc(100% + 2rem));
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: translateX(calc(100% + 2rem));
+    -moz-transition: -moz-transform 300ms;
     transform: translateX(calc(100% + 2rem));
     transition: transform 300ms;
     will-change: transform;
@@ -791,6 +832,10 @@ html, body, #root {
     gap: 1rem;
     overflow-y: auto;
 
+    -webkit-transform: translateX(0);
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: translateX(0);
+    -moz-transition: -moz-transform 300ms;
     transform: translateX(0);
     transition: transform 300ms;
     will-change: transform;
@@ -811,6 +856,10 @@ html, body, #root {
     gap: 1rem;
     overflow-y: auto;
 
+    -webkit-transform: translateX(calc(100% + 2rem));
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: translateX(calc(100% + 2rem));
+    -moz-transition: -moz-transform 300ms;
     transform: translateX(calc(100% + 2rem));
     transition: transform 300ms;
     will-change: transform;
@@ -927,6 +976,10 @@ html, body, #root {
     overflow-y: auto;
     overflow-x: hidden;
 
+    -webkit-transform: translateX(0);
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: translateX(0);
+    -moz-transition: -moz-transform 300ms;
     transform: translateX(0);
     transition: transform 300ms;
     will-change: transform;
@@ -945,6 +998,10 @@ html, body, #root {
     overflow-y: auto;
     overflow-x: hidden;
 
+    -webkit-transform: translateX(calc(100% + 2rem));
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: translateX(calc(100% + 2rem));
+    -moz-transition: -moz-transform 300ms;
     transform: translateX(calc(100% + 2rem));
     transition: transform 300ms;
     will-change: transform;
@@ -1110,6 +1167,10 @@ html, body, #root {
     overflow-y: auto;
     overflow-x: hidden;
 
+    -webkit-transform: translateX(0);
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: translateX(0);
+    -moz-transition: -moz-transform 300ms;
     transform: translateX(0);
     transition: transform 300ms;
     will-change: transform;
@@ -1132,6 +1193,10 @@ html, body, #root {
     overflow-y: auto;
     overflow-x: hidden;
 
+    -webkit-transform: translateX(calc(100% + 2rem));
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: translateX(calc(100% + 2rem));
+    -moz-transition: -moz-transform 300ms;
     transform: translateX(calc(100% + 2rem));
     transition: transform 300ms;
     will-change: transform;
@@ -1362,6 +1427,10 @@ html, body, #root {
     overflow-y: auto;
     overflow-x: hidden;
 
+    -webkit-transform: translateX(0);
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: translateX(0);
+    -moz-transition: -moz-transform 300ms;
     transform: translateX(0);
     transition: transform 300ms;
     will-change: transform;
@@ -1382,6 +1451,10 @@ html, body, #root {
     overflow-y: auto;
     overflow-x: hidden;
 
+    -webkit-transform: translateX(calc(100% + 2rem));
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transform: translateX(calc(100% + 2rem));
+    -moz-transition: -moz-transform 300ms;
     transform: translateX(calc(100% + 2rem));
     transition: transform 300ms;
     will-change: transform;

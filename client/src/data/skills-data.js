@@ -27,7 +27,7 @@ const skills = [
         ],
         header2: 'Concepts',
         info: [
-            <p>REST APIs</p>, <p>Middleware</p>, <p>DOM</p>, <p>Stateless & Stateful Endpoints</p>, <p>Responsive Design</p>, <p>Authentication</p>, <p>Unit / Integration / E2E Testing</p>, <p>State Management</p>, <p>React Hooks</p>
+            <p>REST</p>, <p>Middleware</p>, <p>DOM</p>, <p>Stateless & Stateful Endpoints</p>, <p>Responsive Design</p>, <p>Authentication</p>, <p>Unit / Integration / E2E Testing</p>, <p>CRUD</p>, <p>State Management</p>, <p>React Hooks</p>
         ],
     },
     {
