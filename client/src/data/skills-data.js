@@ -27,7 +27,7 @@ const skills = [
         ],
         header2: 'Concepts',
         info: [
-            <p>REST</p>, <p>Middleware</p>, <p>DOM</p>, <p>Stateless & Stateful Endpoints</p>, <p>Responsive Design</p>, <p>Authentication</p>, <p>Unit / Integration / E2E Testing</p>, <p>CRUD</p>, <p>State Management</p>, <p>React Hooks</p>
+            <p>REST</p>, <p>Middleware</p>, <p>DOM</p>, <p>State Management</p>, <p>Stateless & Stateful Endpoints</p>, <p>Responsive Design</p>, <p>Authentication</p>, <p>Unit / Integration / E2E Testing</p>, <p>CRUD</p>,
         ],
     },
     {
@@ -40,7 +40,7 @@ const skills = [
         ],
         header2: 'Concepts',
         info: [
-            <p>Hashing</p>, <p>Unit Testing</p>, <p>Test Driven Development</p>, <p>1D / 2D / 3D Matricies</p>
+            <p>Hashing</p>, <p>Unit Testing</p>, <p>Test Driven Development</p>, <p>1D / 2D / 3D Matricies</p>, <p>Big O notation</p>
         ],
     },
     {
