@@ -6,17 +6,19 @@ import SkillCard from './SkillCard';
 function Skills(props) {
     return (
         <div className={props.selected ? 'skills-container-open' : 'skills-container-closed'}>
-            {skills.map((skill) => (
-                <SkillCard
-                    key={skill.key}
-                    skill={skill.skill}
-                    header_svg={skill.header_svg}
-                    header1={skill.header1}
-                    svgs={skill.svgs}
-                    header2={skill.header2}
-                    info={skill.info}
-                />
-            ))}
+            <div className='skills-container'>
+                {skills.map((skill) => (
+                    <SkillCard
+                        key={skill.key}
+                        skill={skill.skill}
+                        header_svg={skill.header_svg}
+                        header1={skill.header1}
+                        svgs={skill.svgs}
+                        header2={skill.header2}
+                        info={skill.info}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

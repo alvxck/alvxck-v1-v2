@@ -210,16 +210,17 @@ html, body, #root {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        width: calc(100% - 2rem);
+        width: 100%;
         height: 8vh;
         z-index: 999;
-        padding: 0 1rem;
+        padding: 0;
 
     }
 
     .header-container h1 {
         margin-left: auto;
         margin-top: 0;
+        margin-right: -32px;
         transform: translateX(10px);
     }
 
@@ -231,7 +232,7 @@ html, body, #root {
         justify-content: center;
         gap: 0;
         background: none;
-        padding: 0;
+        padding: 16px;
         cursor: pointer;
     }
 
@@ -267,21 +268,27 @@ html, body, #root {
 
 .scroll-left {
     position: absolute;
-    width: 40px;
+    width: 50px;
     top: calc(50% - 10vh);
     left: 1vw;
     cursor: pointer;
     fill: var(--primary-color);
+    filter: drop-shadow( 3px 3px 3px rgba(0, 0, 0, .5));
 }
 
 .scroll-right {
     transform: scale(-1, 1);
     position: absolute;
-    width: 40px;
+    width: 50px;
     top: calc(50% - 10vh);
     right: 1vw;
     cursor: pointer;
     fill: var(--primary-color);
+    filter: drop-shadow( 3px 3px 3px rgba(0, 0, 0, .5));
+}
+
+.scroll-left:hover, .scroll-right:hover {
+    scale: 1.15;
 }
 
 @media screen and (max-width: 480px) {
@@ -298,7 +305,7 @@ html, body, #root {
     }
 
     to { 
-        transform: scale(4);
+        transform: scale(6);
         opacity: 0;
     }
 }
@@ -326,7 +333,7 @@ html, body, #root {
 .beacon-value {
     visibility: hidden;
     width: 6rem;
-    background-color: rgba(10, 10, 10, .4);
+    background-color: var(--primary-color);
     text-align: center;
     border-radius: .25rem;
     position: absolute;
@@ -341,15 +348,15 @@ html, body, #root {
 }
 
 .beacon-value h1 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-family: var(--primary-font);
-    font-size: .85rem;
+    font-size: 1rem;
     margin: 0;
 }
 
 .beacon-value svg {
-    width: .65rem;
-    fill: var(--primary-color);
+    width: .85rem;
+    fill: var(--secondary-color);
 }
 
 .beacon-value::after {
@@ -358,7 +365,7 @@ html, body, #root {
     top: 100%;
     border-width: 5px;
     border-style: solid;
-    border-color: rgba(30, 30, 30, .4) transparent transparent transparent;
+    border-color: var(--primary-color) transparent transparent transparent;
 }
 
 .beacon-link:hover .beacon-value {
@@ -373,7 +380,6 @@ html, body, #root {
     border-radius: 100%;
     cursor: pointer;
     z-index: 3;
-
 }
 
 .beacon-pulse {
@@ -437,11 +443,11 @@ html, body, #root {
     background-color: rgba(30, 30, 30, .4);
 
     -webkit-transform: none;
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: none;
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: none;
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
@@ -455,11 +461,11 @@ html, body, #root {
     background-color: rgba(30, 30, 30, .4);
 
     -webkit-transform: translateX(-100%);
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: translateX(-100%);
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: translateX(-100%);
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
@@ -470,11 +476,11 @@ html, body, #root {
     margin-top: 10vh;
 
     -webkit-transform: none;
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: none;
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: none;
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
@@ -485,11 +491,11 @@ html, body, #root {
     margin-top: 10vh;
 
     -webkit-transform: translateX(100%);
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: translateX(100%);
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: translateX(100%);
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
@@ -513,11 +519,11 @@ html, body, #root {
         padding-right: 0;
    
         -webkit-transform: none;
-        -webkit-transition: -webkit-transform 300ms;
+        -webkit-transition: -webkit-transform 300ms ease;
         -moz-transform: none;
-        -moz-transition: -moz-transform 300ms;
+        -moz-transition: -moz-transform 300ms ease;
         transform: none;
-        transition: transform 300ms;
+        transition: transform 300ms ease;
         will-change: transform;
     }
 
@@ -531,11 +537,11 @@ html, body, #root {
         padding-right: 0;
         
         -webkit-transform: translateY(100%);
-        -webkit-transition: -webkit-transform 300ms;
+        -webkit-transition: -webkit-transform 300ms ease;
         -moz-transform: translateY(100%);
-        -moz-transition: -moz-transform 300ms;
+        -moz-transition: -moz-transform 300ms ease;
         transform: translateY(100%);
-        transition: transform 300ms;
+        transition: transform 300ms ease;
         will-change: transform;
     }
 
@@ -624,12 +630,8 @@ html, body, #root {
 /* About */
 .about-container-open {
     position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
+    width: 100%;
+    height: 100%;
 
     display: flex;
     align-items: center;
@@ -637,22 +639,18 @@ html, body, #root {
     overflow-y: auto;
 
     -webkit-transform: translateX(0);
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: translateX(0);
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: translateX(0);
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
 .about-container-closed {
     position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
+    width: 100%;
+    height: 100%;
 
     display: flex;
     align-items: center;
@@ -660,11 +658,11 @@ html, body, #root {
     overflow-y: auto;
 
     -webkit-transform: translateX(calc(100% + 2rem));
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: translateX(calc(100% + 2rem));
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: translateX(calc(100% + 2rem));
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
@@ -673,10 +671,11 @@ html, body, #root {
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%;
     width: 85%;
-    height: fit-content;
+    margin: 0 12px 12px 12px;
     
     background-color: rgba(30, 30, 30, .4);
     border-radius: .5rem;
+    box-shadow:  6px 6px 6px rgba(0, 0, 0, .5);
 }
 
 .about-container-header {
@@ -692,7 +691,7 @@ html, body, #root {
 
 .about-container-header img {
     width: 100%;
-    border-radius: .5rem;
+    border-radius: 50%;
 }
 
 .about-container-content {
@@ -777,21 +776,12 @@ html, body, #root {
 
 @media screen and (max-width: 480px) {
 
-    .about-container-open, .about-container-closed {
-        top: 0;
-        bottom: 0;
-        left: 12px;
-        right: 12px;
-        width: calc(100% - 24px);
-        height: 100%;
-    }
-
     .about-container {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 45% 55%;
         width: 100%;
-        height: calc(100% - 24px);
+        height: calc(100% - 12px);
         background-color: rgba(30, 30, 30, .4);
         border-radius: .5rem;
     }
@@ -811,51 +801,42 @@ html, body, #root {
 /* Skills */
 .skills-container-open {
     position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
-
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 1rem;
+    width: 100%;
+    height: 100%;
     overflow-y: auto;
 
     -webkit-transform: translateX(0);
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: translateX(0);
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: translateX(0);
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
 .skills-container-closed {
     position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
 
+    -webkit-transform: translateX(calc(100% + 2rem));
+    -webkit-transition: -webkit-transform 300ms ease;
+    -moz-transform: translateX(calc(100% + 2rem));
+    -moz-transition: -moz-transform 300ms ease;
+    transform: translateX(calc(100% + 2rem));
+    transition: transform 300ms ease;
+    will-change: transform;
+}
+
+.skills-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 1rem;
-    overflow-y: auto;
-
-    -webkit-transform: translateX(calc(100% + 2rem));
-    -webkit-transition: -webkit-transform 300ms;
-    -moz-transform: translateX(calc(100% + 2rem));
-    -moz-transition: -moz-transform 300ms;
-    transform: translateX(calc(100% + 2rem));
-    transition: transform 300ms;
-    will-change: transform;
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+    margin: 0 12px 12px 12px;
 }
 
 .skills-content-card {
@@ -866,6 +847,7 @@ html, body, #root {
     max-height: fit-content;
     background-color: rgba(30, 30, 30, .4);
     border-radius: .5rem;
+    box-shadow:  6px 6px 6px rgba(0, 0, 0, .5);
 }
 
 .skills-content-card-header {
@@ -934,69 +916,50 @@ html, body, #root {
 
 @media screen and (max-width: 480px) {
 
-    .skills-container-open, .skills-container-closed {
+    .skills-container {
         flex-wrap: nowrap;
-        top: 0;
-        bottom: 0;
-        left: .5rem;
-        right: .5rem;
-        width: calc(100% - 1rem);
-        height: 100%;
-        gap: .5rem;
+        height: auto;
     }
 
     .skills-content-card {
         width: 100%;
-    }
-
-    .skills-content-card:last-of-type {
-        margin-bottom: .5rem;
     }
 }
 
 /* Work */
 .work-container-open {
     position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
+    width: 100%;
+    height: 100%;
 
     display: flex;
-    padding-right: .5rem;
     overflow-y: auto;
     overflow-x: hidden;
 
     -webkit-transform: translateX(0);
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: translateX(0);
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: translateX(0);
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
 .work-container-closed {
     position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
+    width: 100%;
+    height: 100%;
 
     display: flex;
     overflow-y: auto;
     overflow-x: hidden;
 
     -webkit-transform: translateX(calc(100% + 2rem));
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: translateX(calc(100% + 2rem));
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: translateX(calc(100% + 2rem));
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
@@ -1007,6 +970,7 @@ html, body, #root {
     justify-content: flex-end;
     width: 5%;
     height: 100%;
+    margin-left: 1rem;
 }
 
 .work-card-tree svg {
@@ -1035,7 +999,7 @@ html, body, #root {
 
 .work-card-container {
     display: flex;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .work-card-content {
@@ -1045,6 +1009,8 @@ html, body, #root {
     background-color: rgba(30, 30, 30, .4);
     border-radius: 8px;
     width: 100%;
+    margin: 0 12px 12px 0;
+    box-shadow:  6px 6px 6px rgba(0, 0, 0, .5);
 }
 
 .work-card-header {
@@ -1093,32 +1059,6 @@ html, body, #root {
 
 @media screen and (max-width: 480px) {
 
-    .work-container-open, .work-container-closed {
-        top: 0;
-        bottom: 0;
-        left: 16px;
-        right: 8px;
-        width: calc(100% - 24px);
-        height: 100%;
-        gap: 8px;
-    } 
-
-    .work-card-container {
-        gap: 1rem;
-    }
-
-    .work-card-container:first-of-type {
-        margin-bottom: .5rem;
-    }
-
-    .work-card-container:last-of-type {
-        margin-top: .5rem;
-    }
-
-    .work-card-tree {
-        width: auto;
-    }
-
     .work-card-tree svg {
         width: 13px;
     }
@@ -1138,60 +1078,48 @@ html, body, #root {
     .work-card-info li {
         font-size: .85rem;
     }
-
-
 }
 
 /* Projects */
 .projects-container-open {
     position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
+    width: 100%;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-right: .5rem;
     overflow-y: auto;
     overflow-x: hidden;
 
     -webkit-transform: translateX(0);
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: translateX(0);
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: translateX(0);
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
 .projects-container-closed {
     position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
+    width: 100%;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-right: .5rem;
     overflow-y: auto;
     overflow-x: hidden;
 
     -webkit-transform: translateX(calc(100% + 2rem));
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: translateX(calc(100% + 2rem));
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: translateX(calc(100% + 2rem));
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
@@ -1218,6 +1146,7 @@ html, body, #root {
 
     background-color: rgba(30, 30, 30, .4);
     border-radius: .5rem;
+    box-shadow:  6px 6px 6px rgba(0, 0, 0, .5);
 }
 
 .projects-card-header {
@@ -1344,13 +1273,8 @@ html, body, #root {
 @media screen and (max-width: 480px) {
 
     .projects-container-open, .projects-container-closed {
-        top: 0;
-        bottom: 0;
-        left: .5rem;
-        right: .5rem;
-        width: calc(100% - 1rem);
+        width: 100%;
         height: 100%;
-        gap: .5rem;
     }
 
     .projects-slider {
@@ -1364,9 +1288,9 @@ html, body, #root {
 
     .projects-card {
         flex-direction: column;
-        width: 100%;
+        width: calc(100% - 24px);
         height: calc(100% - 2.25rem);
-        margin: 0 0 2.25rem 0;
+        margin: 0 12px 2.25rem 12px;
     }
 
     .projects-card-header img {
@@ -1406,50 +1330,41 @@ html, body, #root {
 
 /* Contact */
 .contact-container-open {
-    position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
+    width: 100%;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
     overflow-y: auto;
     overflow-x: hidden;
 
     -webkit-transform: translateX(0);
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: translateX(0);
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: translateX(0);
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
 .contact-container-closed {
     position: absolute;
-    top: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
+    width: 100%;
+    height: 100%;
 
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1rem;
     overflow-y: auto;
     overflow-x: hidden;
 
     -webkit-transform: translateX(calc(100% + 2rem));
-    -webkit-transition: -webkit-transform 300ms;
+    -webkit-transition: -webkit-transform 300ms ease;
     -moz-transform: translateX(calc(100% + 2rem));
-    -moz-transition: -moz-transform 300ms;
+    -moz-transition: -moz-transform 300ms ease;
     transform: translateX(calc(100% + 2rem));
-    transition: transform 300ms;
+    transition: transform 300ms ease;
     will-change: transform;
 }
 
@@ -1467,6 +1382,7 @@ html, body, #root {
     height: 7vw;
     padding: 1rem;
     border-radius: 100%;
+    box-shadow:  10px 10px 10px rgba(0, 0, 0, .5);
 }
 
 #linkedin {
@@ -1492,6 +1408,8 @@ html, body, #root {
     flex-direction: column;
     background-color: rgba(30, 30, 30, .4);
     border-radius: 8px;
+    margin: 0 12px 12px 12px;
+    box-shadow:  6px 6px 6px rgba(0, 0, 0, .5);
 }
 
 .contact-form-header {
@@ -1574,17 +1492,6 @@ html, body, #root {
 }
 
 @media screen and (max-width: 480px) {
-
-    .contact-container-open, 
-    .contact-container-closed {
-        top: 0;
-        bottom: 0;
-        left: .5rem;
-        right: .5rem;
-        width: calc(100% - 1rem);
-        height: 100%;
-        gap: .5rem;
-    }
 
     .contact-row-top {
         margin-top: .5rem;

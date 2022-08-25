@@ -65,22 +65,20 @@ function App() {
 
 				{!showMenu && (
 					<div className='scroll-button-container'>
-						<svg 
+						<svg 							
 							class="scroll-left"
 							onClick={scrollLeft} 
 							xmlns="http://www.w3.org/2000/svg" 
-							viewBox="0 0 197.402 197.402"
-						>
-							<polygon points="146.883,197.402 45.255,98.698 146.883,0 152.148,5.418 56.109,98.698 152.148,191.98"/>
+							viewBox="0 0 1024 1024">
+							<path d="M779.7 83.1l0.7 0.7v-0.4L728 31.1 261.1 498l466 466 51.9-51.8L364.8 498z"  />
 						</svg>
 
-						<svg 
+						<svg 							
 							class="scroll-right"
 							onClick={scrollRight} 
 							xmlns="http://www.w3.org/2000/svg" 
-							viewBox="0 0 197.402 197.402"
-						>
-							<polygon points="146.883,197.402 45.255,98.698 146.883,0 152.148,5.418 56.109,98.698 152.148,191.98"/>
+							viewBox="0 0 1024 1024">
+							<path d="M779.7 83.1l0.7 0.7v-0.4L728 31.1 261.1 498l466 466 51.9-51.8L364.8 498z"  />
 						</svg>
 					</div>
 				)}
