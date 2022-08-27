@@ -11,24 +11,50 @@ function App() {
 	const [showMenu, setShowMenu] = useState(false);
 	const [article, setArticle] = useState(0);
 	const [loading, setLoading] = useState(true);
+	const [scrollL, setScrollL] = useState(true);
+	const [scrollR, setScrollR] = useState(true);
 
 
 	// Get inner height of screen excluding safe areas on mobile
-	const documentHeight = () => {
-		const doc = document.documentElement
-		doc.style.setProperty('--view-height', `${window.innerHeight}px`)
-	}
+	function documentHeight() {
+		const DOC = document.documentElement
+		DOC.style.setProperty('--view-height', `${window.innerHeight}px`)
+	};
 
-	documentHeight();
+	// Set scroll button visibility based on window location
+	function scrollButtons() {
+		const WALL = document.getElementById('wallpaperr');
+
+		if (Math.ceil(WALL.getBoundingClientRect().left) === 0) {
+			setScrollR(true)
+			setScrollL(false);
+		}
+
+		else if (Math.ceil(WALL.getBoundingClientRect().right) === window.innerWidth) {
+			setScrollR(false)
+			setScrollL(true)
+		}
+
+		else {
+			setScrollR(true)
+			setScrollL(true)
+		}
+	}
 
 	// Update inner height variable in CSS on screen resize
 	useEffect(() => {
 		window.addEventListener('resize', documentHeight);
+		documentHeight();
+
+		window.addEventListener('scroll', scrollButtons);
+		scrollButtons();
 
 		return () => {
-			window.removeEventListener('resize', documentHeight)
+			window.removeEventListener('resize', documentHeight);
+			window.removeEventListener('scroll', scrollButtons)
 		}
 	}, [])
+
 
 	// Disable scrolling if <Menu /> is open
 	document.body.style.overflow = showMenu ? 'hidden' : 'overlay';
@@ -39,14 +65,14 @@ function App() {
 
 	function scrollLeft() {
 		window.scrollBy({
-			left: -window.innerWidth,
+			left: -document.getElementById('wallpaperr').offsetWidth,
 			behavior: 'smooth'
 		});
 	}
 
 	function scrollRight() {
 		window.scrollBy({
-			left: window.innerWidth,
+			left: document.getElementById('wallpaperr').offsetWidth,
 			behavior: 'smooth'
 		});	
 	}
@@ -65,21 +91,25 @@ function App() {
 
 				{!showMenu && (
 					<div className='scroll-button-container'>
-						<svg 							
-							class="scroll-left"
-							onClick={scrollLeft} 
-							xmlns="http://www.w3.org/2000/svg" 
-							viewBox="0 0 1024 1024">
-							<path d="M779.7 83.1l0.7 0.7v-0.4L728 31.1 261.1 498l466 466 51.9-51.8L364.8 498z"  />
-						</svg>
+						{scrollL && (
+							<svg 							
+								class="scroll-left"
+								onClick={scrollLeft} 
+								xmlns="http://www.w3.org/2000/svg" 
+								viewBox="0 0 1024 1024">
+								<path d="M779.7 83.1l0.7 0.7v-0.4L728 31.1 261.1 498l466 466 51.9-51.8L364.8 498z"  />
+							</svg>
+						)}
 
-						<svg 							
-							class="scroll-right"
-							onClick={scrollRight} 
-							xmlns="http://www.w3.org/2000/svg" 
-							viewBox="0 0 1024 1024">
-							<path d="M779.7 83.1l0.7 0.7v-0.4L728 31.1 261.1 498l466 466 51.9-51.8L364.8 498z"  />
-						</svg>
+						{scrollR && (
+							<svg 							
+								class="scroll-right"
+								onClick={scrollRight} 
+								xmlns="http://www.w3.org/2000/svg" 
+								viewBox="0 0 1024 1024">
+								<path d="M779.7 83.1l0.7 0.7v-0.4L728 31.1 261.1 498l466 466 51.9-51.8L364.8 498z"  />
+							</svg>
+						)}
 					</div>
 				)}
 

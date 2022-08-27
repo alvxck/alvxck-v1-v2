@@ -763,8 +763,8 @@ html, body, #root {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
     padding: 16px;
     border-radius: 50%;
 }
