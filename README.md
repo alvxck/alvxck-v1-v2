@@ -14,5 +14,3 @@
 📫 Connections: [Linkedin](https://www.linkedin.com/in/-alexandercarvalho/)  
 
 <p align='center'>Check out some of my projects below!</p>
-
-<p align='center'>![](https://komarev.com/ghpvc/?username=alvxck&label=Visitors)<p>
