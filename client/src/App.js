@@ -1,8 +1,8 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import articles from './data/article-data';
-import LoadingScreen from './components/LoadingScreen';
 import wallpaper from './assets/alvx-wallpaper.jpg';
+import LoadingScreen from './components/LoadingScreen';
 import Header from './components/Header';
 import Beacon from './components/Beacon';
 import Menu from './components/Menu';
@@ -11,50 +11,48 @@ function App() {
 	const [showMenu, setShowMenu] = useState(false);
 	const [article, setArticle] = useState(0);
 	const [loading, setLoading] = useState(true);
-	const [scrollL, setScrollL] = useState(true);
-	const [scrollR, setScrollR] = useState(true);
+	const [leftScroll, setLeftScroll] = useState();
+	const [rightScroll, setRightScroll] = useState();
 
-
-	// Get inner height of screen excluding safe areas on mobile
-	function documentHeight() {
-		const DOC = document.documentElement
-		DOC.style.setProperty('--view-height', `${window.innerHeight}px`)
-	};
-
-	// Set scroll button visibility based on window location
-	function scrollButtons() {
-		const WALL = document.getElementById('wallpaperr');
-
-		if (Math.ceil(WALL.getBoundingClientRect().left) === 0) {
-			setScrollR(true)
-			setScrollL(false);
-		}
-
-		else if (Math.ceil(WALL.getBoundingClientRect().right) === window.innerWidth) {
-			setScrollR(false)
-			setScrollL(true)
-		}
-
-		else {
-			setScrollR(true)
-			setScrollL(true)
-		}
-	}
-
-	// Update inner height variable in CSS on screen resize
+	// Update inner height variable in CSS on screen resize and set scroll button visibility
 	useEffect(() => {
-		window.addEventListener('resize', documentHeight);
-		documentHeight();
+		window.addEventListener('resize', getWindowHeight);
+		getWindowHeight();
 
-		window.addEventListener('scroll', scrollButtons);
-		scrollButtons();
+		window.addEventListener('scroll', scrollVisibility);
+		scrollVisibility();
 
 		return () => {
-			window.removeEventListener('resize', documentHeight);
-			window.removeEventListener('scroll', scrollButtons)
+			window.removeEventListener('resize', getWindowHeight);
+			window.removeEventListener('scroll', scrollVisibility);
 		}
 	}, [])
 
+	// Get inner height of screen excluding safe areas on mobile
+	function getWindowHeight() {
+		const DOC = document.documentElement;
+		DOC.style.setProperty('--view-height', `${window.innerHeight}px`);
+	};
+
+	// Set scroll button visibility based on window location
+	function scrollVisibility() {
+		const WALLPAPER = document.getElementById('wallpaperr').getBoundingClientRect();
+
+		if (Math.round(WALLPAPER.left) === 0) {
+			setLeftScroll(false);
+			setRightScroll(true);
+		}
+
+		else if (Math.round(WALLPAPER.right) === window.innerWidth) {
+			setLeftScroll(true);
+			setRightScroll(false);
+		}
+
+		else {
+			setLeftScroll(true);
+			setRightScroll(true);
+		}
+	}
 
 	// Disable scrolling if <Menu /> is open
 	document.body.style.overflow = showMenu ? 'hidden' : 'overlay';
@@ -91,7 +89,7 @@ function App() {
 
 				{!showMenu && (
 					<div className='scroll-button-container'>
-						{scrollL && (
+						{leftScroll && (
 							<svg 							
 								class="scroll-left"
 								onClick={scrollLeft} 
@@ -101,7 +99,7 @@ function App() {
 							</svg>
 						)}
 
-						{scrollR && (
+						{rightScroll && (
 							<svg 							
 								class="scroll-right"
 								onClick={scrollRight} 

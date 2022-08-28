@@ -12,7 +12,7 @@ function About(props) {
                 <div className='about-container-content'>
                     <h1>Hi, my name is Alex.</h1>
                     <h2>CS Student && Software Developer</h2>
-                    <p>I'm a computer science student focused on </p>
+                    <p>I'm a computer science student focused on</p>
                     <ul>
                         <h2>Education</h2>
                         <li>2021 - 2025</li>

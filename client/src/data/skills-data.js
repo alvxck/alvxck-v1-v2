@@ -53,7 +53,7 @@ const skills = [
         ],
         header2: 'Concepts',
         info: [
-            <p>OOP</p>, <p>Encapsulation</p>, <p>Inheritence</p>, <p>Polymorphism</p>, <p>Abstraction</p>
+            <p>OOP</p>, <p>Encapsulation</p>, <p>Inheritance</p>, <p>Polymorphism</p>, <p>Abstraction</p>
         ],
     },
     {
