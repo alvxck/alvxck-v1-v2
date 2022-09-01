@@ -10,15 +10,24 @@ function About(props) {
                 </div>
 
                 <div className='about-container-content'>
-                    <h1>Hi, my name is Alex.</h1>
-                    <h2>CS Student && Software Developer</h2>
-                    <p>I'm a computer science student focused on</p>
-                    <ul>
-                        <h2>Education</h2>
-                        <li>2021 - 2025</li>
-                        <li>Sheridan College</li>
-                        <li>Honours Bachelor of Computer Science</li>
-                    </ul>
+                    <div>
+                        <h1>Hi, my name is Alex.</h1>
+                        <h2>CS Student && Software Developer</h2>
+                    </div>
+
+                    <div>
+                        <p>I'm a computer science student focused on Full Stack Development and Data Science. I'm also interested in Cryptography and Performance Cars.</p>
+                    </div>
+
+                    <div>
+                        <ul>
+                            <h2>Education</h2>
+                            <li>2021 - 2025</li>
+                            <li>Sheridan College</li>
+                            <li>Honours Bachelor of Computer Science</li>
+                        </ul>
+                    </div>
+
                     <div className='about-container-content-contact'>
                         <a id='linkedin' href='https://www.linkedin.com/in/-alexandercarvalho/' target='blank'>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
