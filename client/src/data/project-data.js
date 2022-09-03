@@ -12,15 +12,16 @@ import { ReactComponent as CSSSVG } from '../assets/css.svg';
 import { ReactComponent as GITSVG } from '../assets/git.svg';
 import { ReactComponent as Aws } from '../assets/aws.svg';
 
+import portfolio from '../assets/portfolio-preview.png';
 import loginsystem from '../assets/loginsystem-preview.png';
-import sha from '../assets/sha-preview.png'; 
+import sha from '../assets/sha-preview.jpg'; 
 
 const projects = [
     {
         key: 'project-portfolio-webpage',
         name: 'Portfolio Webpage',
         created: '6/26/22',
-        img: '',
+        img: portfolio,
         languages: [
             <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <HTMLSVG />, <CSSSVG />, <Aws />, <GITSVG />
         ],

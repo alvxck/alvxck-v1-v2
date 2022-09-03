@@ -1342,12 +1342,17 @@ html, body, #root {
         margin: 0 .75rem 2.25rem .75rem;
     }
 
+    .projects-card-header {
+        height: 40%;
+    }
+
     .projects-card-header img {
         width: 100%;
         height: auto;
     }
 
     .projects-card-info {
+        height: 60%;
         width: calc(100% - 2rem);
     }
 
@@ -1356,7 +1361,7 @@ html, body, #root {
     }
 
     .projects-card-info p {
-        font-size: 1rem;
+        font-size: .85rem;
     }
 
     .projects-card-info-stack svg {
