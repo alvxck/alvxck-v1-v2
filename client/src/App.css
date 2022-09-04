@@ -1393,16 +1393,16 @@ html, body, #root {
     }
 
     .projects-card-header {
-        height: calc(40% - 1.5rem);
+        height: calc(45% - 1.5rem);
     }
 
     .projects-card-header img {
-        width: 100%;
+        width: calc(100% - 1.5rem);
         height: auto;
     }
 
     .projects-card-info {
-        height: calc(60% - 1.5rem);
+        height: calc(55% - 1.5rem);
         width: calc(100% - 1.5rem);
     }
 
