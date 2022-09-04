@@ -11,8 +11,8 @@ function App() {
 	const [showMenu, setShowMenu] = useState(false);
 	const [article, setArticle] = useState(0);
 	const [loading, setLoading] = useState(true);
-	const [leftScroll, setLeftScroll] = useState();
-	const [rightScroll, setRightScroll] = useState();
+	const [scrollPosition, setScrollPosition] = useState('left');
+
 
 	// Update inner height variable in CSS on screen resize and set scroll button visibility
 	useEffect(() => {
@@ -39,18 +39,15 @@ function App() {
 		const WALLPAPER = document.getElementById('wallpaperr').getBoundingClientRect();
 
 		if (Math.round(WALLPAPER.left) === 0) {
-			setLeftScroll(false);
-			setRightScroll(true);
+			setScrollPosition('left');
 		}
 
 		else if (Math.round(WALLPAPER.right) === window.innerWidth) {
-			setLeftScroll(true);
-			setRightScroll(false);
+			setScrollPosition('right');
 		}
 
 		else {
-			setLeftScroll(true);
-			setRightScroll(true);
+			setScrollPosition('center');
 		}
 	}
 
@@ -61,22 +58,26 @@ function App() {
         setShowMenu((prev) => !prev);
     }
 
-	function scrollLeft() {
-		window.scrollBy({
-			left: -document.getElementById('wallpaperr').offsetWidth,
-			behavior: 'smooth'
-		});
-	}
+	function scrollWindow(direction) {
+		if (direction === 'left') {
+			window.scrollBy({
+				left: -document.getElementById('wallpaperr').offsetWidth,
+				behavior: 'smooth'
+			});
+		}
 
-	function scrollRight() {
-		window.scrollBy({
-			left: document.getElementById('wallpaperr').offsetWidth,
-			behavior: 'smooth'
-		});	
+		if (direction === 'right') {
+			window.scrollBy({
+				left: document.getElementById('wallpaperr').offsetWidth,
+				behavior: 'smooth'
+			});	
+		}
 	}
 
 	return (
 		<div className='backdrop'>
+			<LoadingScreen loadState={loading}/>
+
 			<img 
 				className='wallpaper'
 				id='wallpaperr'
@@ -85,49 +86,47 @@ function App() {
 				onLoad={() => setLoading(false)}
 			/>
 
-			<LoadingScreen loadState={loading}/>
-
-				{!showMenu && (
+			{!showMenu && (
+				<>
 					<div className='scroll-button-container'>
-						{leftScroll && (
+						{(scrollPosition === 'right' || scrollPosition === 'center') && (
 							<svg 							
 								class="scroll-left"
-								onClick={scrollLeft} 
+								onClick={() => scrollWindow('left')} 
 								xmlns="http://www.w3.org/2000/svg" 
 								viewBox="0 0 1024 1024">
 								<path d="M779.7 83.1l0.7 0.7v-0.4L728 31.1 261.1 498l466 466 51.9-51.8L364.8 498z"  />
 							</svg>
 						)}
 
-						{rightScroll && (
+						{(scrollPosition === 'left' || scrollPosition === 'center') && (
 							<svg 							
 								class="scroll-right"
-								onClick={scrollRight} 
+								onClick={() => scrollWindow('right')} 
 								xmlns="http://www.w3.org/2000/svg" 
 								viewBox="0 0 1024 1024">
 								<path d="M779.7 83.1l0.7 0.7v-0.4L728 31.1 261.1 498l466 466 51.9-51.8L364.8 498z"  />
 							</svg>
 						)}
 					</div>
-				)}
 
-			{!showMenu && (
-				<div className='beacon-container'>
-					{articles.map((article) => (
-						<Beacon
-							key={article.key}
-							value={article.value}
-							top={article.beacon.top}
-							left={article.beacon.left}
-							onClick={() => {setArticle(article.id); toggleMenu();}}
-							svg={article.svg}
-						/>
-					))}
-				</div>
+					<div className='beacon-container'>
+						{articles.map((article) => (
+							<Beacon
+								key={article.key}
+								value={article.value}
+								top={article.beacon.top}
+								left={article.beacon.left}
+								onClick={() => {setArticle(article.id); toggleMenu();}}
+								svg={article.svg}
+							/>
+						))}
+					</div>
+				</>
 			)}
 
 			<div className='home'>
-				<Header onClick={toggleMenu} menu={showMenu}/>
+				<Header onClick={toggleMenu} menu={showMenu} loading={loading}/>
 				<Menu open={showMenu} selected={article} setArticle={(id) => setArticle(id)}/>
         	</div>
 		</div>

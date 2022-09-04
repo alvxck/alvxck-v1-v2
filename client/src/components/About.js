@@ -16,7 +16,7 @@ function About(props) {
                     </div>
 
                     <div>
-                        <p>I'm a computer science student focused on Full Stack Development and Data Science. I'm also interested in Cryptography and Performance Cars.</p>
+                        <p>I'm a Computer Science student focused on Full Stack Development and Data Science. I'm also interested in Cryptography and Performance Cars.</p>
                     </div>
 
                     <div>
