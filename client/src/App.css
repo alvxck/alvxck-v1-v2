@@ -292,7 +292,7 @@ html, body, #root {
     }
 
     .swipe-container-content {
-        animation: swipe-bounce 2.5s 2.6s infinite;
+        animation: swipe-bounce 2.5s 3s;
     }
 
     .swipe-container-content svg {
