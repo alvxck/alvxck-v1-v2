@@ -126,7 +126,7 @@ function App() {
 			)}
 
 			<div className='home'>
-				<Header onClick={toggleMenu} menu={showMenu} loading={loading}/>
+				<Header onClick={toggleMenu} menu={showMenu} loadState={loading}/>
 				<Menu open={showMenu} selected={article} setArticle={(id) => setArticle(id)}/>
         	</div>
 		</div>
