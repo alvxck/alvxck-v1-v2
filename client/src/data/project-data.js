@@ -39,7 +39,7 @@ const projects = [
         ],
         preview: 'https://raw.githubusercontent.com/alvxck/Login-System/main/login-system-demo.gif',
         code: 'https://github.com/alvxck/Login-System',
-        info: 'MERN login / registration system using REST APIs with JWT for user authentication.',
+        info: 'Full Stack [MERN] Login & Registration system with stateless User Authentication.',
     }, 
     {
         key: 'project-SHA',
