@@ -10,7 +10,7 @@
 🌍 Toronto, Canada  
 ⚙️ Currently working at Amazon YYZ2  
 🏫 Honours Bachelor of Computer Science @ Sheridan College  
-🔭 Interested in Cyber Security and Cryptography  
+🔭 Interested in Full Stack Development, Cryptography, and Data Science  
 📫 Connections: [Linkedin](https://www.linkedin.com/in/-alexandercarvalho/)  
 
 <p align='center'>Check out some of my projects below!</p>
