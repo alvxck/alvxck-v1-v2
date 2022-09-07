@@ -1,19 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {ReactComponent as SwipeSVG} from '../assets/swipe.svg';
 
 
 // Main header component
 function Header(props) {
-    const [showSwipe, setShowSwipe] = useState(true);
-
-    // Remove swipe gesture from DOM after 5s
-    useEffect(() => {
-        if (props.loadState === false) {
-            setTimeout(() => {
-                setShowSwipe(false);
-            }, 5000);
-        }
-    }, [props])
 
     return (
         <>
@@ -31,14 +21,12 @@ function Header(props) {
                 </div>
             </div>
 
-            {showSwipe && (
-                <div className='swipe-container'>
-                    <div className='swipe-container-content'>
-                        <SwipeSVG />
-                        <p>Swipe to Navigate</p>
-                    </div>
+            <div className={props.loadState ? 'swipe-container' : 'swipe-container-hidden'}>
+                <div className='swipe-container-content'>
+                    <SwipeSVG />
+                    <p>Swipe to Navigate</p>
                 </div>
-            )}
+            </div>
         </>
 
     )

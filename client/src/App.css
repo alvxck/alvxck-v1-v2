@@ -255,24 +255,6 @@ html, body, #root {
 }
 
 /* Swipe Animation */
-@keyframes swipe-bounce {
-    0% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    33% {
-        transform: translateX(30px);
-        opacity: 1;
-    }
-    66% {
-        transform: translateX(-30px);
-        opacity: 1;
-    }    
-    100% {
-        transform: translateX(0);
-        opacity: 0;
-    }
-}
 
 .swipe-container {
     display: none;
@@ -288,10 +270,26 @@ html, body, #root {
         justify-content: center;
         width: 100%;
         height: var(--view-height);
+
+        opacity: 1;
+        visibility: visible;
     }
 
-    .swipe-container-content {
-        animation: swipe-bounce 2.5s 3s;
+    .swipe-container-hidden {
+        position: absolute;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: var(--view-height);
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s linear, visibility 1s;
+        transition-delay: 4s;
+        will-change: opacity, visibility;
     }
 
     .swipe-container-content svg {
@@ -1283,7 +1281,6 @@ html, body, #root {
 }
 
 .projects-card-info h2 {
-    text-decoration: underline;
     font-size: .85rem;
     font-family: var(--secondary-font);
     color: var(--secondary-font-color);

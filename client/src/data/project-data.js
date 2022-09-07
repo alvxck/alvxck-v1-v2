@@ -20,7 +20,7 @@ const projects = [
     {
         key: 'project-portfolio-webpage',
         name: 'Portfolio Webpage',
-        created: '6/26/22',
+        created: 'Front-End · June 2022',
         img: portfolio,
         languages: [
             <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <HTMLSVG />, <CSSSVG />, <Aws />, <GITSVG />
@@ -30,9 +30,9 @@ const projects = [
         info: 'Personal portfolio and interactive webpage.',
     }, 
     {
-        key: 'project-authentication-service',
-        name: 'Authentication Service',
-        created: '5/7/22',
+        key: 'project-login-system',
+        name: 'Login System',
+        created: 'Full Stack · July 2022',
         img: loginsystem,
         languages: [
             <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <ExpressSVG />, <MongoDBSVG />, <JestSVG />, <HTMLSVG />, <CSSSVG />, <GITSVG />
@@ -44,7 +44,7 @@ const projects = [
     {
         key: 'project-SHA',
         name: "Secure Hash Algorithm's",
-        created: '3/20/22',
+        created: 'Data Analysis · March 2022',
         img: sha,
         languages: [
             <PythonSVG />, <NumpySVG />, <PytestSVG />, <GITSVG />
