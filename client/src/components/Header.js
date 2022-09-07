@@ -21,12 +21,12 @@ function Header(props) {
                 </div>
             </div>
 
-            {/* <div className={props.loadState ? 'swipe-container' : 'swipe-container-hidden'}>
+            <div className={props.loadState ? 'swipe-container' : 'swipe-container-hidden'}>
                 <div className='swipe-container-content'>
                     <SwipeSVG />
                     <p>Swipe to Navigate</p>
                 </div>
-            </div> */}
+            </div>
         </>
 
     )
