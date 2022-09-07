@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import articles from './data/article-data';
 import wallpaper from './assets/alvx-wallpaper.jpg';
 import LoadingScreen from './components/LoadingScreen';
@@ -12,6 +12,7 @@ function App() {
 	const [article, setArticle] = useState(0);
 	const [loading, setLoading] = useState(true);
 	const [scrollPosition, setScrollPosition] = useState('left');
+	const wallpaperContainer = useRef();
 
 
 	// Update inner height variable in CSS on screen resize and set scroll button visibility
@@ -36,7 +37,7 @@ function App() {
 
 	// Set scroll button visibility based on window location
 	function scrollVisibility() {
-		const WALLPAPER = document.getElementById('wallpaperr').getBoundingClientRect();
+		const WALLPAPER = wallpaperContainer.current.getBoundingClientRect();
 
 		if (Math.round(WALLPAPER.left) === 0) {
 			setScrollPosition('left');
@@ -54,24 +55,17 @@ function App() {
 	// Disable scrolling if <Menu /> is open
 	document.body.style.overflow = showMenu ? 'hidden' : 'overlay';
 
+	// Open and Close menus
     function toggleMenu() {
         setShowMenu((prev) => !prev);
     }
 
+	// Set scroll direction on scroll button click
 	function scrollWindow(direction) {
-		if (direction === 'left') {
-			window.scrollBy({
-				left: -document.getElementById('wallpaperr').offsetWidth,
-				behavior: 'smooth'
-			});
-		}
-
-		if (direction === 'right') {
-			window.scrollBy({
-				left: document.getElementById('wallpaperr').offsetWidth,
-				behavior: 'smooth'
-			});	
-		}
+		window.scrollBy({
+			left: direction === "left" ? -wallpaperContainer.current.offsetWidth : wallpaperContainer.current.offsetWidth,
+			behavior: 'smooth'
+		});
 	}
 
 	return (
@@ -80,7 +74,7 @@ function App() {
 
 			<img 
 				className='wallpaper'
-				id='wallpaperr'
+				ref={wallpaperContainer}
 				src={wallpaper} 
 				alt='wallpaper'
 				onLoad={() => setLoading(false)}
