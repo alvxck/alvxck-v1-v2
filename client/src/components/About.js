@@ -24,7 +24,7 @@ function About(props) {
                             <h2>Education</h2>
                             <li>2021 - 2025</li>
                             <li>Sheridan College</li>
-                            <li>Honours Bachelor of Computer Science</li>
+                            <li>Honors Bachelor of Computer Science</li>
                         </ul>
                     </div>
 
