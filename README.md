@@ -11,6 +11,29 @@
 ⚙️ Software Developer at Geotab   
 🏫 Computer Science at Sheridan College   
 🔭 Interested in Data Science and Performance Cars   
-📫 Connections: [LinkedIn](https://www.linkedin.com/in/-alexandercarvalho/), [Website](https://alexandercarvalho.ca)
+📫 Connections: [LinkedIn](https://www.linkedin.com/in/-alexandercarvalho/) | [Website](https://alexandercarvalho.ca)
+
+<table>
+<tr>
+<th>
+<p align='left'>About Me</p>
+</th>
+<th>
+<p align='right'>Skills</p>
+</th>
+</tr>
+<tr>
+<td>
+🌍 Toronto, Canada   
+⚙️ Software Developer at Geotab   
+🏫 Computer Science at Sheridan College   
+🔭 Interested in Data Science and Performance Cars   
+📫 Connections: [LinkedIn](https://www.linkedin.com/in/-alexandercarvalho/) | [Website](https://alexandercarvalho.ca)
+</td>
+<td align="right">
+Column 2
+</td>
+</tr>
+</table>
 
 <p align='center'>Check out some of my projects below!</p>
