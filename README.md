@@ -6,32 +6,37 @@
     <p align='center'>Welcome to my Github.</p>
 </p>
 
-### About Me
-🌍 Toronto, Canada   
-⚙️ Software Developer at Geotab   
-🏫 Computer Science at Sheridan College   
-🔭 Interested in Data Science and Performance Cars   
-📫 Connections: [LinkedIn](https://www.linkedin.com/in/-alexandercarvalho/) | [Website](https://alexandercarvalho.ca)
-
 <table>
 <tr>
 <th>
-<p align='left'>About Me</p>
+<h2 align='left'>About Me</h2>
 </th>
 <th>
-<p align='right'>Skills</p>
+<h2 align='right'>Skills</h2>
 </th>
 </tr>
 <tr>
 <td>
-🌍 Toronto, Canada   
-⚙️ Software Developer at Geotab   
-🏫 Computer Science at Sheridan College   
-🔭 Interested in Data Science and Performance Cars   
-📫 Connections: [LinkedIn](https://www.linkedin.com/in/-alexandercarvalho/) | [Website](https://alexandercarvalho.ca)
+<img width="441" height="0"/><br> 
+🌍 Toronto, Canada <br>  
+⚙️ Software Developer at Geotab <br>
+🏫 Computer Science at Sheridan College <br>   
+🔭 Interested in Data Science and Performance Cars <br> 
+📫 Connections: <a href='https://www.linkedin.com/in/-alexandercarvalho/'>LinkedIn</a> | <a href='https://alexandercarvalho.ca'>Website</a>
 </td>
 <td align="right">
-Column 2
+<img width="441" height="0"/><br>
+<img src="./client/src/assets/python.svg" width='40' height='40'/>
+<img src="./client/src/assets/cpp.svg" width='40' height='40'/>
+<img src="./client/src/assets/c.svg" width='40' height='40'/>
+<img src="./client/src/assets/javascript.svg" width='40' height='40'/><br>
+<img src="./client/src/assets/numpy.svg" width='40' height='40'/>
+<img src="./client/src/assets/pytest.svg" width='40' height='40'/>
+<img src="./client/src/assets/react.svg" width='40' height='40'/>
+<img src="./client/src/assets/expressjs.svg" width='40' height='40'/><br>
+<img src="./client/src/assets/git.svg" width='40' height='40'/>
+<img src="./client/src/assets/aws.svg" width='40' height='40'/>
+<img src="./client/src/assets/bash.svg" width='40' height='40'/>
 </td>
 </tr>
 </table>
