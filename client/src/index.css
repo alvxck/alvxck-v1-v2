@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'DMSans-Bold';
   src: local('DMSans-Bold'), url(./assets/DMSans-Bold.ttf) format('truetype');
 }
@@ -20,4 +20,4 @@ code {
 @font-face {
   font-family: 'DMSans-Regular';
   src: local('DMSans-Regular'), url(./assets/DMSans-Regular.ttf) format('truetype');
-}
+} */
