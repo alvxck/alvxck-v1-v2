@@ -78,7 +78,7 @@ html, body, #root {
 
 .profile-information * {
     transform: rotate(30deg);
-    transform-origin: center right;
+    transform-origin: top right;
 }
 
 .profile-information h1 {
@@ -97,21 +97,17 @@ html, body, #root {
 
 .profile-links {
     display: flex;
-    gap: .75rem;
+    gap: 1.5rem;
 
     transform: rotate(30deg);
-    transform-origin: center right;
-}
-
-.profile-tabs * {
-    transform: rotate(30deg);
-    transform-origin: center right;
+    transform-origin: top right;
 }
 
 .profile-tabs {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: .25rem;
+    margin-top: 2rem;
 
     transform: skew(1deg);
 }
@@ -119,17 +115,34 @@ html, body, #root {
 /* Media Link */
 
 .medialink {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    
+    cursor: pointer;
+}
 
-    background-color: var(--color-2);
+.medialink:hover {
+    scale: 1.1;
+}
+
+.medialink svg {
+    fill: var(--color-2);
 }
 
 /* Tab */
 
 .tab {
-    width: 7.5rem;
     height: 2.5rem;
 
-    background-color: var(--color-2);
+    transform: rotate(30deg);
+    transform-origin: top right;
+
+    cursor: pointer;
+}
+
+.tab h1 {
+    margin: 0;
+    font-family: var(--font-1);
+    color: var(--color-2);
+    text-align: end;
 }

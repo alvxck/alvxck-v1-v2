@@ -1,8 +1,10 @@
 import React from "react";
 import MediaLink from './MediaLink.js';
 import Tab from './Tab.js';
+import data from './data.js';
 
 function Profile() {
+    const dataLinks = data[0]['links'];
 
     return (
         <div className='profile'>
@@ -13,15 +15,22 @@ function Profile() {
             </div>
 
             <div className='profile-links'>
-                <MediaLink />
-                <MediaLink />
-                <MediaLink />
+                {dataLinks.map((media) => (
+                    <MediaLink
+                        key={media.key}
+                        svg={media.svg}
+                        link={media.link}
+                    />
+                ))}
             </div>
 
             <div className='profile-tabs'>
-                <Tab key={'About'}/>
-                <Tab key={'Experience'}/>
-                <Tab key={'Projects'}/>
+                {data.map((tab) => (
+                    <Tab
+                        key={tab.key}
+                        value={tab.value}
+                    />
+                ))}
             </div>
         </div>
     )

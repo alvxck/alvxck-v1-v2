@@ -4,7 +4,7 @@ function Tab(props) {
 
     return (
         <div className='tab'>
-            <h1>{props.key}</h1>
+            <h1>{props.value}</h1>
         </div>
     )
 }
