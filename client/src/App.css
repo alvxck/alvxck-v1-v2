@@ -4,7 +4,7 @@
 :root {
     --view-height: 100vh;
 
-    --font-1: DMSans-Bold;
+    --font-1: DMSans-Regular;
     --font-2: LibreBaskerville-Regular;
 
     --color-1: #050505;
@@ -37,14 +37,99 @@ html, body, #root {
 
 
 /* App */
+
 .divisor {
     position: absolute;
     height: 200%;
-    width: 200%;
-    left: 8%;
+    width: 75%;
 
-    transform: rotate(60deg);
+    left: 50%;
+    transform: rotate(330deg);
+    transform-origin: center left;
 
     background-color: var(--color-2);
 }
 
+.home {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+
+    transform: rotate(-30deg);
+    transform-origin: center center;
+}
+
+.profile, .content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 3;
+    width: 50%;
+    height: 100%;
+    gap: 1rem;
+}
+
+/* Profile */
+
+.profile-information * {
+    transform: rotate(30deg);
+    transform-origin: center right;
+}
+
+.profile-information h1 {
+    margin: 0;
+    font-family: var(--font-2);
+    color: var(--color-2);
+    text-align: end;
+}
+
+.profile-information p {
+    margin: .5rem 0 0 0;
+    font-family: var(--font-1);
+    color: var(--color-2);
+    text-align: end;
+}
+
+.profile-links {
+    display: flex;
+    gap: .75rem;
+
+    transform: rotate(30deg);
+    transform-origin: center right;
+}
+
+.profile-tabs * {
+    transform: rotate(30deg);
+    transform-origin: center right;
+}
+
+.profile-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    transform: skew(1deg);
+}
+
+/* Media Link */
+
+.medialink {
+    width: 2rem;
+    height: 2rem;
+
+    background-color: var(--color-2);
+}
+
+/* Tab */
+
+.tab {
+    width: 7.5rem;
+    height: 2.5rem;
+
+    background-color: var(--color-2);
+}
