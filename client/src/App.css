@@ -4,8 +4,11 @@
 :root {
     --view-height: 100vh;
 
-    --primary-font: DMSans-Bold;
-    --secondary-font: DMSans-Regular;
+    --font-1: DMSans-Bold;
+    --font-2: LibreBaskerville-Regular;
+
+    --color-1: #050505;
+    --color-2: #E3DAC9;
 }
 
 html, body, #root {
@@ -23,10 +26,25 @@ html, body, #root {
     width: 100vw;
     height: 100vh;
     height: var(--view-height);
-    z-index: 3;
+    z-index: 1;
 
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    background-color: #050505;
+    background-color: var(--color-1);
 }
+
+
+/* App */
+.divisor {
+    position: absolute;
+    height: 200%;
+    width: 200%;
+    left: 8%;
+
+    transform: rotate(60deg);
+
+    background-color: var(--color-2);
+}
+

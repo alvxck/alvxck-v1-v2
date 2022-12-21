@@ -1,5 +1,7 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import Content from './components/Content';
+import Profile from './components/Profile';
 
 function App() {
 
@@ -7,7 +9,6 @@ function App() {
 	useEffect(() => {
 		window.addEventListener('resize', getWindowHeight);
 		getWindowHeight();
-
 
 		return () => {
 			window.removeEventListener('resize', getWindowHeight);
@@ -20,12 +21,14 @@ function App() {
 		DOC.style.setProperty('--view-height', `${window.innerHeight}px`);
 	};
 
-
 	return (
 		<div className='main'>
-
+			<div className='divisor'></div>
+			<div className='home'>
+				<Profile />
+				<Content />
+			</div>
 		</div>
-
 	)
 }
 
