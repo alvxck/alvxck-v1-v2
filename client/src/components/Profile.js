@@ -3,7 +3,7 @@ import MediaLink from './MediaLink.js';
 import Tab from './Tab.js';
 import data from './data.js';
 
-function Profile() {
+function Profile(props) {
     const dataLinks = data[0]['links'];
 
     return (
@@ -11,7 +11,7 @@ function Profile() {
             <div className='profile-information'>
                 <h1>Alexander Carvalho</h1>
                 <p>Software Engineer based in Toronto.</p>
-                <p>Currently @ Ansys.</p>
+                <p>Currently @ <a id='current-job' href='https://www.ansys.com/' target='blank'>Ansys.</a></p>
             </div>
 
             <div className='profile-links'>
@@ -29,6 +29,8 @@ function Profile() {
                     <Tab
                         key={tab.key}
                         value={tab.value}
+                        selected={props.selected}
+                        onClick={() => props.setTab(tab.value)}
                     />
                 ))}
             </div>

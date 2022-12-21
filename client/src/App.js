@@ -1,9 +1,10 @@
 import './App.css';
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Content from './components/Content';
 import Profile from './components/Profile';
 
 function App() {
+	const [tab, setTab] = useState(0);
 
 	// Update inner height variable in CSS on screen resize and set scroll button visibility
 	useEffect(() => {
@@ -25,8 +26,8 @@ function App() {
 		<div className='main'>
 			<div className='divisor'></div>
 			<div className='home'>
-				<Profile />
-				<Content />
+				<Profile selected={tab} setTab={(id) => setTab(id)}/>
+				<Content selected={tab}/>
 			</div>
 		</div>
 	)

@@ -9,6 +9,8 @@
 
     --color-1: #050505;
     --color-2: #E3DAC9;
+
+    --color-company: #FFB71B; 
 }
 
 html, body, #root {
@@ -63,7 +65,9 @@ html, body, #root {
     transform-origin: center center;
 }
 
-.profile, .content {
+/* Profile */
+
+.profile {
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -74,18 +78,14 @@ html, body, #root {
     gap: 1rem;
 }
 
-/* Profile */
-
-.profile-information * {
-    transform: rotate(30deg);
-    transform-origin: top right;
-}
-
 .profile-information h1 {
     margin: 0;
     font-family: var(--font-2);
     color: var(--color-2);
     text-align: end;
+
+    transform: rotate(30deg);
+    transform-origin: top right;
 }
 
 .profile-information p {
@@ -93,6 +93,41 @@ html, body, #root {
     font-family: var(--font-1);
     color: var(--color-2);
     text-align: end;
+
+    transform: rotate(30deg);
+    transform-origin: top right;
+}
+
+#current-job {
+    display: inline-block;
+    position: relative;
+    color: var(--color-company);
+
+    font-weight: bolder;
+    text-decoration: none;
+
+    transform: rotate(0deg);
+    transform-origin: top right;
+    
+    cursor: pointer;
+}
+
+#current-job::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-company);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+#current-job:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .profile-links {
@@ -110,6 +145,19 @@ html, body, #root {
     margin-top: 2rem;
 
     transform: skew(1deg);
+}
+
+/* Content */
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 3;
+    width: 50%;
+    height: 100%;
+    gap: 1rem;
 }
 
 /* Media Link */
@@ -131,7 +179,7 @@ html, body, #root {
 
 /* Tab */
 
-.tab {
+.tablink {
     height: 2.5rem;
 
     transform: rotate(30deg);
@@ -140,9 +188,52 @@ html, body, #root {
     cursor: pointer;
 }
 
-.tab h1 {
+.tablink-selected {
+    height: 2.5rem;
+
+    transform: rotate(30deg);
+    transform-origin: top right;
+
+    cursor: pointer;
+}
+
+.tablink h1, .tablink-selected h1 {
     margin: 0;
     font-family: var(--font-1);
     color: var(--color-2);
     text-align: end;
+}
+
+/* About */
+
+.tab-selected {
+    position: absolute;
+    margin-top: calc(50% - 350px);
+    width: 400px;
+    height: 400px;
+
+    -webkit-transform: translateX(0);
+    -webkit-transition: -webkit-transform 300ms ease;
+    -moz-transform: translateX(0);
+    -moz-transition: -moz-transform 300ms ease;
+    transform: translateX(0) rotate(30deg) skewX(30deg);
+    transition: transform 300ms ease;
+    will-change: transform;
+
+    background-color: var(--color-1);
+}
+
+.tab-hidden {
+    position: absolute;
+    margin-top: calc(50% - 350px);
+    width: 400px;
+    height: 400px;
+
+    -webkit-transform: translateX(calc(100% + 2rem));
+    -webkit-transition: -webkit-transform 300ms ease;
+    -moz-transform: translateX(calc(100% + 2rem));
+    -moz-transition: -moz-transform 300ms ease;
+    transform: translateX(calc(100% + 2rem)) skewY(30deg);
+    transition: transform 300ms ease;
+    will-change: transform;
 }
