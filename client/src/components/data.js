@@ -1,4 +1,6 @@
-
+import ansys from '../assets/ansys.png';
+import geotab from '../assets/geotab.png';
+import amazon from '../assets/amazon.png';
 
 
 const data = [
@@ -30,6 +32,35 @@ const data = [
     {
         key: 'experience',
         value: 'Experience',
+        experience: [
+            {
+                key: 'ansys',
+                company: 'Ansys',
+                position: 'Software Engineer Intern, CFD',
+                date: 'Apr 2023 - Aug 2023',
+                location: 'Waterloo, ON',
+                img: ansys,
+                link: 'https://www.ansys.com/'
+            },            
+            {
+                key: 'geotab',
+                company: 'Geotab',
+                position: 'Software Developer, R&D',
+                date: 'Jan 2023 - Current',
+                location: 'Oakville, ON',
+                img: geotab,
+                link: 'https://www.geotab.com/'
+            },            
+            {
+                key: 'amazon',
+                company: 'Amazon',
+                position: 'L1 Associate',
+                date: 'Mar 2020 - Jan 2023',
+                location: 'Milton, ON',
+                img: amazon,
+                link: 'https://www.amazon.ca/'
+            },
+        ]
     },
     {
         key: 'projects',
