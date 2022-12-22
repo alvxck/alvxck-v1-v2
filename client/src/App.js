@@ -4,7 +4,7 @@ import Content from './components/Content';
 import Profile from './components/Profile';
 
 function App() {
-	const [tab, setTab] = useState("About");
+	const [tab, setTab] = useState('About');
 
 	// Update inner height variable in CSS on screen resize and set scroll button visibility
 	useEffect(() => {

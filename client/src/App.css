@@ -8,12 +8,9 @@
 
     --color-1: #050505;
     --color-2: #E3DAC9;
+    --color-3: #212426;
 
     --color-company: #FFB71B; 
-
-    --color-about: #00FF00;
-    --color-experience: #FF0000;
-    --color-projects: #0000FF;
 }
 
 html, body, #root {
@@ -175,7 +172,7 @@ html, body, #root {
 }
 
 /* Tab */
-#About-tab, #Experience-tab, #Projects-tab {
+#About-tab, #Work-tab, #Projects-tab {
     display: inline-block;
     position: relative;
     color: var(--color-2);
@@ -194,23 +191,23 @@ html, body, #root {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    height: 3px;
     bottom: 0;
     left: 0;
-    background-color: var(--color-about);
+    background-color: var(--color-2);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
 
-#Experience-tab::after {
+#Work-tab::after {
     content: '';
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    height: 3px;
     bottom: 0;
     left: 0;
-    background-color: var(--color-experience);
+    background-color: var(--color-2);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -220,21 +217,23 @@ html, body, #root {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    height: 3px;
     bottom: 0;
     left: 0;
-    background-color: var(--color-projects);
+    background-color: var(--color-2);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
   
-#About-tab:hover::after, #Experience-tab:hover::after, #Projects-tab:hover::after {
+#About-tab:hover::after, #Work-tab:hover::after, #Projects-tab:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
 .tablink {
     height: 2.5rem;
+    display: flex;
+    justify-content: flex-end;
 
     transform: rotate(30deg);
     transform-origin: top right;
@@ -244,6 +243,9 @@ html, body, #root {
 
 .tablink-selected {
     height: 2.5rem;
+
+    display: flex;
+    justify-content: flex-end;
 
     transform: rotate(30deg);
     transform-origin: top right;
@@ -278,6 +280,8 @@ html, body, #root {
     position: absolute;
     width: 50%;
     height: 100%;
+    display: flex;
+    align-items: center;
 
     -webkit-transform: translateX(150%);
     -webkit-transition: -webkit-transform 300ms ease;
@@ -294,14 +298,29 @@ html, body, #root {
     width: 55%;
     height: 55%;
 
+    display: flex;
+    flex-direction: column;
+
     transform: skewY(30deg);
     transform-origin: top left;
 
     background-color: var(--color-1);
 }
 
-/* Experience */
-.experience {
+.about-header {
+    width: 100%;
+    height: 50%;
+}
+
+.about-content {
+    width: 100%;
+    height: 50%;
+    background-color: var(--color-3);
+}
+
+/* Work */
+.work {
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -312,7 +331,11 @@ html, body, #root {
     height: 100%;
 }
 
-.experience-card {
+#work-link {
+    text-decoration: none;
+}
+
+.work-card {
     display: flex;
     flex-direction: column;
 
@@ -325,11 +348,12 @@ html, body, #root {
     background-color: var(--color-1);
 }
 
-.experience-card:hover {
+.work-card:hover {
     scale: 1.015;
+    cursor: pointer;
 }
 
-.experience-card-header {
+.work-card-header {
     width: 100%;
     height: 50%;
 
@@ -338,39 +362,45 @@ html, body, #root {
     justify-content: space-between;
 }
 
-.experience-card-header a {
+.work-card-header img {
     height: 50%;
     transform: skewY(-30deg) rotate(30deg);
     transform-origin: bottom left;
-
-    cursor: pointer;
 }
 
-.experience-card-header a img {
-    height: 100%;
-}
-
-.experience-card-header-info svg {
+.work-card-header-info svg {
     margin-left: .25rem;
     width: .6rem;
     fill: var(--color-2);
 }
 
-.experience-card-header-info p {
+.work-card-header-info p {
     margin: 0 .25rem 0 0;
     font-size: small;
     font-family: var(--font-1);
     color: var(--color-2);
     text-align: end;
+    text-decoration: none;
 
     transform: skewY(-30deg) rotate(30deg);
     transform-origin: top right;
 }
 
-.experience-card-content {
+.work-card-content {
     width: 100%;
     height: 50%;
-    background-color: var(--color-experience);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+    background-color: var(--color-3);
+}
+
+.work-card-content svg {
+    width: 1.8rem;
+    transform: skewY(-30deg) rotate(30deg);
+    transform-origin: center left;
 }
 
 
@@ -383,4 +413,49 @@ html, body, #root {
     width: 100%;
     height: 100%;
     gap: 1rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
+    height: 125px;
+
+    transform: skewY(30deg);
+    transform-origin: top left;
+
+    background-color: var(--color-1);
+}
+
+.project-card:hover {
+    scale: 1.015;
+    cursor: pointer;
+}
+
+.project-card-header {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-card-content {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+
+    background-color: var(--color-3);
+}
+
+.project-card-content svg {
+    width: 1.8rem;
+    transform: skewY(-30deg) rotate(30deg);
+    transform-origin: center left;
 }

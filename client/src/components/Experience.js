@@ -5,9 +5,10 @@ import data from "./data";
 
 function Experience(props) {
     const dataExperience = data[1]['experience'];
+
     return (
-        <div className={props.selected === 'Experience' ? 'tab-selected' : 'tab-hidden'}>
-            <div className='experience'>
+        <div className={props.selected === 'Work' ? 'tab-selected' : 'tab-hidden'}>
+            <div className='work'>
                 {dataExperience.map((experience) => (
                     <ExperienceCard
                         key={experience.key}
@@ -17,6 +18,7 @@ function Experience(props) {
                         location={experience.location}
                         img={experience.img}
                         link={experience.link}
+                        tools={experience.tools}
                     />
                 ))}
             </div>
