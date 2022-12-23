@@ -1,6 +1,7 @@
 import ansys from '../assets/ansys.png';
 import geotab from '../assets/geotab.png';
 import amazon from '../assets/amazon.png';
+import loginsystem_preview from '../assets/loginsystem-preview.png';
 
 import { ReactComponent as PythonSVG } from '../assets/python.svg';
 import { ReactComponent as NumpySVG } from '../assets/numpy.svg';
@@ -91,7 +92,8 @@ const data = [
             {
                 key: 'stock-projection',
                 name: 'Stock Projection',
-                area: 'Machine Learning',
+                svg: 'Machine Learning',
+                img: loginsystem_preview,
                 codelink: '',
                 viewlink: '',
                 tools: [
@@ -101,33 +103,14 @@ const data = [
             {
                 key: 'login-system',
                 name: 'Login System',
-                area: 'Full Stack',
+                svg: 'Full Stack',
+                img: loginsystem_preview,
                 codelink: '',
                 viewlink: '',
                 tools: [
                     <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <ExpressSVG />, <MongoDBSVG />, <HTMLSVG />, <CSSSVG />
                 ]
-            },
-            {
-                key: 'sha',
-                name: 'SHA-1',
-                area: 'Cryptography',
-                codelink: '',
-                viewlink: '',
-                tools: [
-                    <PythonSVG />, <PytestSVG />
-                ]
-            },
-            {
-                key: 'portfolio-v2',
-                name: 'Portfolio Webpage',
-                area: 'Front-End',
-                codelink: '',
-                viewlink: '',
-                tools: [
-                    <JavascriptSVG />, <ReactSVG />, <AwsSVG />, <NodeSVG />, <HTMLSVG />, <CSSSVG />
-                ]
-            },      
+            },     
         ]
     },
 ];

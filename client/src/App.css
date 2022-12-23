@@ -8,7 +8,7 @@
 
     --color-1: #050505;
     --color-2: #E3DAC9;
-    --color-3: #212426;
+    --color-3: #1f202c;
 
     --color-company: #FFB71B; 
 }
@@ -267,12 +267,12 @@ html, body, #root {
     display: flex;
     align-items: center;
 
-    -webkit-transform: translateX(0);
-    -webkit-transition: -webkit-transform 300ms ease;
-    -moz-transform: translateX(0);
-    -moz-transition: -moz-transform 300ms ease;
-    transform: translateX(0);
-    transition: transform 300ms ease;
+    -webkit-transform: translateY(0);
+    -webkit-transition: -webkit-transform 500ms ease;
+    -moz-transform: translateY(0);
+    -moz-transition: -moz-transform 500ms ease;
+    transform: translateY(0);
+    transition: transform 500ms ease;
     will-change: transform;
 }
 
@@ -283,20 +283,67 @@ html, body, #root {
     display: flex;
     align-items: center;
 
-    -webkit-transform: translateX(150%);
-    -webkit-transition: -webkit-transform 300ms ease;
-    -moz-transform: translateX(150%);
-    -moz-transition: -moz-transform 300ms ease;
-    transform: translateX(150%);
-    transition: transform 300ms ease;
+    -webkit-transform: translateY(150%);
+    -webkit-transition: -webkit-transform 500ms ease;
+    -moz-transform: translateY(150%);
+    -moz-transition: -moz-transform 500ms ease;
+    transform: translateY(150%);
+    transition: transform 500ms ease;
     will-change: transform;
+}
+
+#link {
+    display: inline-block;
+    position: relative;
+    color: var(--color-1);
+
+    font-size: medium;
+    font-family: var(--font-1);
+    font-weight: bolder;
+    text-decoration: none;
+
+    transform: rotate(30deg);
+    transform-origin: bottom left;
+    
+    cursor: pointer;
+}
+
+#link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-1);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+#link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#link p {
+    font-family: var(--font-1);
+    font-size: xx-small;
+    margin: 0;
+    display: inline;
+}
+
+#link svg {
+    margin: 0 0 0 .3rem;
+    width: .75rem;
+    fill: var(--color-1);
 }
 
 /* About */
 .about {
     margin-top: 10%;
-    width: 55%;
-    height: 55%;
+    width: 300px;
+    height: 375px;
 
     display: flex;
     flex-direction: column;
@@ -309,12 +356,12 @@ html, body, #root {
 
 .about-header {
     width: 100%;
-    height: 50%;
+    height: 66%;
 }
 
 .about-content {
     width: 100%;
-    height: 50%;
+    height: 34%;
     background-color: var(--color-3);
 }
 
@@ -371,14 +418,14 @@ html, body, #root {
 .work-card-header-info svg {
     margin-left: .25rem;
     width: .6rem;
-    fill: var(--color-2);
+    fill: #FFF;
 }
 
 .work-card-header-info p {
     margin: 0 .25rem 0 0;
     font-size: small;
     font-family: var(--font-1);
-    color: var(--color-2);
+    color: #FFF;
     text-align: end;
     text-decoration: none;
 
@@ -406,6 +453,7 @@ html, body, #root {
 
 /* Projects */
 .projects {
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -420,7 +468,7 @@ html, body, #root {
     flex-direction: column;
 
     width: 300px;
-    height: 125px;
+    height: 250px;
 
     transform: skewY(30deg);
     transform-origin: top left;
@@ -435,16 +483,34 @@ html, body, #root {
 
 .project-card-header {
     width: 100%;
-    height: 50%;
+    height: 75%;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.project-card-header img {
+    width: 200px;
+
+    transform: skewY(-30deg) rotate(30deg);
+    transform-origin: center center;
+}
+
+.project-card-header h3 {
+    margin: 0;
+    font-size: medium;
+    font-family: var(--font-1);
+    color: #FFF;
+
+    transform: skewY(-30deg) rotate(30deg);
+    transform-origin: top right;
 }
 
 .project-card-content {
     width: 100%;
-    height: 50%;
+    height: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
