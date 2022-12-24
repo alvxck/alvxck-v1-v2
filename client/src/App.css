@@ -9,6 +9,7 @@
     --color-1: #050505;
     --color-2: #E3DAC9;
     --color-3: #1f202c;
+    --color-4: #FFFFFF;
 
     --color-company: #FFB71B; 
 }
@@ -47,6 +48,22 @@ html, body, #root {
     transform-origin: center left;
 
     background-color: var(--color-2);
+}
+
+.personal-link {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 20px;
+    right: 20px;
+
+    background-color: var(--color-1);
+}
+
+.personal-link p {
+    margin: 2px 4px;
+    font-family: var(--font-1);
+    color: var(--color-2);
 }
 
 .home {
@@ -343,7 +360,7 @@ html, body, #root {
 .about {
     margin-top: 10%;
     width: 300px;
-    height: 375px;
+    height: 450px;
 
     display: flex;
     flex-direction: column;
@@ -356,13 +373,28 @@ html, body, #root {
 
 .about-header {
     width: 100%;
-    height: 66%;
+    height: 60%;
 }
 
 .about-content {
-    width: 100%;
-    height: 34%;
+    width: calc(100% - 3rem);
+    padding: 0 1.5rem;
+    height: 40%;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: .5rem;
+    row-gap: 0;
+
     background-color: var(--color-3);
+}
+
+.about-content svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    transform: skewY(-30deg) rotate(30deg);
+    transform-origin: center left;
 }
 
 /* Work */
@@ -418,14 +450,14 @@ html, body, #root {
 .work-card-header-info svg {
     margin-left: .25rem;
     width: .6rem;
-    fill: #FFF;
+    fill: var(--color-4);
 }
 
 .work-card-header-info p {
     margin: 0 .25rem 0 0;
     font-size: small;
     font-family: var(--font-1);
-    color: #FFF;
+    color: var(--color-4);
     text-align: end;
     text-decoration: none;
 
@@ -502,7 +534,7 @@ html, body, #root {
     margin: 0;
     font-size: medium;
     font-family: var(--font-1);
-    color: #FFF;
+    color: var(--color-4);
 
     transform: skewY(-30deg) rotate(30deg);
     transform-origin: top right;

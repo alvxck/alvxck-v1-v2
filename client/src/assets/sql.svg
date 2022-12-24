@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="-5 0 71 81" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+<title>SQL</title>
     <use xlinkHref="#SQL" x=".5" y=".5"/>
     <symbol id="SQL" overflow="visible">
         <g fill="#0072c6" stroke="none">

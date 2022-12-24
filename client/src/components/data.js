@@ -1,19 +1,22 @@
 import ansys from '../assets/ansys.png';
 import geotab from '../assets/geotab.png';
 import amazon from '../assets/amazon.png';
-import loginsystem_preview from '../assets/loginsystem-preview.png';
 
 import { ReactComponent as PythonSVG } from '../assets/python.svg';
 import { ReactComponent as NumpySVG } from '../assets/numpy.svg';
 import { ReactComponent as TensorFlowSVG } from '../assets/tensorflow.svg';
 import { ReactComponent as PytestSVG } from '../assets/pytest.svg';
+import { ReactComponent as CSVG } from '../assets/c.svg';
+import { ReactComponent as CPPSVG } from '../assets/cpp.svg';
 import { ReactComponent as JavascriptSVG } from '../assets/javascript.svg';
 import { ReactComponent as ReactSVG } from '../assets/react.svg';
 import { ReactComponent as NodeSVG } from '../assets/nodejs.svg';
 import { ReactComponent as ExpressSVG } from '../assets/expressjs.svg';
 import { ReactComponent as MongoDBSVG } from '../assets/mongodb.svg';
+import { ReactComponent as SQLSVG } from '../assets/sql.svg';
 import { ReactComponent as HTMLSVG } from '../assets/html.svg';
 import { ReactComponent as CSSSVG } from '../assets/css.svg';
+import { ReactComponent as BashSVG } from '../assets/bash.svg';
 import { ReactComponent as GITSVG } from '../assets/git.svg';
 import { ReactComponent as AwsSVG } from '../assets/aws.svg';
 
@@ -41,6 +44,9 @@ const data = [
                 link: 'mailto:alexander_sck@live.ca',
             },
 
+        ],
+        skills: [
+            <PythonSVG />, <NumpySVG />, <TensorFlowSVG />, <PytestSVG />, <CSVG />, <CPPSVG />, <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <ExpressSVG />, <HTMLSVG />, <CSSSVG />, <MongoDBSVG />, <SQLSVG />, <AwsSVG />, <BashSVG />, <GITSVG />       
         ]
     },
     {
@@ -56,7 +62,7 @@ const data = [
                 img: ansys,
                 link: 'https://www.ansys.com/',
                 tools: [
-                    <PythonSVG />, <NumpySVG />, <PytestSVG />, <GITSVG />
+                    <PythonSVG />, <NumpySVG />, <PytestSVG />, <AwsSVG />, <GITSVG />
                 ]
             },            
             {
@@ -93,7 +99,7 @@ const data = [
                 key: 'stock-projection',
                 name: 'Stock Projection',
                 svg: 'Machine Learning',
-                img: loginsystem_preview,
+                img: '',
                 codelink: '',
                 viewlink: '',
                 tools: [
@@ -104,7 +110,7 @@ const data = [
                 key: 'login-system',
                 name: 'Login System',
                 svg: 'Full Stack',
-                img: loginsystem_preview,
+                img: '',
                 codelink: '',
                 viewlink: '',
                 tools: [
