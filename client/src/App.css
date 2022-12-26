@@ -8,7 +8,7 @@
 
     --color-1: #050505;
     --color-2: #E3DAC9;
-    --color-3: #1f202c;
+    --color-3: #1F202C;
     --color-4: #FFFFFF;
 
     --color-company: #FFB71B; 
@@ -48,22 +48,6 @@ html, body, #root {
     transform-origin: center left;
 
     background-color: var(--color-2);
-}
-
-.personal-link {
-    position: absolute;
-    width: auto;
-    height: auto;
-    top: 20px;
-    right: 20px;
-
-    background-color: var(--color-1);
-}
-
-.personal-link p {
-    margin: 2px 4px;
-    font-family: var(--font-1);
-    color: var(--color-2);
 }
 
 .home {
@@ -176,12 +160,14 @@ html, body, #root {
 .medialink {
     width: 1.5rem;
     height: 1.5rem;
+
+    transition: transform ease-in-out .1s;
     
     cursor: pointer;
 }
 
 .medialink:hover {
-    scale: 1.1;
+    transform: scale(1.15);
 }
 
 .medialink svg {
@@ -189,64 +175,6 @@ html, body, #root {
 }
 
 /* Tab */
-#About-tab, #Work-tab, #Projects-tab {
-    display: inline-block;
-    position: relative;
-    color: var(--color-2);
-
-    font-weight: bolder;
-    text-decoration: none;
-
-    transform: rotate(0deg);
-    transform-origin: top right;
-    
-    cursor: pointer;
-}
-
-#About-tab::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color-2);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-#Work-tab::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color-2);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-#Projects-tab::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color-2);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-  
-#About-tab:hover::after, #Work-tab:hover::after, #Projects-tab:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
 .tablink {
     height: 2.5rem;
     display: flex;
@@ -270,7 +198,14 @@ html, body, #root {
     cursor: pointer;
 }
 
-.tablink h1, .tablink-selected h1 {
+.tablink h1 {
+    margin: 0;
+    font-family: var(--font-1);
+    color: var(--color-3);
+    text-align: end;
+}
+
+.tablink-selected h1 {
     margin: 0;
     font-family: var(--font-1);
     color: var(--color-2);
@@ -360,7 +295,7 @@ html, body, #root {
 .about {
     margin-top: 10%;
     width: 300px;
-    height: 450px;
+    height: 400px;
 
     display: flex;
     flex-direction: column;
@@ -374,6 +309,33 @@ html, body, #root {
 .about-header {
     width: 100%;
     height: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.about-header h1 {
+    margin: 0;
+    font-family: var(--font-2);
+    font-size: larger;
+    color: var(--color-2);
+    text-align: center;
+
+    transform: skewY(-30deg) rotate(30deg);
+    transform-origin: center center;
+}
+
+.about-header p {
+    margin: 0;
+    font-family: var(--font-1);
+    font-size: small;
+    color: var(--color-2);
+    text-align: center;
+
+    transform: skewY(-30deg) rotate(30deg);
+    transform-origin: center center;
 }
 
 .about-content {
@@ -425,10 +387,13 @@ html, body, #root {
     transform-origin: top left;
 
     background-color: var(--color-1);
+
+    transition: transform ease-in-out .1s;
 }
 
 .work-card:hover {
-    scale: 1.015;
+    transform-origin: top left;
+    transform: scale(1.035) skewY(30deg);
     cursor: pointer;
 }
 
@@ -450,14 +415,14 @@ html, body, #root {
 .work-card-header-info svg {
     margin-left: .25rem;
     width: .6rem;
-    fill: var(--color-4);
+    fill: var(--color-2);
 }
 
 .work-card-header-info p {
     margin: 0 .25rem 0 0;
     font-size: small;
     font-family: var(--font-1);
-    color: var(--color-4);
+    color: var(--color-2);
     text-align: end;
     text-decoration: none;
 
@@ -506,10 +471,13 @@ html, body, #root {
     transform-origin: top left;
 
     background-color: var(--color-1);
+
+    transition: transform ease-in-out .1s;
 }
 
 .project-card:hover {
-    scale: 1.015;
+    transform: scale(1.035) skewY(30deg);
+    transform-origin: top left;
     cursor: pointer;
 }
 

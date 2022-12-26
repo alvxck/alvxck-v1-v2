@@ -25,9 +25,6 @@ function App() {
 	return (
 		<div className='main'>
 			<div className='divisor'/>
-			<div className='personal-link'>
-				<p>Personal Webpage</p>
-			</div>
 			<div className='home'>
 				<Profile selected={tab} setTab={(id) => setTab(id)}/>
 				<Content selected={tab}/>
