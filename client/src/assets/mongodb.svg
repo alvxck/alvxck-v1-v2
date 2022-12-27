@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-13 0 57 67" fill="#fff" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+<title>MongoDB</title>
     <use xlink:href="#Mongodb" x="1" y="1"/>
     <symbol id="Mongodb" overflow="visible">
         <g stroke="none" fill-rule="nonzero">

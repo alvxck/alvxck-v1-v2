@@ -13,11 +13,11 @@ code {
 }
 
 @font-face {
-  font-family: 'DMSans-Bold';
-  src: local('DMSans-Bold'), url(./assets/DMSans-Bold.ttf) format('truetype');
-}
-
-@font-face {
   font-family: 'DMSans-Regular';
   src: local('DMSans-Regular'), url(./assets/DMSans-Regular.ttf) format('truetype');
+} 
+
+@font-face {
+  font-family: 'LibreBaskerville-Regular';
+  src: local('LibreBaskerville-Regular'), url(./assets/LibreBaskerville-Regular.ttf) format('truetype');
 }
