@@ -12,16 +12,15 @@ function Profile(props) {
                 <h1>Alexander Carvalho</h1>
                 <p>Software Engineer based in Toronto.</p>
                 <p>Currently @ <a id='current-job' href='https://www.ansys.com/' target='blank'>Ansys.</a></p>
-            </div>
-
-            <div className='profile-links'>
-                {dataLinks.map((media) => (
-                    <MediaLink
-                        key={media.key}
-                        svg={media.svg}
-                        link={media.link}
-                    />
-                ))}
+                <div className='profile-links'>
+                    {dataLinks.map((media) => (
+                        <MediaLink
+                            key={media.key}
+                            svg={media.svg}
+                            link={media.link}
+                        />
+                    ))}
+                </div>
             </div>
 
             <div className='profile-tabs'>
