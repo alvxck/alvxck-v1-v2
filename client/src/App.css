@@ -464,6 +464,7 @@ html, body, #root {
     .about {
         margin-top: 0;
         width: 100%;
+        max-width: 400px;
         height: 100%;
     
         display: flex;
@@ -600,16 +601,16 @@ html, body, #root {
 }
 
 .work-card-content svg {
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
     transform: skewY(-30deg) rotate(30deg);
     transform-origin: center left;
 }
 
 @media screen and (max-width: 1024px) {
-
     .work {
         margin-top: 0;
+        max-width: 400px;
         justify-content: flex-start;
         gap: .5rem;
 
@@ -728,8 +729,8 @@ html, body, #root {
 }
 
 .project-card-content svg {
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
     transform: skewY(-30deg) rotate(30deg);
     transform-origin: center left;
 }
@@ -737,6 +738,8 @@ html, body, #root {
 @media screen and (max-width: 1024px) {
     .projects {
         margin: 0;
+        max-width: 400px;
+        justify-content: flex-start;
         gap: .5rem;
     }
     
