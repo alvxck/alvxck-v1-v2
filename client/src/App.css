@@ -11,7 +11,8 @@
     --color-3: #1F202C;
     --color-4: #FFFFFF;
 
-    --color-company: #FFB71B; 
+    /* --color-company: #FFB71B;  */
+    --color-company: #0078D3; 
 }
 
 html, body, #root {
@@ -184,10 +185,11 @@ html, body, #root {
 
     .profile-information {
         width: 100%;
-        border-top: 1px solid var(--color-3);
+        /* border-top: 1px solid var(--color-3); */
     }
     
     .profile-information h1 {
+        font-size: 1.9rem;
         margin-top: .5rem;
         transform: rotate(0deg);
     }
@@ -373,7 +375,7 @@ html, body, #root {
     .tab-selected {
         position: absolute;
         width: calc(100% - 1rem);
-        height: calc(70vh - 1rem);
+        height: calc(var(--view-height)*.70 - 1rem);
         display: flex;
         align-items: center;
     }
@@ -394,8 +396,8 @@ html, body, #root {
 /* About */
 .about {
     margin-top: 10%;
-    width: 300px;
-    height: 400px;
+    width: 310px;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -408,12 +410,13 @@ html, body, #root {
 
 .about-header {
     width: 100%;
-    height: 60%;
+    height: auto;
 
+    margin: 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 1.5rem;
 }
 
 .about-header h1 {
@@ -439,16 +442,15 @@ html, body, #root {
 }
 
 .about-content {
-    width: calc(100% - 3rem);
-    padding: 0 1.5rem;
-    height: 40%;
+    width: calc(100% - 1.5rem);
+    height: auto;
 
+    padding: .75rem;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     column-gap: .5rem;
-    row-gap: 0;
+    row-gap: 1rem;
 
     background-color: var(--color-3);
 }
@@ -512,8 +514,8 @@ html, body, #root {
     }
     
     .about-content svg {
-        width: 2rem;
-        height: 2rem;
+        width: 2.25rem;
+        height: 2.25rem;
         transform: skewY(0deg) rotate(0deg);
     }
 }
@@ -536,11 +538,11 @@ html, body, #root {
 }
 
 .work-card {
+    width: 310px;
+    height: auto;
+
     display: flex;
     flex-direction: column;
-
-    width: 300px;
-    height: 125px;
 
     transform: skewY(30deg);
     transform-origin: top left;
@@ -557,16 +559,17 @@ html, body, #root {
 }
 
 .work-card-header {
-    width: 100%;
-    height: 50%;
+    width: calc(100% - 1rem);
+    height: auto;
 
+    margin: .5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .work-card-header img {
-    height: 50%;
+    height: 31.25px;
     transform: skewY(-30deg) rotate(30deg);
     transform-origin: bottom left;
 }
@@ -578,7 +581,7 @@ html, body, #root {
 }
 
 .work-card-header-info p {
-    margin: 0 .25rem 0 0;
+    margin: 0;
     font-size: small;
     font-family: var(--font-1);
     color: var(--color-2);
@@ -590,8 +593,10 @@ html, body, #root {
 }
 
 .work-card-content {
-    width: 100%;
-    height: 50%;
+    width: calc(100% - 1.5rem);
+    height: auto;
+
+    padding: .75rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -626,7 +631,7 @@ html, body, #root {
 
     .work-card {
         width: 100%;
-        height: 125px;
+        height: auto;
     
         transform: skewY(0deg);
     }
@@ -642,19 +647,21 @@ html, body, #root {
     }
     
     .work-card-header img {
-        height: 65%;
+        height: 31.25px;
         transform: skewY(0deg) rotate(0deg);
     }
     
     .work-card-header-info p {
+        margin: 0;
         transform: skewY(0deg) rotate(0deg);
     }
     
     .work-card-content svg {
+        width: 2.25rem;
+        height: 2.25rem;
         transform: skewY(0deg) rotate(0deg);
     }
 }
-
 
 /* Projects */
 .projects {
@@ -669,12 +676,11 @@ html, body, #root {
 }
 
 .project-card {
+    width: 310px;
+    height: auto;
+
     display: flex;
     flex-direction: column;
-
-    width: 300px;
-    height: 250px;
-
     transform: skewY(30deg);
     transform-origin: top left;
 
@@ -683,16 +689,11 @@ html, body, #root {
     transition: transform ease-in-out .1s;
 }
 
-.project-card:hover {
-    transform: scale(1.035) skewY(30deg);
-    transform-origin: top left;
-    cursor: pointer;
-}
-
 .project-card-header {
-    width: 100%;
-    height: 75%;
+    width: calc(100% - 1.5rem);
+    height: auto;
 
+    margin: .75rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -700,30 +701,58 @@ html, body, #root {
 }
 
 .project-card-header img {
-    width: 200px;
+    height: 100px;
 
     transform: skewY(-30deg) rotate(30deg);
     transform-origin: center center;
 }
 
-.project-card-header h3 {
+.project-card-header-info {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project-card-header-info h1 {
     margin: 0;
-    font-size: medium;
+    font-size: large;
     font-family: var(--font-1);
-    color: var(--color-4);
+    color: var(--color-2);
+
+    transform: skewY(-30deg) rotate(30deg);
+    transform-origin: bottom left;
+}
+
+.project-card-header-info-links {
+    display: flex;
+    flex-direction: row;
+    gap: .75rem;
+}
+
+#project-link {
+    text-decoration: none;
+    cursor: pointer;
 
     transform: skewY(-30deg) rotate(30deg);
     transform-origin: top right;
 }
 
+#project-link svg {
+    width: 1.25rem;
+    fill: var(--color-2);
+}
+
 .project-card-content {
-    width: 100%;
-    height: 25%;
+    width: calc(100% - 1.5rem);
+    height: auto;
+
+    padding: .75rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .5rem;
-
 
     background-color: var(--color-3);
 }
@@ -746,6 +775,8 @@ html, body, #root {
     .project-card {
         width: 100%;
         height: 250px;
+        display: flex;
+        justify-content: space-between;
     
         transform: skewY(0deg);
     }
@@ -757,24 +788,24 @@ html, body, #root {
     .project-card-header {
         margin: .5rem;
         width: calc(100% - 1rem);
-        height: calc(75% - 1rem);
+        height: auto;
     }
     
     .project-card-header img {
-        height: 75%;
-        width: auto;
-    
+        height: 100px;
         transform: skewY(0deg) rotate(0deg);
     }
     
     .project-card-content {
         margin: 0;
-        padding: .5rem;
-        width: calc(100% - 1rem);
-        height: calc(25% - 1rem);
+        padding: .75rem;
+        width: calc(100% - 1.5rem);
+        height: auto;
     }
     
     .project-card-content svg {
+        width: 2.25rem;
+        height: 2.25rem;
         transform: skewY(0deg) rotate(0deg);
     }
 }

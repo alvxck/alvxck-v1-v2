@@ -1,6 +1,5 @@
 import ansys from '../assets/ansys.png';
 import geotab from '../assets/geotab.png';
-import amazon from '../assets/amazon.png';
 
 import { ReactComponent as PythonSVG } from '../assets/python.svg';
 import { ReactComponent as NumpySVG } from '../assets/numpy.svg';
@@ -10,6 +9,7 @@ import { ReactComponent as CSVG } from '../assets/c.svg';
 import { ReactComponent as CPPSVG } from '../assets/cpp.svg';
 import { ReactComponent as JavascriptSVG } from '../assets/javascript.svg';
 import { ReactComponent as ReactSVG } from '../assets/react.svg';
+import { ReactComponent as SvelteSVG } from '../assets/svelte.svg';
 import { ReactComponent as NodeSVG } from '../assets/nodejs.svg';
 import { ReactComponent as ExpressSVG } from '../assets/expressjs.svg';
 import { ReactComponent as MongoDBSVG } from '../assets/mongodb.svg';
@@ -19,6 +19,7 @@ import { ReactComponent as CSSSVG } from '../assets/css.svg';
 import { ReactComponent as BashSVG } from '../assets/bash.svg';
 import { ReactComponent as GITSVG } from '../assets/git.svg';
 import { ReactComponent as AwsSVG } from '../assets/aws.svg';
+import { ReactComponent as DockerSVG } from '../assets/docker.svg';
 
 const data = [
     {
@@ -74,21 +75,9 @@ const data = [
                 img: geotab,
                 link: 'https://www.geotab.com/',
                 tools: [
-                    <GITSVG />
+                    <JavascriptSVG />, <SvelteSVG />, <ExpressSVG />, <DockerSVG />, <GITSVG />
                 ]
             },            
-            {
-                key: 'amazon',
-                company: 'Amazon',
-                position: 'L1 Associate',
-                date: 'Mar 2020 - Jan 2023',
-                location: 'Milton, ON',
-                img: amazon,
-                link: 'https://www.amazon.ca/',
-                tools: [
-
-                ]
-            },
         ]
     },
     {
@@ -105,18 +94,7 @@ const data = [
                 tools: [
                     <PythonSVG />,  <TensorFlowSVG />, <NumpySVG />
                 ]
-            },                  
-            {
-                key: 'login-system',
-                name: 'Login System',
-                svg: 'Full Stack',
-                img: '',
-                codelink: '',
-                viewlink: '',
-                tools: [
-                    <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <ExpressSVG />, <MongoDBSVG />, <HTMLSVG />, <CSSSVG />
-                ]
-            },     
+            },                    
         ]
     },
 ];
