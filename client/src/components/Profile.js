@@ -11,7 +11,7 @@ function Profile(props) {
             <div className='profile-information'>
                 <h1>Alexander Carvalho</h1>
                 <p>Software Engineer based in Toronto.</p>
-                <p>Currently @ <a id='current-job' href='https://www.ansys.com/' target='blank'>Ansys.</a></p>
+                <p>Currently @ <a id='current-job' href='https://www.ansys.com/' target='blank'>Geotab.</a></p>
                 <div className='profile-links'>
                     {dataLinks.map((media) => (
                         <MediaLink
