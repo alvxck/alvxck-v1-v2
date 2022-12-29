@@ -1,5 +1,6 @@
 import ansys from '../assets/ansys.png';
 import geotab from '../assets/geotab.png';
+import stockProjection from '../assets/stock-projection.png';
 
 import { ReactComponent as PythonSVG } from '../assets/python.svg';
 import { ReactComponent as NumpySVG } from '../assets/numpy.svg';
@@ -88,8 +89,8 @@ const data = [
                 key: 'stock-projection',
                 name: 'Stock Projection',
                 svg: 'Machine Learning',
-                img: '',
-                codelink: '',
+                img: stockProjection,
+                codelink: 'https://github.com/alvxck/Stock-Forecast',
                 viewlink: '',
                 tools: [
                     <PythonSVG />,  <TensorFlowSVG />, <NumpySVG />
