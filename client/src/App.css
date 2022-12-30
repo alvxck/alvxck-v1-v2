@@ -166,6 +166,10 @@ html, body, #root {
     margin-top: 2rem;
 }
 
+.profile-tabs:hover h1{
+    color: var(--color-3);
+}
+
 @media screen and (max-width: 1024px) {
     .profile {
         margin: 1rem;
@@ -252,6 +256,7 @@ html, body, #root {
     font-family: var(--font-1);
     color: var(--color-3);
     text-align: end;
+    transition: .3s;
 }
 
 .tablink-selected h1 {
@@ -259,6 +264,11 @@ html, body, #root {
     font-family: var(--font-1);
     color: var(--color-2);
     text-align: end;
+    transition: .3s;
+}
+
+.tablink:hover h1, .tablink-selected:hover h1{
+    color: var(--color-2);
 }
 
 .tab-selected {
@@ -556,7 +566,7 @@ html, body, #root {
     justify-content: space-between;
 }
 
-.project-card-header-info h1 {
+.project-card-header-info-title h1 {
     margin: 0;
     font-size: large;
     font-family: var(--font-1);
@@ -566,8 +576,19 @@ html, body, #root {
     transform-origin: bottom left;
 }
 
+.project-card-header-info-title p {
+    margin: 0;
+    font-size: x-small;
+    font-family: var(--font-1);
+    color: var(--color-2);
+
+    transform: skewY(-30deg) rotate(30deg);
+    transform-origin: bottom left;
+}
+
 .project-card-header-info-links {
     display: flex;
+    align-items: center;
     flex-direction: row;
     gap: .5rem;
 }
@@ -586,7 +607,7 @@ html, body, #root {
 }
 
 #project-link svg {
-    width: 1.35rem;
+    width: 1.4rem;
     fill: var(--color-2);
 }
 

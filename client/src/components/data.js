@@ -5,6 +5,7 @@ import stockProjection from '../assets/stock-projection.png';
 import { ReactComponent as PythonSVG } from '../assets/python.svg';
 import { ReactComponent as NumpySVG } from '../assets/numpy.svg';
 import { ReactComponent as TensorFlowSVG } from '../assets/tensorflow.svg';
+import { ReactComponent as DjangoSVG } from '../assets/django.svg';
 import { ReactComponent as PytestSVG } from '../assets/pytest.svg';
 import { ReactComponent as CSVG } from '../assets/c.svg';
 import { ReactComponent as CPPSVG } from '../assets/cpp.svg';
@@ -13,8 +14,6 @@ import { ReactComponent as ReactSVG } from '../assets/react.svg';
 import { ReactComponent as SvelteSVG } from '../assets/svelte.svg';
 import { ReactComponent as NodeSVG } from '../assets/nodejs.svg';
 import { ReactComponent as ExpressSVG } from '../assets/expressjs.svg';
-import { ReactComponent as MongoDBSVG } from '../assets/mongodb.svg';
-import { ReactComponent as SQLSVG } from '../assets/sql.svg';
 import { ReactComponent as HTMLSVG } from '../assets/html.svg';
 import { ReactComponent as CSSSVG } from '../assets/css.svg';
 import { ReactComponent as BashSVG } from '../assets/bash.svg';
@@ -48,7 +47,7 @@ const data = [
 
         ],
         skills: [
-            <PythonSVG />, <NumpySVG />, <TensorFlowSVG />, <PytestSVG />, <CSVG />, <CPPSVG />, <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <ExpressSVG />, <HTMLSVG />, <CSSSVG />, <MongoDBSVG />, <SQLSVG />, <AwsSVG />, <BashSVG />, <GITSVG />       
+            <PythonSVG />, <NumpySVG />, <TensorFlowSVG />, <DjangoSVG />, <PytestSVG />, <CSVG />, <CPPSVG />, <JavascriptSVG />, <ReactSVG />, <SvelteSVG />, <NodeSVG />, <ExpressSVG />, <HTMLSVG />, <CSSSVG />, <AwsSVG />, <DockerSVG />, <BashSVG />, <GITSVG />       
         ]
     },
     {
@@ -88,10 +87,10 @@ const data = [
             {
                 key: 'stock-projection',
                 name: 'Stock Projection',
-                svg: 'Machine Learning',
+                type: 'Machine Learning',
                 img: stockProjection,
                 codelink: 'https://github.com/alvxck/Stock-Forecast',
-                viewlink: '',
+                viewlink: 'https://github.com/alvxck/Stock-Forecast',
                 tools: [
                     <PythonSVG />,  <TensorFlowSVG />, <NumpySVG />
                 ]
