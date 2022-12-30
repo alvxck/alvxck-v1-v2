@@ -13,7 +13,7 @@ function Projects(props) {
                     <ProjectsCard
                         key={projects.key}
                         name={projects.name}
-                        svg={projects.svg}
+                        type={projects.type}
                         codelink={projects.codelink}
                         viewlink={projects.viewlink}
                         img={projects.img}

@@ -2,19 +2,18 @@
 <p align='center'>
     <a href='https://alexandercarvalho.ca' target='blank'><img src='./client/src/assets/alvx-wallpaper.jpg'/></a>
     <h1 align='center'>Hi, I'm Alex.</h1>
-    <p align='center'>I'm a Software Engineer from Toronto, Canada interested in Cloud Computing Systems and Data Science for Predictive Analytics.</p>
     <p align='center'>Welcome to my Github.</p>
 </p>
 
 <table>
 <tr>
 <th>
+<h2>About Me</h2>
 <img width="441" height="0"/><br>
-<h4>About Me</h4>
 </th>
 <th>
+<h2>Skills</h2>
 <img width="441" height="0"/><br>
-<h4>Skills</h4>
 </th>
 </tr>
 <tr>
