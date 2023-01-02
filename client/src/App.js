@@ -29,6 +29,9 @@ function App() {
 				<Profile selected={tab} setTab={(id) => setTab(id)}/>
 				<Content selected={tab}/>
 			</div>
+			<div className='footer'>
+                <p>© ALVX · 2023</p>
+            </div>
 		</div>
 	)
 }

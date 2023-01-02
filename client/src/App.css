@@ -4,7 +4,7 @@
     --view-height: 100vh;
 
     --font-1: DMSans-Regular;
-    --font-2: LibreBaskerville-Regular;
+    --font-2: PlayfairDisplay-Regular;
 
     --color-1: #050505;
     --color-2: #E3DAC9;
@@ -64,6 +64,20 @@ html, body, #root {
     transform-origin: center center;
 }
 
+
+.footer {
+    position: absolute;
+    top: calc(var(--view-height) - 22px);
+}
+
+.footer p {
+    margin: 0;
+    font-family: var(--font-2);
+    font-size: small;
+    color: var(--color-2);
+    text-align: center;
+}
+
 @media screen and (max-width: 1024px) {
     
     .divisor {
@@ -99,7 +113,9 @@ html, body, #root {
 
 .profile-information h1 {
     margin: 0;
+    font-weight: 500;
     font-family: var(--font-2);
+    font-size: 2.5rem;
     color: var(--color-2);
     text-align: end;
 
@@ -185,7 +201,7 @@ html, body, #root {
     }
     
     .profile-information h1 {
-        font-size: 1.9rem;
+        font-size: 2rem;
         margin-top: .5rem;
         transform: rotate(0deg);
     }
@@ -380,6 +396,7 @@ html, body, #root {
     margin: 0;
     font-family: var(--font-2);
     font-size: larger;
+    font-weight: 500;
     color: var(--color-2);
     text-align: center;
 

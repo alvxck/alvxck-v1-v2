@@ -18,6 +18,6 @@ code {
 } 
 
 @font-face {
-  font-family: 'LibreBaskerville-Regular';
-  src: local('LibreBaskerville-Regular'), url(./assets/LibreBaskerville-Regular.ttf) format('truetype');
+  font-family: 'PlayfairDisplay-Regular';
+  src: local('PlayfairDisplay-Regular'), url(./assets/PlayfairDisplay-Regular.ttf) format('truetype');
 }
