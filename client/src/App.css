@@ -201,7 +201,7 @@ html, body, #root {
     }
     
     .profile-information h1 {
-        font-size: 1.9rem;
+        font-size: 2rem;
         margin-top: .5rem;
         transform: rotate(0deg);
     }

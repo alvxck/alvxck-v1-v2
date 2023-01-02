@@ -89,13 +89,13 @@ const data = [
         projects: [
             {
                 key: 'stock-projection',
-                name: 'Stock Projection',
+                name: 'Stock Projection API',
                 type: 'Machine Learning',
                 img: stockProjection,
                 codelink: 'https://github.com/alvxck/Stock-Forecast',
                 viewlink: 'https://github.com/alvxck/Stock-Forecast',
                 tools: [
-                    <PythonSVG />,  <TensorFlowSVG />, <NumpySVG />
+                    <PythonSVG />,  <TensorFlowSVG />, <NumpySVG />, <FlaskSVG />
                 ]
             },                    
         ]
