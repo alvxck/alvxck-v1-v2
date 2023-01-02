@@ -201,8 +201,7 @@ html, body, #root {
     }
     
     .profile-information h1 {
-        font-size: 2rem;
-        margin-top: .5rem;
+        font-size: 2.25rem;
         transform: rotate(0deg);
     }
     
@@ -451,6 +450,8 @@ html, body, #root {
 
 #work-link {
     text-decoration: none;
+    transform: skewY(30deg);
+    transform-origin: top left;
 }
 
 .work-card {
@@ -460,17 +461,13 @@ html, body, #root {
     display: flex;
     flex-direction: column;
 
-    transform: skewY(30deg);
-    transform-origin: top left;
-
     background-color: var(--color-1);
 
     transition: transform ease-in-out .1s;
 }
 
 .work-card:hover {
-    transform-origin: top left;
-    transform: scale(1.035) skewY(30deg);
+    transform: scale(1.035);
     cursor: pointer;
 }
 
