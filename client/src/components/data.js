@@ -6,11 +6,14 @@ import { ReactComponent as PythonSVG } from '../assets/python.svg';
 import { ReactComponent as NumpySVG } from '../assets/numpy.svg';
 import { ReactComponent as TensorFlowSVG } from '../assets/tensorflow.svg';
 import { ReactComponent as DjangoSVG } from '../assets/django.svg';
+import { ReactComponent as FlaskSVG } from '../assets/flask.svg';
 import { ReactComponent as PytestSVG } from '../assets/pytest.svg';
 import { ReactComponent as CSVG } from '../assets/c.svg';
 import { ReactComponent as CPPSVG } from '../assets/cpp.svg';
+import { ReactComponent as TypescriptSVG } from '../assets/typescript.svg';
 import { ReactComponent as JavascriptSVG } from '../assets/javascript.svg';
 import { ReactComponent as ReactSVG } from '../assets/react.svg';
+import { ReactComponent as NextSVG } from '../assets/next.svg';
 import { ReactComponent as SvelteSVG } from '../assets/svelte.svg';
 import { ReactComponent as NodeSVG } from '../assets/nodejs.svg';
 import { ReactComponent as ExpressSVG } from '../assets/expressjs.svg';
@@ -47,7 +50,7 @@ const data = [
 
         ],
         skills: [
-            <PythonSVG />, <NumpySVG />, <TensorFlowSVG />, <DjangoSVG />, <PytestSVG />, <CSVG />, <CPPSVG />, <JavascriptSVG />, <ReactSVG />, <SvelteSVG />, <NodeSVG />, <ExpressSVG />, <HTMLSVG />, <CSSSVG />, <AwsSVG />, <DockerSVG />, <BashSVG />, <GITSVG />       
+            <PythonSVG />, <NumpySVG />, <TensorFlowSVG />, <DjangoSVG />, <FlaskSVG />, <PytestSVG />, <CSVG />, <CPPSVG />, <TypescriptSVG />, <JavascriptSVG />, <NextSVG />, <ReactSVG />, <SvelteSVG />, <NodeSVG />, <ExpressSVG />, <HTMLSVG />, <CSSSVG />, <AwsSVG />, <DockerSVG />, <BashSVG />, <GITSVG />       
         ]
     },
     {
