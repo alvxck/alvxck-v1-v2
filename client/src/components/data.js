@@ -97,7 +97,7 @@ const data = [
                 codelink: 'https://github.com/alvxck/Stock-Forecast',
                 viewlink: 'https://github.com/alvxck/Stock-Forecast',
                 tools: [
-                    <PythonSVG />,  <TensorFlowSVG />, <NumpySVG />, <FlaskSVG />
+                    <PythonSVG />, <KerasSVG />, <NumpySVG />, <PandasSVG />, <FlaskSVG />
                 ]
             },                    
         ]
