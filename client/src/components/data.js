@@ -17,14 +17,15 @@ import { ReactComponent as JavascriptSVG } from '../assets/javascript.svg';
 import { ReactComponent as ReactSVG } from '../assets/react.svg';
 import { ReactComponent as NextSVG } from '../assets/next.svg';
 import { ReactComponent as SvelteSVG } from '../assets/svelte.svg';
+import { ReactComponent as JestSVG } from '../assets/jest.svg';
 import { ReactComponent as NodeSVG } from '../assets/nodejs.svg';
 import { ReactComponent as ExpressSVG } from '../assets/expressjs.svg';
 import { ReactComponent as HTMLSVG } from '../assets/html.svg';
 import { ReactComponent as CSSSVG } from '../assets/css.svg';
+import { ReactComponent as SassSVG } from '../assets/sass.svg';
 import { ReactComponent as BashSVG } from '../assets/bash.svg';
 import { ReactComponent as GITSVG } from '../assets/git.svg';
 import { ReactComponent as AwsSVG } from '../assets/aws.svg';
-import { ReactComponent as DockerSVG } from '../assets/docker.svg';
 
 const data = [
     {
@@ -59,18 +60,18 @@ const data = [
         key: 'work',
         value: 'Work',
         experience: [
-            {
-                key: 'ansys',
-                company: 'Ansys',
-                position: 'Software Engineer Intern, CFD',
-                date: 'Apr 2023 - Aug 2023',
-                location: 'Waterloo, ON',
-                img: ansys,
-                link: 'https://www.ansys.com/',
-                tools: [
-                    <PythonSVG />, <NumpySVG />, <PytestSVG />, <AwsSVG />, <GITSVG />
-                ]
-            },            
+            // {
+            //     key: 'ansys',
+            //     company: 'Ansys',
+            //     position: 'Software Engineer Intern, CFD',
+            //     date: 'Apr 2023 - Aug 2023',
+            //     location: 'Waterloo, ON',
+            //     img: ansys,
+            //     link: 'https://www.ansys.com/',
+            //     tools: [
+            //         <PythonSVG />, <NumpySVG />, <PytestSVG />, <AwsSVG />, <GITSVG />
+            //     ]
+            // },            
             {
                 key: 'geotab',
                 company: 'Geotab',
@@ -80,7 +81,7 @@ const data = [
                 img: geotab,
                 link: 'https://www.geotab.com/',
                 tools: [
-                    <JavascriptSVG />, <SvelteSVG />, <ExpressSVG />, <DockerSVG />, <GITSVG />
+                    <TypescriptSVG />, <SvelteSVG />, <ExpressSVG />, <SassSVG />, <JestSVG />, <GITSVG />
                 ]
             },            
         ]
@@ -97,7 +98,7 @@ const data = [
                 codelink: 'https://github.com/alvxck/Stock-Forecast',
                 viewlink: 'https://github.com/alvxck/Stock-Forecast',
                 tools: [
-                    <PythonSVG />, <KerasSVG />, <NumpySVG />, <PandasSVG />, <FlaskSVG />
+                    <PythonSVG />, <KerasSVG />, <NumpySVG />, <PandasSVG />, <FlaskSVG />, <PytestSVG />
                 ]
             },                    
         ]
