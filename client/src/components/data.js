@@ -6,8 +6,8 @@ import { ReactComponent as PythonSVG } from '../assets/python.svg';
 import { ReactComponent as NumpySVG } from '../assets/numpy.svg';
 import { ReactComponent as PandasSVG } from '../assets/pandas.svg';
 import { ReactComponent as TensorFlowSVG } from '../assets/tensorflow.svg';
-import { ReactComponent as KerasSVG } from '../assets/keras.svg';
-import { ReactComponent as DjangoSVG } from '../assets/django.svg';
+import { ReactComponent as PyTorchSVG } from '../assets/pytorch.svg';
+import { ReactComponent as NvidiaSVG } from '../assets/nvidia.svg';
 import { ReactComponent as FlaskSVG } from '../assets/flask.svg';
 import { ReactComponent as PytestSVG } from '../assets/pytest.svg';
 import { ReactComponent as CSVG } from '../assets/c.svg';
@@ -16,13 +16,10 @@ import { ReactComponent as TypescriptSVG } from '../assets/typescript.svg';
 import { ReactComponent as JavascriptSVG } from '../assets/javascript.svg';
 import { ReactComponent as ReactSVG } from '../assets/react.svg';
 import { ReactComponent as NextSVG } from '../assets/next.svg';
-import { ReactComponent as SvelteSVG } from '../assets/svelte.svg';
-import { ReactComponent as JestSVG } from '../assets/jest.svg';
 import { ReactComponent as NodeSVG } from '../assets/nodejs.svg';
 import { ReactComponent as ExpressSVG } from '../assets/expressjs.svg';
 import { ReactComponent as HTMLSVG } from '../assets/html.svg';
 import { ReactComponent as CSSSVG } from '../assets/css.svg';
-import { ReactComponent as SassSVG } from '../assets/sass.svg';
 import { ReactComponent as BashSVG } from '../assets/bash.svg';
 import { ReactComponent as GITSVG } from '../assets/git.svg';
 import { ReactComponent as AwsSVG } from '../assets/aws.svg';
@@ -53,7 +50,7 @@ const data = [
 
         ],
         skills: [
-            <PythonSVG />, <NumpySVG />, <PandasSVG />, <TensorFlowSVG />, <KerasSVG />, <DjangoSVG />, <FlaskSVG />, <PytestSVG />, <CSVG />, <CPPSVG />, <TypescriptSVG />, <JavascriptSVG />, <NextSVG />, <ReactSVG />, <NodeSVG />, <ExpressSVG />, <HTMLSVG />, <CSSSVG />, <AwsSVG />, <BashSVG />, <GITSVG />       
+            <PythonSVG />, <NumpySVG />, <PandasSVG />, <TensorFlowSVG />, <PyTorchSVG />, <FlaskSVG />, <PytestSVG />, <CSVG />, <CPPSVG />, <TypescriptSVG />, <JavascriptSVG />, <NextSVG />, <ReactSVG />, <NodeSVG />, <ExpressSVG />, <HTMLSVG />, <CSSSVG />, <AwsSVG />, <BashSVG />, <GITSVG />       
         ]
     },
     {
@@ -81,7 +78,7 @@ const data = [
                 img: geotab,
                 link: 'https://www.geotab.com/',
                 tools: [
-                    <TypescriptSVG />, <SvelteSVG />, <ExpressSVG />, <SassSVG />, <JestSVG />, <GITSVG />
+                    <PythonSVG />, <PyTorchSVG />, <NumpySVG />, <PytestSVG />, <NvidiaSVG />, <GITSVG />
                 ]
             },            
         ]
@@ -98,7 +95,7 @@ const data = [
                 codelink: 'https://github.com/alvxck/Stock-Forecast',
                 viewlink: 'https://github.com/alvxck/Stock-Forecast',
                 tools: [
-                    <PythonSVG />, <KerasSVG />, <NumpySVG />, <PandasSVG />, <FlaskSVG />, <PytestSVG />
+                    <PythonSVG />, <TensorFlowSVG />, <NumpySVG />, <PandasSVG />, <FlaskSVG />, <PytestSVG />
                 ]
             },                    
         ]
