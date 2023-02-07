@@ -4,7 +4,7 @@
     <p align='center'>
     [ <a href='https://alvx.ca' target='blank'>alvx.ca ↗︎</a> ]
     </p>
-    <p align='center'>I'm a Software Engineer from Toronto, Canada interested in Cloud Computing Systems and DataScience for Predictive Analytics.
+    <p align='center'>I'm a Software Engineer from Toronto, Canada interested in Cloud Computing Systems and Data Science for Predictive Analytics.
     </p>
     <p align='center'>Welcome to my GitHub.
     </p>
