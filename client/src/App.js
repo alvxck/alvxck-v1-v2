@@ -30,7 +30,8 @@ function App() {
 				<Content selected={tab}/>
 			</div>
 			<div className='footer'>
-                <p>© ALVX · 2023</p>
+                <p>ALVX © </p>
+				<p id='year'>2023</p>
             </div>
 		</div>
 	)
