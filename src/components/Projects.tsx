@@ -1,15 +1,13 @@
-import React from "react";
-import ProjectsCard from "./ProjectsCard";
-import data from "./data";
+import { ProjectsCard } from "./ProjectsCard";
+import { data } from "../utils/props-data";
 
-
-function Projects(props) {
+export const Projects = (props : any) => {
     const dataProjects = data[2]['projects'];
 
     return (
         <div className={props.selected === 'Projects' ? 'tab-selected' : 'tab-hidden'}>
             <div className='projects'>
-                {dataProjects.map((projects) => (
+                {dataProjects?.map((projects) => (
                     <ProjectsCard
                         key={projects.key}
                         name={projects.name}
@@ -35,5 +33,3 @@ function Projects(props) {
         </div>
     )
 }
-
-export default Projects;

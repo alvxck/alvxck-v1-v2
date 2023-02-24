@@ -1,7 +1,7 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
-import Content from './components/Content';
-import Profile from './components/Profile';
+import { useState, useEffect } from 'react';
+import { Content } from './components/Content';
+import { Profile } from './components/Profile';
 
 function App() {
 	const [tab, setTab] = useState('About');
@@ -26,7 +26,7 @@ function App() {
 		<div className='main'>
 			<div className='divisor'/>
 			<div className='home'>
-				<Profile selected={tab} setTab={(id) => setTab(id)}/>
+				<Profile selected={tab} setTab={(id : string) => setTab(id)}/>
 				<Content selected={tab}/>
 			</div>
 			<div className='footer'>

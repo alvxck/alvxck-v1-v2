@@ -1,8 +1,7 @@
-import React from "react";
-import data from "./data";
+import { data } from "../utils/props-data";
 
 
-function About(props) {
+export const About = (props : any) => {
     const dataSkills = data[0]['skills'];
 
     return (
@@ -21,5 +20,3 @@ function About(props) {
         </div>
     )
 }
-
-export default About;

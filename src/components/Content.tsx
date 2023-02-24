@@ -1,9 +1,8 @@
-import React from "react";
-import About from './About.js';
-import Experience from './Experience.js';
-import Projects from './Projects.js';
+import { About } from './About.js';
+import { Experience } from './Experience.js';
+import { Projects } from './Projects.js';
 
-function Content(props) {
+export const Content = (props : any) => {
 
     return(
         <div className='content'>
@@ -13,5 +12,3 @@ function Content(props) {
         </div>
     )
 }
-
-export default Content;

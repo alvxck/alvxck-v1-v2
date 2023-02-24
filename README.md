@@ -1,6 +1,6 @@
 <p align='center'>
     <h1>Hi, I'm Alex</h1>
-    <a href='https://alvx.ca' target='blank'><img src='./client/src/assets/alvx-wallpaper.jpg'/></a>
+    <a href='https://alvx.ca' target='blank'><img src='./src/assets/alvx-wallpaper.jpg'/></a>
     <p align='center'>
     [ <a href='https://alvx.ca' target='blank'>Website ↗︎</a> ]
     [ <a href='https://www.linkedin.com/in/-alexandercarvalho/' target='blank'>LinkedIn ↗︎</a> ]
