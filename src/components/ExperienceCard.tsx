@@ -1,6 +1,5 @@
-import React from "react";
 
-function ExperienceCard(props){
+export const ExperienceCard = (props : any) => {
 
     return(
         <a
@@ -46,5 +45,3 @@ function ExperienceCard(props){
         </a>
     )
 }
-
-export default ExperienceCard;

@@ -24,7 +24,8 @@ import { ReactComponent as BashSVG } from '../assets/bash.svg';
 import { ReactComponent as GITSVG } from '../assets/git.svg';
 import { ReactComponent as AwsSVG } from '../assets/aws.svg';
 
-const data = [
+
+export const data = [
     {
         key: 'about',
         value: 'About',
@@ -78,7 +79,7 @@ const data = [
                 img: geotab,
                 link: 'https://www.geotab.com/',
                 tools: [
-                    <PythonSVG />, <PyTorchSVG />, <NumpySVG />, <PytestSVG />, <NvidiaSVG />, <GITSVG />
+                    <PythonSVG />, <NumpySVG />, <PytestSVG />, <NvidiaSVG />, <GITSVG />
                 ]
             },            
         ]
@@ -101,5 +102,3 @@ const data = [
         ]
     },
 ];
-
-export default data;

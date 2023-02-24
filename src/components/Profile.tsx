@@ -1,9 +1,8 @@
-import React from "react";
-import MediaLink from './MediaLink.js';
-import Tab from './Tab.js';
-import data from './data.js';
+import { MediaLink } from './MediaLink.js';
+import { Tab } from './Tab.js';
+import { data } from '../utils/props-data.js';
 
-function Profile(props) {
+export const Profile = (props : any) => {
     const dataLinks = data[0]['links'];
 
     return (
@@ -13,7 +12,7 @@ function Profile(props) {
                 <p>Software Engineer based in Toronto.</p>
                 <p>Currently @ <a id='current-job' href='https://www.geotab.com/' target='blank'>Geotab.</a></p>
                 <div className='profile-links'>
-                    {dataLinks.map((media) => (
+                    {dataLinks?.map((media) => (
                         <MediaLink
                             key={media.key}
                             svg={media.svg}
@@ -36,5 +35,3 @@ function Profile(props) {
         </div>
     )
 }
-
-export default Profile;

@@ -1,7 +1,5 @@
-import React from "react";
 
-
-function MediaLink(props) {
+export const MediaLink = (props : any) => {
 
     return (
         <div className='medialink'>
@@ -15,5 +13,3 @@ function MediaLink(props) {
         </div>
     )
 }
-
-export default MediaLink;

@@ -1,6 +1,5 @@
-import React from "react";
 
-function ProjectsCard(props) {
+export const ProjectsCard = (props  : any) => {
 
     return (
         <div className='project-card'>
@@ -35,5 +34,3 @@ function ProjectsCard(props) {
         </div>
     )
 }
-
-export default ProjectsCard;

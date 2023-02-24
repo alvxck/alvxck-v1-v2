@@ -1,15 +1,14 @@
-import React from "react";
-import ExperienceCard from "./ExperienceCard";
-import data from "./data";
+import { ExperienceCard } from "./ExperienceCard";
+import { data }  from "../utils/props-data";
 
 
-function Experience(props) {
+export const Experience = (props : any) => {
     const dataExperience = data[1]['experience'];
 
     return (
         <div className={props.selected === 'Work' ? 'tab-selected' : 'tab-hidden'}>
             <div className='work'>
-                {dataExperience.map((experience) => (
+                {dataExperience?.map((experience) => (
                     <ExperienceCard
                         key={experience.key}
                         company={experience.company}
@@ -35,5 +34,3 @@ function Experience(props) {
         </div>
     )
 }
-
-export default Experience;
