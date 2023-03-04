@@ -214,7 +214,7 @@ html, body, #root {
       transform: rotate(0deg);
   }
   
-  .profile-information p {    
+  .profile-information p {   
       transform: rotate(0deg);
   }
   
@@ -475,7 +475,7 @@ html, body, #root {
   transition: transform ease-in-out .1s;
 }
 
-.work-card:hover {
+.work-card:hover, .project-card:hover {
   transform: scale(1.035);
   cursor: pointer;
 }
@@ -553,7 +553,6 @@ html, body, #root {
 
   display: flex;
   flex-direction: column;
-  transform: skewY(30deg);
   transform-origin: top left;
 
   background-color: var(--color-1);

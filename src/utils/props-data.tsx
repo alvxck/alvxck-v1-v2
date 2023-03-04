@@ -1,13 +1,13 @@
 import ansys from '../assets/ansys.png';
 import geotab from '../assets/geotab.png';
 import stockProjection from '../assets/stock-projection.png';
+import blockchain from '../assets/blockchain.png';
 
 import { ReactComponent as PythonSVG } from '../assets/python.svg';
 import { ReactComponent as NumpySVG } from '../assets/numpy.svg';
 import { ReactComponent as PandasSVG } from '../assets/pandas.svg';
+import { ReactComponent as KerasSVG } from '../assets/keras.svg';
 import { ReactComponent as TensorFlowSVG } from '../assets/tensorflow.svg';
-import { ReactComponent as PyTorchSVG } from '../assets/pytorch.svg';
-import { ReactComponent as NvidiaSVG } from '../assets/nvidia.svg';
 import { ReactComponent as FlaskSVG } from '../assets/flask.svg';
 import { ReactComponent as PytestSVG } from '../assets/pytest.svg';
 import { ReactComponent as CSVG } from '../assets/c.svg';
@@ -15,9 +15,11 @@ import { ReactComponent as CPPSVG } from '../assets/cpp.svg';
 import { ReactComponent as TypescriptSVG } from '../assets/typescript.svg';
 import { ReactComponent as JavascriptSVG } from '../assets/javascript.svg';
 import { ReactComponent as ReactSVG } from '../assets/react.svg';
-import { ReactComponent as NextSVG } from '../assets/next.svg';
+import { ReactComponent as SvelteSVG } from '../assets/svelte.svg';
+import { ReactComponent as JestSVG } from '../assets/jest.svg';
 import { ReactComponent as NodeSVG } from '../assets/nodejs.svg';
 import { ReactComponent as ExpressSVG } from '../assets/expressjs.svg';
+import { ReactComponent as TailwindSVG } from '../assets/tailwind.svg';
 import { ReactComponent as HTMLSVG } from '../assets/html.svg';
 import { ReactComponent as CSSSVG } from '../assets/css.svg';
 import { ReactComponent as BashSVG } from '../assets/bash.svg';
@@ -34,7 +36,7 @@ export const data = [
                 key: 'linkedin',
                 value: 'linkedin',
                 svg: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><title>LinkedIn</title><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>,
-                link: 'https://www.linkedin.com/in/-alexandercarvalho/',
+                link: 'https://www.linkedin.com/in/alvx/',
             },
             {
                 key: 'github',
@@ -51,25 +53,25 @@ export const data = [
 
         ],
         skills: [
-            <PythonSVG />, <NumpySVG />, <PandasSVG />, <TensorFlowSVG />, <PyTorchSVG />, <FlaskSVG />, <PytestSVG />, <CSVG />, <CPPSVG />, <TypescriptSVG />, <JavascriptSVG />, <NextSVG />, <ReactSVG />, <NodeSVG />, <ExpressSVG />, <HTMLSVG />, <CSSSVG />, <AwsSVG />, <BashSVG />, <GITSVG />       
+            <PythonSVG />, <NumpySVG />, <PandasSVG />, <KerasSVG />, <TensorFlowSVG />, <FlaskSVG />, <PytestSVG />, <CSVG />, <CPPSVG />, <TypescriptSVG />, <JavascriptSVG />, <ReactSVG />, <NodeSVG />, <ExpressSVG />, <JestSVG />, <TailwindSVG />, <HTMLSVG />, <CSSSVG />, <AwsSVG />, <BashSVG />, <GITSVG />       
         ]
     },
     {
         key: 'work',
         value: 'Work',
         experience: [
-            // {
-            //     key: 'ansys',
-            //     company: 'Ansys',
-            //     position: 'Software Engineer Intern, CFD',
-            //     date: 'Apr 2023 - Aug 2023',
-            //     location: 'Waterloo, ON',
-            //     img: ansys,
-            //     link: 'https://www.ansys.com/',
-            //     tools: [
-            //         <PythonSVG />, <NumpySVG />, <PytestSVG />, <AwsSVG />, <GITSVG />
-            //     ]
-            // },            
+            {
+                key: 'ansys',
+                company: 'Ansys',
+                position: 'Software Engineer Intern, CFD',
+                date: 'Apr 2023 - Aug 2023',
+                location: 'Waterloo, ON',
+                img: ansys,
+                link: 'https://www.ansys.com/',
+                tools: [
+                    // <PythonSVG />, <NumpySVG />, <PandasSVG />, <PytestSVG />, <AwsSVG />, <GITSVG />
+                ]
+            },            
             {
                 key: 'geotab',
                 company: 'Geotab',
@@ -79,7 +81,7 @@ export const data = [
                 img: geotab,
                 link: 'https://www.geotab.com/',
                 tools: [
-                    <PythonSVG />, <NumpySVG />, <PytestSVG />, <NvidiaSVG />, <GITSVG />
+                    // <TypescriptSVG />, <SvelteSVG />, <JestSVG />, <TailwindSVG />, <GITSVG />
                 ]
             },            
         ]
@@ -93,12 +95,22 @@ export const data = [
                 name: 'Stock Projection API',
                 type: 'Machine Learning',
                 img: stockProjection,
-                codelink: 'https://github.com/alvxck/Stock-Forecast',
-                viewlink: 'https://github.com/alvxck/Stock-Forecast',
+                link: 'https://github.com/alvxck/Stock-Forecast',
                 tools: [
                     <PythonSVG />, <TensorFlowSVG />, <NumpySVG />, <PandasSVG />, <FlaskSVG />, <PytestSVG />
                 ]
-            },                    
+            },    
+            // {
+            //     key: 'block-chain',
+            //     name: 'Blockchain',
+            //     type: 'Cryptography',
+            //     img: blockchain,
+            //     codelink: 'https://github.com/alvxck/Blockchain',
+            //     viewlink: 'https://github.com/alvxck/Blockchain',
+            //     tools: [
+            //         <CPPSVG />,
+            //     ]
+            // },                   
         ]
     },
 ];
